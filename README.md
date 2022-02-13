@@ -71,7 +71,7 @@ Fanuc uses 90vdc brakes on all of their motors I have seen. They however open at
 Motor brakes will require a diode and resistor or other type of surge arrestor to handle the inductive voltage spike when being turned off. I am currently using a diode and 2 ohm resistor across the brake terminals, I am planning on trying a higher value resistor to decrease the closing time. I tried with no surge protection and the EMI spike caused the computer runing linuxCNC to crash, so don't do that.
 
 # Encoders
-Encoders were the most challenging part of this entire project.
+Encoders were the most challenging part of this entire project. Thankfully, the hostmot2 firmware that the FPGA card runs on is opensource, allowing custom encoder interfaces to be written with only slight pain and suffering.
 
 Odrives are designed to handle quadrature input from the encoders, but very few industrial encoders output it. Instead they often use a proprietary protocol with no public documentation.
 
@@ -109,4 +109,11 @@ Conviently the entire robot can now be run off of a standard 120v plug(as long a
 # Future Upgrades/Changes
 The biggest thing I am working on improving is the servo drives. 10% speed just isn't going to fly. I've been working on designing a driver similar to the STMBL drive, only capable of handling the full power I need for the robot servos. Along with including a much better brake control and estop system.
 
-The new drives would likly fall under a v2 of this repository, as the majority of the hardware and low level software will be changed.
+The new drives would likely fall under a v2 of this repository, as the majority of the hardware and low level software will be changed.
+
+# Support Me
+Youtube: https://www.youtube.com/c/ExcessiveOverkill
+
+https://www.reddit.com/r/ExcessiveOverkill/
+
+Patreon: https://www.patreon.com/excessiveoverkill
