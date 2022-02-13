@@ -1,0 +1,55 @@
+Release 14.7 - par P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+Thu Nov 25 00:40:56 2021
+
+All signals are completely routed.
+
+WARNING:ParHelpers:361 - There are 43 loadless signals in this design. This design will cause Bitgen to issue DRC
+   warnings.
+
+   NLOCK_IBUF
+   ahostmot2/makesserialmod.makesserials[0].asserial/interfaceramin0/Mram_RAM1_RAMD_D1_O
+   ahostmot2/makesserialmod.makesserials[0].asserial/interfaceramin0/Mram_RAM2_RAMD_D1_O
+   ahostmot2/makesserialmod.makesserials[0].asserial/interfaceramin0/Mram_RAM3_RAMD_D1_O
+   ahostmot2/makesserialmod.makesserials[0].asserial/interfaceramin0/Mram_RAM4_RAMD_D1_O
+   ahostmot2/makesserialmod.makesserials[0].asserial/interfaceramin0/Mram_RAM5_RAMD_D1_O
+   ahostmot2/makesserialmod.makesserials[0].asserial/interfaceramin1/Mram_RAM1_RAMD_D1_O
+   ahostmot2/makesserialmod.makesserials[0].asserial/interfaceramin1/Mram_RAM2_RAMD_D1_O
+   ahostmot2/makesserialmod.makesserials[0].asserial/interfaceramin1/Mram_RAM3_RAMD_D1_O
+   ahostmot2/makesserialmod.makesserials[0].asserial/interfaceramin1/Mram_RAM4_RAMD_D1_O
+   ahostmot2/makesserialmod.makesserials[0].asserial/interfaceramin1/Mram_RAM5_RAMD_D1_O
+   ahostmot2/makesserialmod.makesserials[0].asserial/interfaceramin2/Mram_RAM1_RAMD_D1_O
+   ahostmot2/makesserialmod.makesserials[0].asserial/interfaceramin2/Mram_RAM2_RAMD_D1_O
+   ahostmot2/makesserialmod.makesserials[0].asserial/interfaceramin2/Mram_RAM3_RAMD_D1_O
+   ahostmot2/makesserialmod.makesserials[0].asserial/interfaceramin2/Mram_RAM4_RAMD_D1_O
+   ahostmot2/makesserialmod.makesserials[0].asserial/interfaceramin2/Mram_RAM5_RAMD_D1_O
+   ahostmot2/makesserialmod.makesserials[0].asserial/interfaceramin3/Mram_RAM1_RAMD_D1_O
+   ahostmot2/makesserialmod.makesserials[0].asserial/interfaceramin3/Mram_RAM2_RAMD_D1_O
+   ahostmot2/makesserialmod.makesserials[0].asserial/interfaceramin3/Mram_RAM3_RAMD_D1_O
+   ahostmot2/makesserialmod.makesserials[0].asserial/interfaceramin3/Mram_RAM4_RAMD_D1_O
+   ahostmot2/makesserialmod.makesserials[0].asserial/interfaceramin3/Mram_RAM5_RAMD_D1_O
+   ahostmot2/makesserialmod.makesserials[0].asserial/interfaceramout0/Mram_RAM1_RAMD_D1_O
+   ahostmot2/makesserialmod.makesserials[0].asserial/interfaceramout0/Mram_RAM2_RAMD_D1_O
+   ahostmot2/makesserialmod.makesserials[0].asserial/interfaceramout0/Mram_RAM3_RAMD_D1_O
+   ahostmot2/makesserialmod.makesserials[0].asserial/interfaceramout0/Mram_RAM4_RAMD_D1_O
+   ahostmot2/makesserialmod.makesserials[0].asserial/interfaceramout0/Mram_RAM5_RAMD_D1_O
+   ahostmot2/makesserialmod.makesserials[0].asserial/interfaceramout1/Mram_RAM1_RAMD_D1_O
+   ahostmot2/makesserialmod.makesserials[0].asserial/interfaceramout1/Mram_RAM2_RAMD_D1_O
+   ahostmot2/makesserialmod.makesserials[0].asserial/interfaceramout1/Mram_RAM3_RAMD_D1_O
+   ahostmot2/makesserialmod.makesserials[0].asserial/interfaceramout1/Mram_RAM4_RAMD_D1_O
+   ahostmot2/makesserialmod.makesserials[0].asserial/interfaceramout1/Mram_RAM5_RAMD_D1_O
+   ahostmot2/makesserialmod.makesserials[0].asserial/interfaceramout2/Mram_RAM1_RAMD_D1_O
+   ahostmot2/makesserialmod.makesserials[0].asserial/interfaceramout2/Mram_RAM2_RAMD_D1_O
+   ahostmot2/makesserialmod.makesserials[0].asserial/interfaceramout2/Mram_RAM3_RAMD_D1_O
+   ahostmot2/makesserialmod.makesserials[0].asserial/interfaceramout2/Mram_RAM4_RAMD_D1_O
+   ahostmot2/makesserialmod.makesserials[0].asserial/interfaceramout2/Mram_RAM5_RAMD_D1_O
+   ahostmot2/makesserialmod.makesserials[0].asserial/interfaceramout3/Mram_RAM1_RAMD_D1_O
+   ahostmot2/makesserialmod.makesserials[0].asserial/interfaceramout3/Mram_RAM2_RAMD_D1_O
+   ahostmot2/makesserialmod.makesserials[0].asserial/interfaceramout3/Mram_RAM3_RAMD_D1_O
+   ahostmot2/makesserialmod.makesserials[0].asserial/interfaceramout3/Mram_RAM4_RAMD_D1_O
+   ahostmot2/makesserialmod.makesserials[0].asserial/interfaceramout3/Mram_RAM5_RAMD_D1_O
+   ahostmot2/makesserialmod.makesserials[0].asserial/processor/StackRam/Mram_RAM1_RAMD_D1_O
+   ahostmot2/makesserialmod.makesserials[0].asserial/processor/StackRam/Mram_RAM2_RAMD_D1_O
+
+

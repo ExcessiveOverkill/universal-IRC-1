@@ -1,0 +1,184 @@
+Release 14.7 Drc P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+Thu Nov 25 00:42:09 2021
+
+drc -z TopPCIHostMot2.ncd TopPCIHostMot2.pcf
+
+WARNING:PhysDesignRules:367 - The signal
+   <ahostmot2/makesserialmod.makesserials[0].asserial/processor/StackRam/Mram_RA
+   M1_RAMD_D1_O> is incomplete. The signal does not drive any load pins in the
+   design.
+WARNING:PhysDesignRules:367 - The signal
+   <ahostmot2/makesserialmod.makesserials[0].asserial/processor/StackRam/Mram_RA
+   M2_RAMD_D1_O> is incomplete. The signal does not drive any load pins in the
+   design.
+WARNING:PhysDesignRules:367 - The signal
+   <ahostmot2/makesserialmod.makesserials[0].asserial/interfaceramout0/Mram_RAM4
+   _RAMD_D1_O> is incomplete. The signal does not drive any load pins in the
+   design.
+WARNING:PhysDesignRules:367 - The signal
+   <ahostmot2/makesserialmod.makesserials[0].asserial/interfaceramin3/Mram_RAM5_
+   RAMD_D1_O> is incomplete. The signal does not drive any load pins in the
+   design.
+WARNING:PhysDesignRules:367 - The signal
+   <ahostmot2/makesserialmod.makesserials[0].asserial/interfaceramin2/Mram_RAM1_
+   RAMD_D1_O> is incomplete. The signal does not drive any load pins in the
+   design.
+WARNING:PhysDesignRules:367 - The signal
+   <ahostmot2/makesserialmod.makesserials[0].asserial/interfaceramin2/Mram_RAM5_
+   RAMD_D1_O> is incomplete. The signal does not drive any load pins in the
+   design.
+WARNING:PhysDesignRules:367 - The signal
+   <ahostmot2/makesserialmod.makesserials[0].asserial/interfaceramin3/Mram_RAM1_
+   RAMD_D1_O> is incomplete. The signal does not drive any load pins in the
+   design.
+WARNING:PhysDesignRules:367 - The signal
+   <ahostmot2/makesserialmod.makesserials[0].asserial/interfaceramin0/Mram_RAM1_
+   RAMD_D1_O> is incomplete. The signal does not drive any load pins in the
+   design.
+WARNING:PhysDesignRules:367 - The signal
+   <ahostmot2/makesserialmod.makesserials[0].asserial/interfaceramin1/Mram_RAM1_
+   RAMD_D1_O> is incomplete. The signal does not drive any load pins in the
+   design.
+WARNING:PhysDesignRules:367 - The signal
+   <ahostmot2/makesserialmod.makesserials[0].asserial/interfaceramout2/Mram_RAM5
+   _RAMD_D1_O> is incomplete. The signal does not drive any load pins in the
+   design.
+WARNING:PhysDesignRules:367 - The signal
+   <ahostmot2/makesserialmod.makesserials[0].asserial/interfaceramout3/Mram_RAM5
+   _RAMD_D1_O> is incomplete. The signal does not drive any load pins in the
+   design.
+WARNING:PhysDesignRules:367 - The signal
+   <ahostmot2/makesserialmod.makesserials[0].asserial/interfaceramout2/Mram_RAM4
+   _RAMD_D1_O> is incomplete. The signal does not drive any load pins in the
+   design.
+WARNING:PhysDesignRules:367 - The signal
+   <ahostmot2/makesserialmod.makesserials[0].asserial/interfaceramout1/Mram_RAM4
+   _RAMD_D1_O> is incomplete. The signal does not drive any load pins in the
+   design.
+WARNING:PhysDesignRules:367 - The signal
+   <ahostmot2/makesserialmod.makesserials[0].asserial/interfaceramin0/Mram_RAM4_
+   RAMD_D1_O> is incomplete. The signal does not drive any load pins in the
+   design.
+WARNING:PhysDesignRules:367 - The signal
+   <ahostmot2/makesserialmod.makesserials[0].asserial/interfaceramin0/Mram_RAM5_
+   RAMD_D1_O> is incomplete. The signal does not drive any load pins in the
+   design.
+WARNING:PhysDesignRules:367 - The signal
+   <ahostmot2/makesserialmod.makesserials[0].asserial/interfaceramin1/Mram_RAM5_
+   RAMD_D1_O> is incomplete. The signal does not drive any load pins in the
+   design.
+WARNING:PhysDesignRules:367 - The signal
+   <ahostmot2/makesserialmod.makesserials[0].asserial/interfaceramin2/Mram_RAM4_
+   RAMD_D1_O> is incomplete. The signal does not drive any load pins in the
+   design.
+WARNING:PhysDesignRules:367 - The signal
+   <ahostmot2/makesserialmod.makesserials[0].asserial/interfaceramin1/Mram_RAM4_
+   RAMD_D1_O> is incomplete. The signal does not drive any load pins in the
+   design.
+WARNING:PhysDesignRules:367 - The signal
+   <ahostmot2/makesserialmod.makesserials[0].asserial/interfaceramin3/Mram_RAM4_
+   RAMD_D1_O> is incomplete. The signal does not drive any load pins in the
+   design.
+WARNING:PhysDesignRules:367 - The signal
+   <ahostmot2/makesserialmod.makesserials[0].asserial/interfaceramout0/Mram_RAM5
+   _RAMD_D1_O> is incomplete. The signal does not drive any load pins in the
+   design.
+WARNING:PhysDesignRules:367 - The signal
+   <ahostmot2/makesserialmod.makesserials[0].asserial/interfaceramout3/Mram_RAM4
+   _RAMD_D1_O> is incomplete. The signal does not drive any load pins in the
+   design.
+WARNING:PhysDesignRules:367 - The signal
+   <ahostmot2/makesserialmod.makesserials[0].asserial/interfaceramin0/Mram_RAM2_
+   RAMD_D1_O> is incomplete. The signal does not drive any load pins in the
+   design.
+WARNING:PhysDesignRules:367 - The signal
+   <ahostmot2/makesserialmod.makesserials[0].asserial/interfaceramout1/Mram_RAM5
+   _RAMD_D1_O> is incomplete. The signal does not drive any load pins in the
+   design.
+WARNING:PhysDesignRules:367 - The signal
+   <ahostmot2/makesserialmod.makesserials[0].asserial/interfaceramin1/Mram_RAM3_
+   RAMD_D1_O> is incomplete. The signal does not drive any load pins in the
+   design.
+WARNING:PhysDesignRules:367 - The signal
+   <ahostmot2/makesserialmod.makesserials[0].asserial/interfaceramin2/Mram_RAM2_
+   RAMD_D1_O> is incomplete. The signal does not drive any load pins in the
+   design.
+WARNING:PhysDesignRules:367 - The signal
+   <ahostmot2/makesserialmod.makesserials[0].asserial/interfaceramin1/Mram_RAM2_
+   RAMD_D1_O> is incomplete. The signal does not drive any load pins in the
+   design.
+WARNING:PhysDesignRules:367 - The signal
+   <ahostmot2/makesserialmod.makesserials[0].asserial/interfaceramin3/Mram_RAM2_
+   RAMD_D1_O> is incomplete. The signal does not drive any load pins in the
+   design.
+WARNING:PhysDesignRules:367 - The signal
+   <ahostmot2/makesserialmod.makesserials[0].asserial/interfaceramout0/Mram_RAM3
+   _RAMD_D1_O> is incomplete. The signal does not drive any load pins in the
+   design.
+WARNING:PhysDesignRules:367 - The signal
+   <ahostmot2/makesserialmod.makesserials[0].asserial/interfaceramout1/Mram_RAM1
+   _RAMD_D1_O> is incomplete. The signal does not drive any load pins in the
+   design.
+WARNING:PhysDesignRules:367 - The signal
+   <ahostmot2/makesserialmod.makesserials[0].asserial/interfaceramout0/Mram_RAM1
+   _RAMD_D1_O> is incomplete. The signal does not drive any load pins in the
+   design.
+WARNING:PhysDesignRules:367 - The signal
+   <ahostmot2/makesserialmod.makesserials[0].asserial/interfaceramout3/Mram_RAM3
+   _RAMD_D1_O> is incomplete. The signal does not drive any load pins in the
+   design.
+WARNING:PhysDesignRules:367 - The signal
+   <ahostmot2/makesserialmod.makesserials[0].asserial/interfaceramout3/Mram_RAM2
+   _RAMD_D1_O> is incomplete. The signal does not drive any load pins in the
+   design.
+WARNING:PhysDesignRules:367 - The signal
+   <ahostmot2/makesserialmod.makesserials[0].asserial/interfaceramout2/Mram_RAM3
+   _RAMD_D1_O> is incomplete. The signal does not drive any load pins in the
+   design.
+WARNING:PhysDesignRules:367 - The signal
+   <ahostmot2/makesserialmod.makesserials[0].asserial/interfaceramout1/Mram_RAM3
+   _RAMD_D1_O> is incomplete. The signal does not drive any load pins in the
+   design.
+WARNING:PhysDesignRules:367 - The signal
+   <ahostmot2/makesserialmod.makesserials[0].asserial/interfaceramout2/Mram_RAM1
+   _RAMD_D1_O> is incomplete. The signal does not drive any load pins in the
+   design.
+WARNING:PhysDesignRules:367 - The signal
+   <ahostmot2/makesserialmod.makesserials[0].asserial/interfaceramout3/Mram_RAM1
+   _RAMD_D1_O> is incomplete. The signal does not drive any load pins in the
+   design.
+WARNING:PhysDesignRules:367 - The signal
+   <ahostmot2/makesserialmod.makesserials[0].asserial/interfaceramin0/Mram_RAM3_
+   RAMD_D1_O> is incomplete. The signal does not drive any load pins in the
+   design.
+WARNING:PhysDesignRules:367 - The signal
+   <ahostmot2/makesserialmod.makesserials[0].asserial/interfaceramin3/Mram_RAM3_
+   RAMD_D1_O> is incomplete. The signal does not drive any load pins in the
+   design.
+WARNING:PhysDesignRules:367 - The signal
+   <ahostmot2/makesserialmod.makesserials[0].asserial/interfaceramin2/Mram_RAM3_
+   RAMD_D1_O> is incomplete. The signal does not drive any load pins in the
+   design.
+WARNING:PhysDesignRules:367 - The signal
+   <ahostmot2/makesserialmod.makesserials[0].asserial/interfaceramout2/Mram_RAM2
+   _RAMD_D1_O> is incomplete. The signal does not drive any load pins in the
+   design.
+WARNING:PhysDesignRules:367 - The signal
+   <ahostmot2/makesserialmod.makesserials[0].asserial/interfaceramout0/Mram_RAM2
+   _RAMD_D1_O> is incomplete. The signal does not drive any load pins in the
+   design.
+WARNING:PhysDesignRules:367 - The signal
+   <ahostmot2/makesserialmod.makesserials[0].asserial/interfaceramout1/Mram_RAM2
+   _RAMD_D1_O> is incomplete. The signal does not drive any load pins in the
+   design.
+INFO:PhysDesignRules:1861 - To achieve optimal frequency synthesis performance
+   with the CLKFX and CLKFX180 outputs of the DCM comp ClockMult1, consult the
+   device Data Sheet.
+WARNING:PhysDesignRules:2410 - This design is using one or more 9K Block RAMs
+   (RAMB8BWER).  9K Block RAM initialization data, both user defined and
+   default, may be incorrect and should not be used.  For more information,
+   please reference Xilinx Answer Record 39999.
+DRC detected 0 errors and 43 warnings.  Please see the previously displayed
+individual error or warning messages for more details.

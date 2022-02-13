@@ -1,0 +1,671 @@
+xst -intstyle ise -ifn "/home/ise/linuxCNC/TopPCIHostMot2.xst" -ofn "/home/ise/linuxCNC/TopPCIHostMot2.syr" 
+xst -intstyle ise -ifn "/home/ise/linuxCNC/TopPCIHostMot2.xst" -ofn "/home/ise/linuxCNC/TopPCIHostMot2.syr" 
+xst -intstyle ise -ifn "/home/ise/linuxCNC/TopPCIHostMot2.xst" -ofn "/home/ise/linuxCNC/TopPCIHostMot2.syr" 
+ngdbuild -intstyle ise -dd _ngo -aut -nt timestamp -uc 5i24.ucf -p xc6slx16-ftg256-2 TopPCIHostMot2.ngc TopPCIHostMot2.ngd  
+map -intstyle ise -p xc6slx16-ftg256-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr b -lc off -power off -o TopPCIHostMot2_map.ncd TopPCIHostMot2.ngd TopPCIHostMot2.pcf 
+par -w -intstyle ise -ol high -mt off TopPCIHostMot2_map.ncd TopPCIHostMot2.ncd TopPCIHostMot2.pcf 
+trce -intstyle ise -v 10 -s 2 -n 3 -fastpaths -xml TopPCIHostMot2.twx TopPCIHostMot2.ncd -o TopPCIHostMot2.twr TopPCIHostMot2.pcf -ucf 5i24.ucf 
+bitgen -intstyle ise -f TopPCIHostMot2.ut TopPCIHostMot2.ncd 
+xst -intstyle ise -ifn "/home/ise/linuxCNC/TopPCIHostMot2.xst" -ofn "/home/ise/linuxCNC/TopPCIHostMot2.syr" 
+xst -intstyle ise -ifn "/home/ise/linuxCNC/TopPCIHostMot2.xst" -ofn "/home/ise/linuxCNC/TopPCIHostMot2.syr" 
+ngdbuild -intstyle ise -dd _ngo -aut -nt timestamp -uc 5i24.ucf -p xc6slx16-ftg256-2 TopPCIHostMot2.ngc TopPCIHostMot2.ngd  
+map -intstyle ise -p xc6slx16-ftg256-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr b -lc off -power off -o TopPCIHostMot2_map.ncd TopPCIHostMot2.ngd TopPCIHostMot2.pcf 
+par -w -intstyle ise -ol high -mt off TopPCIHostMot2_map.ncd TopPCIHostMot2.ncd TopPCIHostMot2.pcf 
+trce -intstyle ise -v 10 -s 2 -n 3 -fastpaths -xml TopPCIHostMot2.twx TopPCIHostMot2.ncd -o TopPCIHostMot2.twr TopPCIHostMot2.pcf -ucf 5i24.ucf 
+bitgen -intstyle ise -f TopPCIHostMot2.ut TopPCIHostMot2.ncd 
+xst -intstyle ise -ifn "/home/ise/linuxCNC/TopPCIHostMot2.xst" -ofn "/home/ise/linuxCNC/TopPCIHostMot2.syr" 
+xst -intstyle ise -ifn "/home/ise/linuxCNC/TopPCIHostMot2.xst" -ofn "/home/ise/linuxCNC/TopPCIHostMot2.syr" 
+xst -intstyle ise -ifn "/home/ise/linuxCNC/TopPCIHostMot2.xst" -ofn "/home/ise/linuxCNC/TopPCIHostMot2.syr" 
+ngdbuild -intstyle ise -dd _ngo -aut -nt timestamp -uc 5i24.ucf -p xc6slx16-ftg256-2 TopPCIHostMot2.ngc TopPCIHostMot2.ngd  
+map -intstyle ise -p xc6slx16-ftg256-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr b -lc off -power off -o TopPCIHostMot2_map.ncd TopPCIHostMot2.ngd TopPCIHostMot2.pcf 
+par -w -intstyle ise -ol high -mt off TopPCIHostMot2_map.ncd TopPCIHostMot2.ncd TopPCIHostMot2.pcf 
+trce -intstyle ise -v 10 -s 2 -n 3 -fastpaths -xml TopPCIHostMot2.twx TopPCIHostMot2.ncd -o TopPCIHostMot2.twr TopPCIHostMot2.pcf -ucf 5i24.ucf 
+bitgen -intstyle ise -f TopPCIHostMot2.ut TopPCIHostMot2.ncd 
+bitgen -intstyle ise -f TopPCIHostMot2.ut TopPCIHostMot2.ncd 
+bitgen -intstyle ise -f TopPCIHostMot2.ut TopPCIHostMot2.ncd 
+xst -intstyle ise -ifn "/home/ise/linuxCNC/TopPCIHostMot2.xst" -ofn "/home/ise/linuxCNC/TopPCIHostMot2.syr" 
+ngdbuild -intstyle ise -dd _ngo -aut -nt timestamp -uc 5i24.ucf -p xc6slx16-ftg256-2 TopPCIHostMot2.ngc TopPCIHostMot2.ngd  
+map -intstyle ise -p xc6slx16-ftg256-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr b -lc off -power off -o TopPCIHostMot2_map.ncd TopPCIHostMot2.ngd TopPCIHostMot2.pcf 
+par -w -intstyle ise -ol high -mt off TopPCIHostMot2_map.ncd TopPCIHostMot2.ncd TopPCIHostMot2.pcf 
+bitgen -intstyle ise -f TopPCIHostMot2.ut TopPCIHostMot2.ncd 
+xst -intstyle ise -ifn "/home/ise/linuxCNC/TopPCIHostMot2.xst" -ofn "/home/ise/linuxCNC/TopPCIHostMot2.syr" 
+xst -intstyle ise -ifn "/home/ise/linuxCNC/TopPCIHostMot2.xst" -ofn "/home/ise/linuxCNC/TopPCIHostMot2.syr" 
+xst -intstyle ise -ifn "/home/ise/linuxCNC/TopPCIHostMot2.xst" -ofn "/home/ise/linuxCNC/TopPCIHostMot2.syr" 
+ngdbuild -intstyle ise -dd _ngo -aut -nt timestamp -uc 5i24.ucf -p xc6slx16-ftg256-2 TopPCIHostMot2.ngc TopPCIHostMot2.ngd  
+map -intstyle ise -p xc6slx16-ftg256-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr b -lc off -power off -o TopPCIHostMot2_map.ncd TopPCIHostMot2.ngd TopPCIHostMot2.pcf 
+par -w -intstyle ise -ol high -mt off TopPCIHostMot2_map.ncd TopPCIHostMot2.ncd TopPCIHostMot2.pcf 
+trce -intstyle ise -v 10 -s 2 -n 3 -fastpaths -xml TopPCIHostMot2.twx TopPCIHostMot2.ncd -o TopPCIHostMot2.twr TopPCIHostMot2.pcf -ucf 5i24.ucf 
+bitgen -intstyle ise -f TopPCIHostMot2.ut TopPCIHostMot2.ncd 
+xst -intstyle ise -ifn "/home/ise/linuxCNC/TopPCIHostMot2.xst" -ofn "/home/ise/linuxCNC/TopPCIHostMot2.syr" 
+xst -intstyle ise -ifn "/home/ise/linuxCNC/TopPCIHostMot2.xst" -ofn "/home/ise/linuxCNC/TopPCIHostMot2.syr" 
+ngdbuild -intstyle ise -dd _ngo -aut -nt timestamp -uc 5i24.ucf -p xc6slx16-ftg256-2 TopPCIHostMot2.ngc TopPCIHostMot2.ngd  
+map -intstyle ise -p xc6slx16-ftg256-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr b -lc off -power off -o TopPCIHostMot2_map.ncd TopPCIHostMot2.ngd TopPCIHostMot2.pcf 
+par -w -intstyle ise -ol high -mt off TopPCIHostMot2_map.ncd TopPCIHostMot2.ncd TopPCIHostMot2.pcf 
+trce -intstyle ise -v 10 -s 2 -n 3 -fastpaths -xml TopPCIHostMot2.twx TopPCIHostMot2.ncd -o TopPCIHostMot2.twr TopPCIHostMot2.pcf -ucf 5i24.ucf 
+bitgen -intstyle ise -f TopPCIHostMot2.ut TopPCIHostMot2.ncd 
+xst -intstyle ise -ifn "/home/ise/linuxCNC/TopPCIHostMot2.xst" -ofn "/home/ise/linuxCNC/TopPCIHostMot2.syr" 
+ngdbuild -intstyle ise -dd _ngo -aut -nt timestamp -uc 5i24.ucf -p xc6slx25-ftg256-2 TopPCIHostMot2.ngc TopPCIHostMot2.ngd  
+map -intstyle ise -p xc6slx25-ftg256-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr b -lc off -power off -o TopPCIHostMot2_map.ncd TopPCIHostMot2.ngd TopPCIHostMot2.pcf 
+par -w -intstyle ise -ol high -mt off TopPCIHostMot2_map.ncd TopPCIHostMot2.ncd TopPCIHostMot2.pcf 
+trce -intstyle ise -v 10 -s 2 -n 3 -fastpaths -xml TopPCIHostMot2.twx TopPCIHostMot2.ncd -o TopPCIHostMot2.twr TopPCIHostMot2.pcf -ucf 5i24.ucf 
+bitgen -intstyle ise -f TopPCIHostMot2.ut TopPCIHostMot2.ncd 
+xst -intstyle ise -ifn "/home/ise/linuxCNC/TopPCIHostMot2.xst" -ofn "/home/ise/linuxCNC/TopPCIHostMot2.syr" 
+ngdbuild -intstyle ise -dd _ngo -aut -nt timestamp -uc 5i24.ucf -p xc6slx25-ftg256-2 TopPCIHostMot2.ngc TopPCIHostMot2.ngd  
+map -intstyle ise -p xc6slx25-ftg256-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr b -lc off -power off -o TopPCIHostMot2_map.ncd TopPCIHostMot2.ngd TopPCIHostMot2.pcf 
+par -w -intstyle ise -ol high -mt off TopPCIHostMot2_map.ncd TopPCIHostMot2.ncd TopPCIHostMot2.pcf 
+trce -intstyle ise -v 10 -s 2 -n 3 -fastpaths -xml TopPCIHostMot2.twx TopPCIHostMot2.ncd -o TopPCIHostMot2.twr TopPCIHostMot2.pcf -ucf 5i24.ucf 
+bitgen -intstyle ise -f TopPCIHostMot2.ut TopPCIHostMot2.ncd 
+xst -intstyle ise -ifn "/home/ise/linuxCNC/TopPCIHostMot2.xst" -ofn "/home/ise/linuxCNC/TopPCIHostMot2.syr" 
+ngdbuild -intstyle ise -dd _ngo -aut -nt timestamp -uc 5i24.ucf -p xc6slx25-ftg256-2 TopPCIHostMot2.ngc TopPCIHostMot2.ngd  
+map -intstyle ise -p xc6slx25-ftg256-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr b -lc off -power off -o TopPCIHostMot2_map.ncd TopPCIHostMot2.ngd TopPCIHostMot2.pcf 
+par -w -intstyle ise -ol high -mt off TopPCIHostMot2_map.ncd TopPCIHostMot2.ncd TopPCIHostMot2.pcf 
+bitgen -intstyle ise -f TopPCIHostMot2.ut TopPCIHostMot2.ncd 
+xst -intstyle ise -ifn "/home/ise/linuxCNC/TopPCIHostMot2.xst" -ofn "/home/ise/linuxCNC/TopPCIHostMot2.syr" 
+ngdbuild -intstyle ise -dd _ngo -aut -nt timestamp -uc 5i24.ucf -p xc6slx25-ftg256-2 TopPCIHostMot2.ngc TopPCIHostMot2.ngd  
+map -intstyle ise -p xc6slx25-ftg256-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr b -lc off -power off -o TopPCIHostMot2_map.ncd TopPCIHostMot2.ngd TopPCIHostMot2.pcf 
+par -w -intstyle ise -ol high -mt off TopPCIHostMot2_map.ncd TopPCIHostMot2.ncd TopPCIHostMot2.pcf 
+trce -intstyle ise -v 10 -s 2 -n 3 -fastpaths -xml TopPCIHostMot2.twx TopPCIHostMot2.ncd -o TopPCIHostMot2.twr TopPCIHostMot2.pcf -ucf 5i24.ucf 
+bitgen -intstyle ise -f TopPCIHostMot2.ut TopPCIHostMot2.ncd 
+xst -intstyle ise -ifn "/home/ise/linuxCNC/TopPCIHostMot2.xst" -ofn "/home/ise/linuxCNC/TopPCIHostMot2.syr" 
+ngdbuild -intstyle ise -dd _ngo -aut -nt timestamp -uc 5i24.ucf -p xc6slx25-ftg256-2 TopPCIHostMot2.ngc TopPCIHostMot2.ngd  
+map -intstyle ise -p xc6slx25-ftg256-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr b -lc off -power off -o TopPCIHostMot2_map.ncd TopPCIHostMot2.ngd TopPCIHostMot2.pcf 
+par -w -intstyle ise -ol high -mt off TopPCIHostMot2_map.ncd TopPCIHostMot2.ncd TopPCIHostMot2.pcf 
+bitgen -intstyle ise -f TopPCIHostMot2.ut TopPCIHostMot2.ncd 
+xst -intstyle ise -ifn "/home/ise/linuxCNC/TopPCIHostMot2.xst" -ofn "/home/ise/linuxCNC/TopPCIHostMot2.syr" 
+ngdbuild -intstyle ise -dd _ngo -aut -nt timestamp -uc 5i24.ucf -p xc6slx25-ftg256-2 TopPCIHostMot2.ngc TopPCIHostMot2.ngd  
+map -intstyle ise -p xc6slx25-ftg256-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr b -lc off -power off -o TopPCIHostMot2_map.ncd TopPCIHostMot2.ngd TopPCIHostMot2.pcf 
+par -w -intstyle ise -ol high -mt off TopPCIHostMot2_map.ncd TopPCIHostMot2.ncd TopPCIHostMot2.pcf 
+bitgen -intstyle ise -f TopPCIHostMot2.ut TopPCIHostMot2.ncd 
+xst -intstyle ise -ifn "/home/ise/linuxCNC/TopPCIHostMot2.xst" -ofn "/home/ise/linuxCNC/TopPCIHostMot2.syr" 
+ngdbuild -intstyle ise -dd _ngo -aut -nt timestamp -uc 5i24.ucf -p xc6slx25-ftg256-2 TopPCIHostMot2.ngc TopPCIHostMot2.ngd  
+map -intstyle ise -p xc6slx25-ftg256-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr b -lc off -power off -o TopPCIHostMot2_map.ncd TopPCIHostMot2.ngd TopPCIHostMot2.pcf 
+par -w -intstyle ise -ol high -mt off TopPCIHostMot2_map.ncd TopPCIHostMot2.ncd TopPCIHostMot2.pcf 
+trce -intstyle ise -v 10 -s 2 -n 3 -fastpaths -xml TopPCIHostMot2.twx TopPCIHostMot2.ncd -o TopPCIHostMot2.twr TopPCIHostMot2.pcf -ucf 5i24.ucf 
+bitgen -intstyle ise -f TopPCIHostMot2.ut TopPCIHostMot2.ncd 
+xst -intstyle ise -ifn "/home/ise/linuxCNC/TopPCIHostMot2.xst" -ofn "/home/ise/linuxCNC/TopPCIHostMot2.syr" 
+xst -intstyle ise -ifn "/home/ise/linuxCNC/TopPCIHostMot2.xst" -ofn "/home/ise/linuxCNC/TopPCIHostMot2.syr" 
+ngdbuild -intstyle ise -dd _ngo -aut -nt timestamp -uc 5i24.ucf -p xc6slx25-ftg256-2 TopPCIHostMot2.ngc TopPCIHostMot2.ngd  
+map -intstyle ise -p xc6slx25-ftg256-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr b -lc off -power off -o TopPCIHostMot2_map.ncd TopPCIHostMot2.ngd TopPCIHostMot2.pcf 
+par -w -intstyle ise -ol high -mt off TopPCIHostMot2_map.ncd TopPCIHostMot2.ncd TopPCIHostMot2.pcf 
+bitgen -intstyle ise -f TopPCIHostMot2.ut TopPCIHostMot2.ncd 
+xst -intstyle ise -ifn "/home/ise/linuxCNC/TopPCIHostMot2.xst" -ofn "/home/ise/linuxCNC/TopPCIHostMot2.syr" 
+ngdbuild -intstyle ise -dd _ngo -aut -nt timestamp -uc 5i24.ucf -p xc6slx25-ftg256-2 TopPCIHostMot2.ngc TopPCIHostMot2.ngd  
+map -intstyle ise -p xc6slx25-ftg256-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr b -lc off -power off -o TopPCIHostMot2_map.ncd TopPCIHostMot2.ngd TopPCIHostMot2.pcf 
+par -w -intstyle ise -ol high -mt off TopPCIHostMot2_map.ncd TopPCIHostMot2.ncd TopPCIHostMot2.pcf 
+bitgen -intstyle ise -f TopPCIHostMot2.ut TopPCIHostMot2.ncd 
+xst -intstyle ise -ifn "/home/ise/linuxCNC/TopPCIHostMot2.xst" -ofn "/home/ise/linuxCNC/TopPCIHostMot2.syr" 
+ngdbuild -intstyle ise -dd _ngo -aut -nt timestamp -uc 5i24.ucf -p xc6slx25-ftg256-2 TopPCIHostMot2.ngc TopPCIHostMot2.ngd  
+map -intstyle ise -p xc6slx25-ftg256-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr b -lc off -power off -o TopPCIHostMot2_map.ncd TopPCIHostMot2.ngd TopPCIHostMot2.pcf 
+par -w -intstyle ise -ol high -mt off TopPCIHostMot2_map.ncd TopPCIHostMot2.ncd TopPCIHostMot2.pcf 
+trce -intstyle ise -v 10 -s 2 -n 3 -fastpaths -xml TopPCIHostMot2.twx TopPCIHostMot2.ncd -o TopPCIHostMot2.twr TopPCIHostMot2.pcf -ucf 5i24.ucf 
+xst -intstyle ise -ifn "/home/ise/linuxCNC/TopPCIHostMot2.xst" -ofn "/home/ise/linuxCNC/TopPCIHostMot2.syr" 
+xst -intstyle ise -ifn "/home/ise/linuxCNC/TopPCIHostMot2.xst" -ofn "/home/ise/linuxCNC/TopPCIHostMot2.syr" 
+xst -intstyle ise -ifn "/home/ise/linuxCNC/TopPCIHostMot2.xst" -ofn "/home/ise/linuxCNC/TopPCIHostMot2.syr" 
+xst -intstyle ise -ifn "/home/ise/linuxCNC/TopPCIHostMot2.xst" -ofn "/home/ise/linuxCNC/TopPCIHostMot2.syr" 
+xst -intstyle ise -ifn "/home/ise/linuxCNC/TopPCIHostMot2.xst" -ofn "/home/ise/linuxCNC/TopPCIHostMot2.syr" 
+xst -intstyle ise -ifn "/home/ise/linuxCNC/TopPCIHostMot2.xst" -ofn "/home/ise/linuxCNC/TopPCIHostMot2.syr" 
+ngdbuild -intstyle ise -dd _ngo -aut -nt timestamp -uc 5i24.ucf -p xc6slx25-ftg256-2 TopPCIHostMot2.ngc TopPCIHostMot2.ngd  
+map -intstyle ise -p xc6slx25-ftg256-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr b -lc off -power off -o TopPCIHostMot2_map.ncd TopPCIHostMot2.ngd TopPCIHostMot2.pcf 
+par -w -intstyle ise -ol high -mt off TopPCIHostMot2_map.ncd TopPCIHostMot2.ncd TopPCIHostMot2.pcf 
+xst -intstyle ise -ifn "/home/ise/linuxCNC/TopPCIHostMot2.xst" -ofn "/home/ise/linuxCNC/TopPCIHostMot2.syr" 
+ngdbuild -intstyle ise -dd _ngo -aut -nt timestamp -uc 5i24.ucf -p xc6slx25-ftg256-2 TopPCIHostMot2.ngc TopPCIHostMot2.ngd  
+map -intstyle ise -p xc6slx25-ftg256-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr b -lc off -power off -o TopPCIHostMot2_map.ncd TopPCIHostMot2.ngd TopPCIHostMot2.pcf 
+par -w -intstyle ise -ol high -mt off TopPCIHostMot2_map.ncd TopPCIHostMot2.ncd TopPCIHostMot2.pcf 
+trce -intstyle ise -v 10 -s 2 -n 3 -fastpaths -xml TopPCIHostMot2.twx TopPCIHostMot2.ncd -o TopPCIHostMot2.twr TopPCIHostMot2.pcf -ucf 5i24.ucf 
+bitgen -intstyle ise -f TopPCIHostMot2.ut TopPCIHostMot2.ncd 
+xst -intstyle ise -ifn "/home/ise/linuxCNC/TopPCIHostMot2.xst" -ofn "/home/ise/linuxCNC/TopPCIHostMot2.syr" 
+xst -intstyle ise -ifn "/home/ise/linuxCNC/TopPCIHostMot2.xst" -ofn "/home/ise/linuxCNC/TopPCIHostMot2.syr" 
+xst -intstyle ise -ifn "/home/ise/linuxCNC/TopPCIHostMot2.xst" -ofn "/home/ise/linuxCNC/TopPCIHostMot2.syr" 
+ngdbuild -intstyle ise -dd _ngo -aut -nt timestamp -uc 5i24.ucf -p xc6slx25-ftg256-2 TopPCIHostMot2.ngc TopPCIHostMot2.ngd  
+map -intstyle ise -p xc6slx25-ftg256-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr b -lc off -power off -o TopPCIHostMot2_map.ncd TopPCIHostMot2.ngd TopPCIHostMot2.pcf 
+par -w -intstyle ise -ol high -mt off TopPCIHostMot2_map.ncd TopPCIHostMot2.ncd TopPCIHostMot2.pcf 
+trce -intstyle ise -v 10 -s 2 -n 3 -fastpaths -xml TopPCIHostMot2.twx TopPCIHostMot2.ncd -o TopPCIHostMot2.twr TopPCIHostMot2.pcf -ucf 5i24.ucf 
+bitgen -intstyle ise -f TopPCIHostMot2.ut TopPCIHostMot2.ncd 
+xst -intstyle ise -ifn "/home/ise/linuxCNC/TopPCIHostMot2.xst" -ofn "/home/ise/linuxCNC/TopPCIHostMot2.syr" 
+ngdbuild -intstyle ise -dd _ngo -aut -nt timestamp -uc 5i24.ucf -p xc6slx25-ftg256-2 TopPCIHostMot2.ngc TopPCIHostMot2.ngd  
+xst -intstyle ise -ifn "/home/ise/linuxCNC/TopPCIHostMot2.xst" -ofn "/home/ise/linuxCNC/TopPCIHostMot2.syr" 
+ngdbuild -intstyle ise -dd _ngo -aut -nt timestamp -uc 5i24.ucf -p xc6slx25-ftg256-2 TopPCIHostMot2.ngc TopPCIHostMot2.ngd  
+map -intstyle ise -p xc6slx25-ftg256-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr b -lc off -power off -o TopPCIHostMot2_map.ncd TopPCIHostMot2.ngd TopPCIHostMot2.pcf 
+par -w -intstyle ise -ol high -mt off TopPCIHostMot2_map.ncd TopPCIHostMot2.ncd TopPCIHostMot2.pcf 
+xst -intstyle ise -ifn "/home/ise/linuxCNC/TopPCIHostMot2.xst" -ofn "/home/ise/linuxCNC/TopPCIHostMot2.syr" 
+xst -intstyle ise -ifn "/home/ise/linuxCNC/TopPCIHostMot2.xst" -ofn "/home/ise/linuxCNC/TopPCIHostMot2.syr" 
+ngdbuild -intstyle ise -dd _ngo -aut -nt timestamp -uc 5i24.ucf -p xc6slx25-ftg256-2 TopPCIHostMot2.ngc TopPCIHostMot2.ngd  
+map -intstyle ise -p xc6slx25-ftg256-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr b -lc off -power off -o TopPCIHostMot2_map.ncd TopPCIHostMot2.ngd TopPCIHostMot2.pcf 
+par -w -intstyle ise -ol high -mt off TopPCIHostMot2_map.ncd TopPCIHostMot2.ncd TopPCIHostMot2.pcf 
+trce -intstyle ise -v 10 -s 2 -n 3 -fastpaths -xml TopPCIHostMot2.twx TopPCIHostMot2.ncd -o TopPCIHostMot2.twr TopPCIHostMot2.pcf -ucf 5i24.ucf 
+bitgen -intstyle ise -f TopPCIHostMot2.ut TopPCIHostMot2.ncd 
+bitgen -intstyle ise -f TopPCIHostMot2.ut TopPCIHostMot2.ncd 
+xst -intstyle ise -ifn "/home/ise/linuxCNC/TopPCIHostMot2.xst" -ofn "/home/ise/linuxCNC/TopPCIHostMot2.syr" 
+xst -intstyle ise -ifn "/home/ise/linuxCNC/TopPCIHostMot2.xst" -ofn "/home/ise/linuxCNC/TopPCIHostMot2.syr" 
+ngdbuild -intstyle ise -dd _ngo -aut -nt timestamp -uc 5i24.ucf -p xc6slx25-ftg256-2 TopPCIHostMot2.ngc TopPCIHostMot2.ngd  
+map -intstyle ise -p xc6slx25-ftg256-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr b -lc off -power off -o TopPCIHostMot2_map.ncd TopPCIHostMot2.ngd TopPCIHostMot2.pcf 
+par -w -intstyle ise -ol high -mt off TopPCIHostMot2_map.ncd TopPCIHostMot2.ncd TopPCIHostMot2.pcf 
+trce -intstyle ise -v 10 -s 2 -n 3 -fastpaths -xml TopPCIHostMot2.twx TopPCIHostMot2.ncd -o TopPCIHostMot2.twr TopPCIHostMot2.pcf -ucf 5i24.ucf 
+bitgen -intstyle ise -f TopPCIHostMot2.ut TopPCIHostMot2.ncd 
+xst -intstyle ise -ifn "/home/ise/linuxCNC/TopPCIHostMot2.xst" -ofn "/home/ise/linuxCNC/TopPCIHostMot2.syr" 
+xst -intstyle ise -ifn "/home/ise/linuxCNC/TopPCIHostMot2.xst" -ofn "/home/ise/linuxCNC/TopPCIHostMot2.syr" 
+ngdbuild -intstyle ise -dd _ngo -aut -nt timestamp -uc 5i24.ucf -p xc6slx25-ftg256-2 TopPCIHostMot2.ngc TopPCIHostMot2.ngd  
+map -intstyle ise -p xc6slx25-ftg256-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr b -lc off -power off -o TopPCIHostMot2_map.ncd TopPCIHostMot2.ngd TopPCIHostMot2.pcf 
+par -w -intstyle ise -ol high -mt off TopPCIHostMot2_map.ncd TopPCIHostMot2.ncd TopPCIHostMot2.pcf 
+bitgen -intstyle ise -f TopPCIHostMot2.ut TopPCIHostMot2.ncd 
+xst -intstyle ise -ifn "/home/ise/linuxCNC/TopPCIHostMot2.xst" -ofn "/home/ise/linuxCNC/TopPCIHostMot2.syr" 
+xst -intstyle ise -ifn "/home/ise/linuxCNC/TopPCIHostMot2.xst" -ofn "/home/ise/linuxCNC/TopPCIHostMot2.syr" 
+xst -intstyle ise -ifn "/home/ise/linuxCNC/TopPCIHostMot2.xst" -ofn "/home/ise/linuxCNC/TopPCIHostMot2.syr" 
+ngdbuild -intstyle ise -dd _ngo -aut -nt timestamp -uc 5i24.ucf -p xc6slx25-ftg256-2 TopPCIHostMot2.ngc TopPCIHostMot2.ngd  
+map -intstyle ise -p xc6slx25-ftg256-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr b -lc off -power off -o TopPCIHostMot2_map.ncd TopPCIHostMot2.ngd TopPCIHostMot2.pcf 
+par -w -intstyle ise -ol high -mt off TopPCIHostMot2_map.ncd TopPCIHostMot2.ncd TopPCIHostMot2.pcf 
+trce -intstyle ise -v 10 -s 2 -n 3 -fastpaths -xml TopPCIHostMot2.twx TopPCIHostMot2.ncd -o TopPCIHostMot2.twr TopPCIHostMot2.pcf -ucf 5i24.ucf 
+bitgen -intstyle ise -f TopPCIHostMot2.ut TopPCIHostMot2.ncd 
+xst -intstyle ise -ifn "/home/ise/linuxCNC/TopPCIHostMot2.xst" -ofn "/home/ise/linuxCNC/TopPCIHostMot2.syr" 
+ngdbuild -intstyle ise -dd _ngo -aut -nt timestamp -uc 5i24.ucf -p xc6slx25-ftg256-2 TopPCIHostMot2.ngc TopPCIHostMot2.ngd  
+map -intstyle ise -p xc6slx25-ftg256-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr b -lc off -power off -o TopPCIHostMot2_map.ncd TopPCIHostMot2.ngd TopPCIHostMot2.pcf 
+par -w -intstyle ise -ol high -mt off TopPCIHostMot2_map.ncd TopPCIHostMot2.ncd TopPCIHostMot2.pcf 
+bitgen -intstyle ise -f TopPCIHostMot2.ut TopPCIHostMot2.ncd 
+xst -intstyle ise -ifn "/home/ise/linuxCNC/TopPCIHostMot2.xst" -ofn "/home/ise/linuxCNC/TopPCIHostMot2.syr" 
+ngdbuild -intstyle ise -dd _ngo -aut -nt timestamp -uc 5i24.ucf -p xc6slx25-ftg256-2 TopPCIHostMot2.ngc TopPCIHostMot2.ngd  
+map -intstyle ise -p xc6slx25-ftg256-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr b -lc off -power off -o TopPCIHostMot2_map.ncd TopPCIHostMot2.ngd TopPCIHostMot2.pcf 
+par -w -intstyle ise -ol high -mt off TopPCIHostMot2_map.ncd TopPCIHostMot2.ncd TopPCIHostMot2.pcf 
+bitgen -intstyle ise -f TopPCIHostMot2.ut TopPCIHostMot2.ncd 
+xst -intstyle ise -ifn "/home/ise/linuxCNC/TopPCIHostMot2.xst" -ofn "/home/ise/linuxCNC/TopPCIHostMot2.syr" 
+ngdbuild -intstyle ise -dd _ngo -aut -nt timestamp -uc 5i24.ucf -p xc6slx25-ftg256-2 TopPCIHostMot2.ngc TopPCIHostMot2.ngd  
+map -intstyle ise -p xc6slx25-ftg256-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr b -lc off -power off -o TopPCIHostMot2_map.ncd TopPCIHostMot2.ngd TopPCIHostMot2.pcf 
+par -w -intstyle ise -ol high -mt off TopPCIHostMot2_map.ncd TopPCIHostMot2.ncd TopPCIHostMot2.pcf 
+bitgen -intstyle ise -f TopPCIHostMot2.ut TopPCIHostMot2.ncd 
+xst -intstyle ise -ifn "/home/ise/linuxCNC/TopPCIHostMot2.xst" -ofn "/home/ise/linuxCNC/TopPCIHostMot2.syr" 
+ngdbuild -intstyle ise -dd _ngo -aut -nt timestamp -uc 5i24.ucf -p xc6slx25-ftg256-2 TopPCIHostMot2.ngc TopPCIHostMot2.ngd  
+map -intstyle ise -p xc6slx25-ftg256-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr b -lc off -power off -o TopPCIHostMot2_map.ncd TopPCIHostMot2.ngd TopPCIHostMot2.pcf 
+par -w -intstyle ise -ol high -mt off TopPCIHostMot2_map.ncd TopPCIHostMot2.ncd TopPCIHostMot2.pcf 
+bitgen -intstyle ise -f TopPCIHostMot2.ut TopPCIHostMot2.ncd 
+xst -intstyle ise -ifn "/home/ise/linuxCNC/TopPCIHostMot2.xst" -ofn "/home/ise/linuxCNC/TopPCIHostMot2.syr" 
+xst -intstyle ise -ifn "/home/ise/linuxCNC/TopPCIHostMot2.xst" -ofn "/home/ise/linuxCNC/TopPCIHostMot2.syr" 
+xst -intstyle ise -ifn "/home/ise/linuxCNC/TopPCIHostMot2.xst" -ofn "/home/ise/linuxCNC/TopPCIHostMot2.syr" 
+xst -intstyle ise -ifn "/home/ise/linuxCNC/TopPCIHostMot2.xst" -ofn "/home/ise/linuxCNC/TopPCIHostMot2.syr" 
+xst -intstyle ise -ifn "/home/ise/linuxCNC/TopPCIHostMot2.xst" -ofn "/home/ise/linuxCNC/TopPCIHostMot2.syr" 
+xst -intstyle ise -ifn "/home/ise/linuxCNC/TopPCIHostMot2.xst" -ofn "/home/ise/linuxCNC/TopPCIHostMot2.syr" 
+xst -intstyle ise -ifn "/home/ise/linuxCNC/TopPCIHostMot2.xst" -ofn "/home/ise/linuxCNC/TopPCIHostMot2.syr" 
+ngdbuild -intstyle ise -dd _ngo -aut -nt timestamp -uc 5i24.ucf -p xc6slx25-ftg256-2 TopPCIHostMot2.ngc TopPCIHostMot2.ngd  
+map -intstyle ise -p xc6slx25-ftg256-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr b -lc off -power off -o TopPCIHostMot2_map.ncd TopPCIHostMot2.ngd TopPCIHostMot2.pcf 
+par -w -intstyle ise -ol high -mt off TopPCIHostMot2_map.ncd TopPCIHostMot2.ncd TopPCIHostMot2.pcf 
+bitgen -intstyle ise -f TopPCIHostMot2.ut TopPCIHostMot2.ncd 
+xst -intstyle ise -ifn "/home/ise/linuxCNC/TopPCIHostMot2.xst" -ofn "/home/ise/linuxCNC/TopPCIHostMot2.syr" 
+ngdbuild -intstyle ise -dd _ngo -aut -nt timestamp -uc 5i24.ucf -p xc6slx25-ftg256-2 TopPCIHostMot2.ngc TopPCIHostMot2.ngd  
+map -intstyle ise -p xc6slx25-ftg256-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr b -lc off -power off -o TopPCIHostMot2_map.ncd TopPCIHostMot2.ngd TopPCIHostMot2.pcf 
+par -w -intstyle ise -ol high -mt off TopPCIHostMot2_map.ncd TopPCIHostMot2.ncd TopPCIHostMot2.pcf 
+bitgen -intstyle ise -f TopPCIHostMot2.ut TopPCIHostMot2.ncd 
+xst -intstyle ise -ifn "/home/ise/linuxCNC/TopPCIHostMot2.xst" -ofn "/home/ise/linuxCNC/TopPCIHostMot2.syr" 
+ngdbuild -intstyle ise -dd _ngo -aut -nt timestamp -uc 5i24.ucf -p xc6slx25-ftg256-2 TopPCIHostMot2.ngc TopPCIHostMot2.ngd  
+map -intstyle ise -p xc6slx25-ftg256-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr b -lc off -power off -o TopPCIHostMot2_map.ncd TopPCIHostMot2.ngd TopPCIHostMot2.pcf 
+par -w -intstyle ise -ol high -mt off TopPCIHostMot2_map.ncd TopPCIHostMot2.ncd TopPCIHostMot2.pcf 
+bitgen -intstyle ise -f TopPCIHostMot2.ut TopPCIHostMot2.ncd 
+xst -intstyle ise -ifn "/home/ise/linuxCNC/TopPCIHostMot2.xst" -ofn "/home/ise/linuxCNC/TopPCIHostMot2.syr" 
+ngdbuild -intstyle ise -dd _ngo -aut -nt timestamp -uc 5i24.ucf -p xc6slx25-ftg256-2 TopPCIHostMot2.ngc TopPCIHostMot2.ngd  
+map -intstyle ise -p xc6slx25-ftg256-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr b -lc off -power off -o TopPCIHostMot2_map.ncd TopPCIHostMot2.ngd TopPCIHostMot2.pcf 
+par -w -intstyle ise -ol high -mt off TopPCIHostMot2_map.ncd TopPCIHostMot2.ncd TopPCIHostMot2.pcf 
+bitgen -intstyle ise -f TopPCIHostMot2.ut TopPCIHostMot2.ncd 
+xst -intstyle ise -ifn "/home/ise/linuxCNC/TopPCIHostMot2.xst" -ofn "/home/ise/linuxCNC/TopPCIHostMot2.syr" 
+ngdbuild -intstyle ise -dd _ngo -aut -nt timestamp -uc 5i24.ucf -p xc6slx25-ftg256-2 TopPCIHostMot2.ngc TopPCIHostMot2.ngd  
+map -intstyle ise -p xc6slx25-ftg256-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr b -lc off -power off -o TopPCIHostMot2_map.ncd TopPCIHostMot2.ngd TopPCIHostMot2.pcf 
+par -w -intstyle ise -ol high -mt off TopPCIHostMot2_map.ncd TopPCIHostMot2.ncd TopPCIHostMot2.pcf 
+bitgen -intstyle ise -f TopPCIHostMot2.ut TopPCIHostMot2.ncd 
+xst -intstyle ise -ifn "/home/ise/linuxCNC/TopPCIHostMot2.xst" -ofn "/home/ise/linuxCNC/TopPCIHostMot2.syr" 
+ngdbuild -intstyle ise -dd _ngo -aut -nt timestamp -uc 5i24.ucf -p xc6slx25-ftg256-2 TopPCIHostMot2.ngc TopPCIHostMot2.ngd  
+map -intstyle ise -p xc6slx25-ftg256-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr b -lc off -power off -o TopPCIHostMot2_map.ncd TopPCIHostMot2.ngd TopPCIHostMot2.pcf 
+par -w -intstyle ise -ol high -mt off TopPCIHostMot2_map.ncd TopPCIHostMot2.ncd TopPCIHostMot2.pcf 
+bitgen -intstyle ise -f TopPCIHostMot2.ut TopPCIHostMot2.ncd 
+xst -intstyle ise -ifn "/home/ise/linuxCNC/TopPCIHostMot2.xst" -ofn "/home/ise/linuxCNC/TopPCIHostMot2.syr" 
+xst -intstyle ise -ifn "/home/ise/linuxCNC/TopPCIHostMot2.xst" -ofn "/home/ise/linuxCNC/TopPCIHostMot2.syr" 
+xst -intstyle ise -ifn "/home/ise/linuxCNC/TopPCIHostMot2.xst" -ofn "/home/ise/linuxCNC/TopPCIHostMot2.syr" 
+ngdbuild -intstyle ise -dd _ngo -aut -nt timestamp -uc 5i24.ucf -p xc6slx25-ftg256-2 TopPCIHostMot2.ngc TopPCIHostMot2.ngd  
+map -intstyle ise -p xc6slx25-ftg256-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr b -lc off -power off -o TopPCIHostMot2_map.ncd TopPCIHostMot2.ngd TopPCIHostMot2.pcf 
+par -w -intstyle ise -ol high -mt off TopPCIHostMot2_map.ncd TopPCIHostMot2.ncd TopPCIHostMot2.pcf 
+bitgen -intstyle ise -f TopPCIHostMot2.ut TopPCIHostMot2.ncd 
+xst -intstyle ise -ifn "/home/ise/linuxCNC/TopPCIHostMot2.xst" -ofn "/home/ise/linuxCNC/TopPCIHostMot2.syr" 
+ngdbuild -intstyle ise -dd _ngo -aut -nt timestamp -uc 5i24.ucf -p xc6slx25-ftg256-2 TopPCIHostMot2.ngc TopPCIHostMot2.ngd  
+map -intstyle ise -p xc6slx25-ftg256-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr b -lc off -power off -o TopPCIHostMot2_map.ncd TopPCIHostMot2.ngd TopPCIHostMot2.pcf 
+par -w -intstyle ise -ol high -mt off TopPCIHostMot2_map.ncd TopPCIHostMot2.ncd TopPCIHostMot2.pcf 
+bitgen -intstyle ise -f TopPCIHostMot2.ut TopPCIHostMot2.ncd 
+xst -intstyle ise -ifn "/home/ise/linuxCNC/TopPCIHostMot2.xst" -ofn "/home/ise/linuxCNC/TopPCIHostMot2.syr" 
+xst -intstyle ise -ifn "/home/ise/linuxCNC/TopPCIHostMot2.xst" -ofn "/home/ise/linuxCNC/TopPCIHostMot2.syr" 
+xst -intstyle ise -ifn "/home/ise/linuxCNC/TopPCIHostMot2.xst" -ofn "/home/ise/linuxCNC/TopPCIHostMot2.syr" 
+ngdbuild -intstyle ise -dd _ngo -aut -nt timestamp -uc 5i24.ucf -p xc6slx25-ftg256-2 TopPCIHostMot2.ngc TopPCIHostMot2.ngd  
+map -intstyle ise -p xc6slx25-ftg256-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr b -lc off -power off -o TopPCIHostMot2_map.ncd TopPCIHostMot2.ngd TopPCIHostMot2.pcf 
+par -w -intstyle ise -ol high -mt off TopPCIHostMot2_map.ncd TopPCIHostMot2.ncd TopPCIHostMot2.pcf 
+bitgen -intstyle ise -f TopPCIHostMot2.ut TopPCIHostMot2.ncd 
+xst -intstyle ise -ifn "/home/ise/linuxCNC/TopPCIHostMot2.xst" -ofn "/home/ise/linuxCNC/TopPCIHostMot2.syr" 
+ngdbuild -intstyle ise -dd _ngo -aut -nt timestamp -uc 5i24.ucf -p xc6slx25-ftg256-2 TopPCIHostMot2.ngc TopPCIHostMot2.ngd  
+xst -intstyle ise -ifn "/home/ise/linuxCNC/TopPCIHostMot2.xst" -ofn "/home/ise/linuxCNC/TopPCIHostMot2.syr" 
+ngdbuild -intstyle ise -dd _ngo -aut -nt timestamp -uc 5i24.ucf -p xc6slx25-ftg256-2 TopPCIHostMot2.ngc TopPCIHostMot2.ngd  
+map -intstyle ise -p xc6slx25-ftg256-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr b -lc off -power off -o TopPCIHostMot2_map.ncd TopPCIHostMot2.ngd TopPCIHostMot2.pcf 
+par -w -intstyle ise -ol high -mt off TopPCIHostMot2_map.ncd TopPCIHostMot2.ncd TopPCIHostMot2.pcf 
+bitgen -intstyle ise -f TopPCIHostMot2.ut TopPCIHostMot2.ncd 
+xst -intstyle ise -ifn "/home/ise/linuxCNC/TopPCIHostMot2.xst" -ofn "/home/ise/linuxCNC/TopPCIHostMot2.syr" 
+ngdbuild -intstyle ise -dd _ngo -aut -nt timestamp -uc 5i24.ucf -p xc6slx25-ftg256-2 TopPCIHostMot2.ngc TopPCIHostMot2.ngd  
+map -intstyle ise -p xc6slx25-ftg256-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr b -lc off -power off -o TopPCIHostMot2_map.ncd TopPCIHostMot2.ngd TopPCIHostMot2.pcf 
+par -w -intstyle ise -ol high -mt off TopPCIHostMot2_map.ncd TopPCIHostMot2.ncd TopPCIHostMot2.pcf 
+bitgen -intstyle ise -f TopPCIHostMot2.ut TopPCIHostMot2.ncd 
+xst -intstyle ise -ifn "/home/ise/linuxCNC/TopPCIHostMot2.xst" -ofn "/home/ise/linuxCNC/TopPCIHostMot2.syr" 
+xst -intstyle ise -ifn "/home/ise/linuxCNC/TopPCIHostMot2.xst" -ofn "/home/ise/linuxCNC/TopPCIHostMot2.syr" 
+xst -intstyle ise -ifn "/home/ise/linuxCNC/TopPCIHostMot2.xst" -ofn "/home/ise/linuxCNC/TopPCIHostMot2.syr" 
+ngdbuild -intstyle ise -dd _ngo -aut -nt timestamp -uc 5i24.ucf -p xc6slx25-ftg256-2 TopPCIHostMot2.ngc TopPCIHostMot2.ngd  
+map -intstyle ise -p xc6slx25-ftg256-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr b -lc off -power off -o TopPCIHostMot2_map.ncd TopPCIHostMot2.ngd TopPCIHostMot2.pcf 
+par -w -intstyle ise -ol high -mt off TopPCIHostMot2_map.ncd TopPCIHostMot2.ncd TopPCIHostMot2.pcf 
+bitgen -intstyle ise -f TopPCIHostMot2.ut TopPCIHostMot2.ncd 
+xst -intstyle ise -ifn "/home/ise/linuxCNC/TopPCIHostMot2.xst" -ofn "/home/ise/linuxCNC/TopPCIHostMot2.syr" 
+ngdbuild -intstyle ise -dd _ngo -aut -nt timestamp -uc 5i24.ucf -p xc6slx25-ftg256-2 TopPCIHostMot2.ngc TopPCIHostMot2.ngd  
+map -intstyle ise -p xc6slx25-ftg256-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr b -lc off -power off -o TopPCIHostMot2_map.ncd TopPCIHostMot2.ngd TopPCIHostMot2.pcf 
+par -w -intstyle ise -ol high -mt off TopPCIHostMot2_map.ncd TopPCIHostMot2.ncd TopPCIHostMot2.pcf 
+bitgen -intstyle ise -f TopPCIHostMot2.ut TopPCIHostMot2.ncd 
+xst -intstyle ise -ifn "/home/ise/linuxCNC/TopPCIHostMot2.xst" -ofn "/home/ise/linuxCNC/TopPCIHostMot2.syr" 
+ngdbuild -intstyle ise -dd _ngo -aut -nt timestamp -uc 5i24.ucf -p xc6slx25-ftg256-2 TopPCIHostMot2.ngc TopPCIHostMot2.ngd  
+map -intstyle ise -p xc6slx25-ftg256-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr b -lc off -power off -o TopPCIHostMot2_map.ncd TopPCIHostMot2.ngd TopPCIHostMot2.pcf 
+par -w -intstyle ise -ol high -mt off TopPCIHostMot2_map.ncd TopPCIHostMot2.ncd TopPCIHostMot2.pcf 
+bitgen -intstyle ise -f TopPCIHostMot2.ut TopPCIHostMot2.ncd 
+xst -intstyle ise -ifn "/home/ise/linuxCNC/TopPCIHostMot2.xst" -ofn "/home/ise/linuxCNC/TopPCIHostMot2.syr" 
+ngdbuild -intstyle ise -dd _ngo -aut -nt timestamp -uc 5i24.ucf -p xc6slx25-ftg256-2 TopPCIHostMot2.ngc TopPCIHostMot2.ngd  
+map -intstyle ise -p xc6slx25-ftg256-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr b -lc off -power off -o TopPCIHostMot2_map.ncd TopPCIHostMot2.ngd TopPCIHostMot2.pcf 
+par -w -intstyle ise -ol high -mt off TopPCIHostMot2_map.ncd TopPCIHostMot2.ncd TopPCIHostMot2.pcf 
+bitgen -intstyle ise -f TopPCIHostMot2.ut TopPCIHostMot2.ncd 
+xst -intstyle ise -ifn "/home/ise/linuxCNC/TopPCIHostMot2.xst" -ofn "/home/ise/linuxCNC/TopPCIHostMot2.syr" 
+ngdbuild -intstyle ise -dd _ngo -aut -nt timestamp -uc 5i24.ucf -p xc6slx25-ftg256-2 TopPCIHostMot2.ngc TopPCIHostMot2.ngd  
+map -intstyle ise -p xc6slx25-ftg256-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr b -lc off -power off -o TopPCIHostMot2_map.ncd TopPCIHostMot2.ngd TopPCIHostMot2.pcf 
+par -w -intstyle ise -ol high -mt off TopPCIHostMot2_map.ncd TopPCIHostMot2.ncd TopPCIHostMot2.pcf 
+bitgen -intstyle ise -f TopPCIHostMot2.ut TopPCIHostMot2.ncd 
+xst -intstyle ise -ifn "/home/ise/linuxCNC/TopPCIHostMot2.xst" -ofn "/home/ise/linuxCNC/TopPCIHostMot2.syr" 
+xst -intstyle ise -ifn "/home/ise/linuxCNC/TopPCIHostMot2.xst" -ofn "/home/ise/linuxCNC/TopPCIHostMot2.syr" 
+ngdbuild -intstyle ise -dd _ngo -aut -nt timestamp -uc 5i24.ucf -p xc6slx25-ftg256-2 TopPCIHostMot2.ngc TopPCIHostMot2.ngd  
+map -intstyle ise -p xc6slx25-ftg256-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr b -lc off -power off -o TopPCIHostMot2_map.ncd TopPCIHostMot2.ngd TopPCIHostMot2.pcf 
+par -w -intstyle ise -ol high -mt off TopPCIHostMot2_map.ncd TopPCIHostMot2.ncd TopPCIHostMot2.pcf 
+bitgen -intstyle ise -f TopPCIHostMot2.ut TopPCIHostMot2.ncd 
+xst -intstyle ise -ifn "/home/ise/linuxCNC/TopPCIHostMot2.xst" -ofn "/home/ise/linuxCNC/TopPCIHostMot2.syr" 
+ngdbuild -intstyle ise -dd _ngo -aut -nt timestamp -uc 5i24.ucf -p xc6slx25-ftg256-2 TopPCIHostMot2.ngc TopPCIHostMot2.ngd  
+map -intstyle ise -p xc6slx25-ftg256-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr b -lc off -power off -o TopPCIHostMot2_map.ncd TopPCIHostMot2.ngd TopPCIHostMot2.pcf 
+par -w -intstyle ise -ol high -mt off TopPCIHostMot2_map.ncd TopPCIHostMot2.ncd TopPCIHostMot2.pcf 
+bitgen -intstyle ise -f TopPCIHostMot2.ut TopPCIHostMot2.ncd 
+xst -intstyle ise -ifn "/home/ise/linuxCNC/TopPCIHostMot2.xst" -ofn "/home/ise/linuxCNC/TopPCIHostMot2.syr" 
+ngdbuild -intstyle ise -dd _ngo -aut -nt timestamp -uc 5i24.ucf -p xc6slx25-ftg256-2 TopPCIHostMot2.ngc TopPCIHostMot2.ngd  
+map -intstyle ise -p xc6slx25-ftg256-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr b -lc off -power off -o TopPCIHostMot2_map.ncd TopPCIHostMot2.ngd TopPCIHostMot2.pcf 
+par -w -intstyle ise -ol high -mt off TopPCIHostMot2_map.ncd TopPCIHostMot2.ncd TopPCIHostMot2.pcf 
+bitgen -intstyle ise -f TopPCIHostMot2.ut TopPCIHostMot2.ncd 
+xst -intstyle ise -ifn "/home/ise/linuxCNC/TopPCIHostMot2.xst" -ofn "/home/ise/linuxCNC/TopPCIHostMot2.syr" 
+ngdbuild -intstyle ise -dd _ngo -aut -nt timestamp -uc 5i24.ucf -p xc6slx25-ftg256-2 TopPCIHostMot2.ngc TopPCIHostMot2.ngd  
+map -intstyle ise -p xc6slx25-ftg256-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr b -lc off -power off -o TopPCIHostMot2_map.ncd TopPCIHostMot2.ngd TopPCIHostMot2.pcf 
+par -w -intstyle ise -ol high -mt off TopPCIHostMot2_map.ncd TopPCIHostMot2.ncd TopPCIHostMot2.pcf 
+bitgen -intstyle ise -f TopPCIHostMot2.ut TopPCIHostMot2.ncd 
+xst -intstyle ise -ifn "/home/ise/linuxCNC/TopPCIHostMot2.xst" -ofn "/home/ise/linuxCNC/TopPCIHostMot2.syr" 
+ngdbuild -intstyle ise -dd _ngo -aut -nt timestamp -uc 5i24.ucf -p xc6slx25-ftg256-2 TopPCIHostMot2.ngc TopPCIHostMot2.ngd  
+map -intstyle ise -p xc6slx25-ftg256-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr b -lc off -power off -o TopPCIHostMot2_map.ncd TopPCIHostMot2.ngd TopPCIHostMot2.pcf 
+par -w -intstyle ise -ol high -mt off TopPCIHostMot2_map.ncd TopPCIHostMot2.ncd TopPCIHostMot2.pcf 
+xst -intstyle ise -ifn "/home/ise/linuxCNC/TopPCIHostMot2.xst" -ofn "/home/ise/linuxCNC/TopPCIHostMot2.syr" 
+ngdbuild -intstyle ise -dd _ngo -aut -nt timestamp -uc 5i24.ucf -p xc6slx25-ftg256-2 TopPCIHostMot2.ngc TopPCIHostMot2.ngd  
+map -intstyle ise -p xc6slx25-ftg256-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr b -lc off -power off -o TopPCIHostMot2_map.ncd TopPCIHostMot2.ngd TopPCIHostMot2.pcf 
+par -w -intstyle ise -ol high -mt off TopPCIHostMot2_map.ncd TopPCIHostMot2.ncd TopPCIHostMot2.pcf 
+trce -intstyle ise -v 10 -s 2 -n 3 -fastpaths -xml TopPCIHostMot2.twx TopPCIHostMot2.ncd -o TopPCIHostMot2.twr TopPCIHostMot2.pcf -ucf 5i24.ucf 
+bitgen -intstyle ise -f TopPCIHostMot2.ut TopPCIHostMot2.ncd 
+xst -intstyle ise -ifn "/home/ise/linuxCNC/TopPCIHostMot2.xst" -ofn "/home/ise/linuxCNC/TopPCIHostMot2.syr" 
+ngdbuild -intstyle ise -dd _ngo -aut -nt timestamp -uc 5i24.ucf -p xc6slx25-ftg256-2 TopPCIHostMot2.ngc TopPCIHostMot2.ngd  
+map -intstyle ise -p xc6slx25-ftg256-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr b -lc off -power off -o TopPCIHostMot2_map.ncd TopPCIHostMot2.ngd TopPCIHostMot2.pcf 
+par -w -intstyle ise -ol high -mt off TopPCIHostMot2_map.ncd TopPCIHostMot2.ncd TopPCIHostMot2.pcf 
+bitgen -intstyle ise -f TopPCIHostMot2.ut TopPCIHostMot2.ncd 
+xst -intstyle ise -ifn "/home/ise/linuxCNC/TopPCIHostMot2.xst" -ofn "/home/ise/linuxCNC/TopPCIHostMot2.syr" 
+ngdbuild -intstyle ise -dd _ngo -aut -nt timestamp -uc 5i24.ucf -p xc6slx25-ftg256-2 TopPCIHostMot2.ngc TopPCIHostMot2.ngd  
+map -intstyle ise -p xc6slx25-ftg256-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr b -lc off -power off -o TopPCIHostMot2_map.ncd TopPCIHostMot2.ngd TopPCIHostMot2.pcf 
+par -w -intstyle ise -ol high -mt off TopPCIHostMot2_map.ncd TopPCIHostMot2.ncd TopPCIHostMot2.pcf 
+bitgen -intstyle ise -f TopPCIHostMot2.ut TopPCIHostMot2.ncd 
+xst -intstyle ise -ifn "/home/ise/linuxCNC/TopPCIHostMot2.xst" -ofn "/home/ise/linuxCNC/TopPCIHostMot2.syr" 
+ngdbuild -intstyle ise -dd _ngo -aut -nt timestamp -uc 5i24.ucf -p xc6slx25-ftg256-2 TopPCIHostMot2.ngc TopPCIHostMot2.ngd  
+map -intstyle ise -p xc6slx25-ftg256-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr b -lc off -power off -o TopPCIHostMot2_map.ncd TopPCIHostMot2.ngd TopPCIHostMot2.pcf 
+par -w -intstyle ise -ol high -mt off TopPCIHostMot2_map.ncd TopPCIHostMot2.ncd TopPCIHostMot2.pcf 
+bitgen -intstyle ise -f TopPCIHostMot2.ut TopPCIHostMot2.ncd 
+xst -intstyle ise -ifn "/home/ise/linuxCNC/TopPCIHostMot2.xst" -ofn "/home/ise/linuxCNC/TopPCIHostMot2.syr" 
+xst -intstyle ise -ifn "/home/ise/linuxCNC/TopPCIHostMot2.xst" -ofn "/home/ise/linuxCNC/TopPCIHostMot2.syr" 
+ngdbuild -intstyle ise -dd _ngo -aut -nt timestamp -uc 5i24.ucf -p xc6slx25-ftg256-2 TopPCIHostMot2.ngc TopPCIHostMot2.ngd  
+map -intstyle ise -p xc6slx25-ftg256-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr b -lc off -power off -o TopPCIHostMot2_map.ncd TopPCIHostMot2.ngd TopPCIHostMot2.pcf 
+par -w -intstyle ise -ol high -mt off TopPCIHostMot2_map.ncd TopPCIHostMot2.ncd TopPCIHostMot2.pcf 
+bitgen -intstyle ise -f TopPCIHostMot2.ut TopPCIHostMot2.ncd 
+xst -intstyle ise -ifn "/home/ise/linuxCNC/TopPCIHostMot2.xst" -ofn "/home/ise/linuxCNC/TopPCIHostMot2.syr" 
+ngdbuild -intstyle ise -dd _ngo -aut -nt timestamp -uc 5i24.ucf -p xc6slx25-ftg256-2 TopPCIHostMot2.ngc TopPCIHostMot2.ngd  
+map -intstyle ise -p xc6slx25-ftg256-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr b -lc off -power off -o TopPCIHostMot2_map.ncd TopPCIHostMot2.ngd TopPCIHostMot2.pcf 
+par -w -intstyle ise -ol high -mt off TopPCIHostMot2_map.ncd TopPCIHostMot2.ncd TopPCIHostMot2.pcf 
+bitgen -intstyle ise -f TopPCIHostMot2.ut TopPCIHostMot2.ncd 
+xst -intstyle ise -ifn "/home/ise/linuxCNC/TopPCIHostMot2.xst" -ofn "/home/ise/linuxCNC/TopPCIHostMot2.syr" 
+ngdbuild -intstyle ise -dd _ngo -aut -nt timestamp -uc 5i24.ucf -p xc6slx25-ftg256-2 TopPCIHostMot2.ngc TopPCIHostMot2.ngd  
+map -intstyle ise -p xc6slx25-ftg256-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr b -lc off -power off -o TopPCIHostMot2_map.ncd TopPCIHostMot2.ngd TopPCIHostMot2.pcf 
+par -w -intstyle ise -ol high -mt off TopPCIHostMot2_map.ncd TopPCIHostMot2.ncd TopPCIHostMot2.pcf 
+bitgen -intstyle ise -f TopPCIHostMot2.ut TopPCIHostMot2.ncd 
+xst -intstyle ise -ifn "/home/ise/linuxCNC/TopPCIHostMot2.xst" -ofn "/home/ise/linuxCNC/TopPCIHostMot2.syr" 
+ngdbuild -intstyle ise -dd _ngo -aut -nt timestamp -uc 5i24.ucf -p xc6slx25-ftg256-2 TopPCIHostMot2.ngc TopPCIHostMot2.ngd  
+map -intstyle ise -p xc6slx25-ftg256-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr b -lc off -power off -o TopPCIHostMot2_map.ncd TopPCIHostMot2.ngd TopPCIHostMot2.pcf 
+par -w -intstyle ise -ol high -mt off TopPCIHostMot2_map.ncd TopPCIHostMot2.ncd TopPCIHostMot2.pcf 
+bitgen -intstyle ise -f TopPCIHostMot2.ut TopPCIHostMot2.ncd 
+xst -intstyle ise -ifn "/home/ise/linuxCNC/TopPCIHostMot2.xst" -ofn "/home/ise/linuxCNC/TopPCIHostMot2.syr" 
+ngdbuild -intstyle ise -dd _ngo -aut -nt timestamp -uc 5i24.ucf -p xc6slx25-ftg256-2 TopPCIHostMot2.ngc TopPCIHostMot2.ngd  
+map -intstyle ise -p xc6slx25-ftg256-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr b -lc off -power off -o TopPCIHostMot2_map.ncd TopPCIHostMot2.ngd TopPCIHostMot2.pcf 
+par -w -intstyle ise -ol high -mt off TopPCIHostMot2_map.ncd TopPCIHostMot2.ncd TopPCIHostMot2.pcf 
+bitgen -intstyle ise -f TopPCIHostMot2.ut TopPCIHostMot2.ncd 
+xst -intstyle ise -ifn "/home/ise/linuxCNC/TopPCIHostMot2.xst" -ofn "/home/ise/linuxCNC/TopPCIHostMot2.syr" 
+ngdbuild -intstyle ise -dd _ngo -aut -nt timestamp -uc 5i24.ucf -p xc6slx25-ftg256-2 TopPCIHostMot2.ngc TopPCIHostMot2.ngd  
+map -intstyle ise -p xc6slx25-ftg256-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr b -lc off -power off -o TopPCIHostMot2_map.ncd TopPCIHostMot2.ngd TopPCIHostMot2.pcf 
+par -w -intstyle ise -ol high -mt off TopPCIHostMot2_map.ncd TopPCIHostMot2.ncd TopPCIHostMot2.pcf 
+bitgen -intstyle ise -f TopPCIHostMot2.ut TopPCIHostMot2.ncd 
+xst -intstyle ise -ifn "/home/ise/linuxCNC/TopPCIHostMot2.xst" -ofn "/home/ise/linuxCNC/TopPCIHostMot2.syr" 
+ngdbuild -intstyle ise -dd _ngo -aut -nt timestamp -uc 5i24.ucf -p xc6slx25-ftg256-2 TopPCIHostMot2.ngc TopPCIHostMot2.ngd  
+map -intstyle ise -p xc6slx25-ftg256-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr b -lc off -power off -o TopPCIHostMot2_map.ncd TopPCIHostMot2.ngd TopPCIHostMot2.pcf 
+par -w -intstyle ise -ol high -mt off TopPCIHostMot2_map.ncd TopPCIHostMot2.ncd TopPCIHostMot2.pcf 
+bitgen -intstyle ise -f TopPCIHostMot2.ut TopPCIHostMot2.ncd 
+xst -intstyle ise -ifn "/home/ise/linuxCNC/TopPCIHostMot2.xst" -ofn "/home/ise/linuxCNC/TopPCIHostMot2.syr" 
+xst -intstyle ise -ifn "/home/ise/linuxCNC/TopPCIHostMot2.xst" -ofn "/home/ise/linuxCNC/TopPCIHostMot2.syr" 
+xst -intstyle ise -ifn "/home/ise/linuxCNC/TopPCIHostMot2.xst" -ofn "/home/ise/linuxCNC/TopPCIHostMot2.syr" 
+ngdbuild -intstyle ise -dd _ngo -aut -nt timestamp -uc 5i24.ucf -p xc6slx25-ftg256-2 TopPCIHostMot2.ngc TopPCIHostMot2.ngd  
+map -intstyle ise -p xc6slx25-ftg256-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr b -lc off -power off -o TopPCIHostMot2_map.ncd TopPCIHostMot2.ngd TopPCIHostMot2.pcf 
+par -w -intstyle ise -ol high -mt off TopPCIHostMot2_map.ncd TopPCIHostMot2.ncd TopPCIHostMot2.pcf 
+bitgen -intstyle ise -f TopPCIHostMot2.ut TopPCIHostMot2.ncd 
+xst -intstyle ise -ifn "/home/ise/linuxCNC/TopPCIHostMot2.xst" -ofn "/home/ise/linuxCNC/TopPCIHostMot2.syr" 
+xst -intstyle ise -ifn "/home/ise/linuxCNC/TopPCIHostMot2.xst" -ofn "/home/ise/linuxCNC/TopPCIHostMot2.syr" 
+ngdbuild -intstyle ise -dd _ngo -aut -nt timestamp -uc 5i24.ucf -p xc6slx25-ftg256-2 TopPCIHostMot2.ngc TopPCIHostMot2.ngd  
+map -intstyle ise -p xc6slx25-ftg256-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr b -lc off -power off -o TopPCIHostMot2_map.ncd TopPCIHostMot2.ngd TopPCIHostMot2.pcf 
+par -w -intstyle ise -ol high -mt off TopPCIHostMot2_map.ncd TopPCIHostMot2.ncd TopPCIHostMot2.pcf 
+bitgen -intstyle ise -f TopPCIHostMot2.ut TopPCIHostMot2.ncd 
+xst -intstyle ise -ifn "/home/ise/linuxCNC/TopPCIHostMot2.xst" -ofn "/home/ise/linuxCNC/TopPCIHostMot2.syr" 
+ngdbuild -intstyle ise -dd _ngo -aut -nt timestamp -uc 5i24.ucf -p xc6slx25-ftg256-2 TopPCIHostMot2.ngc TopPCIHostMot2.ngd  
+map -intstyle ise -p xc6slx25-ftg256-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr b -lc off -power off -o TopPCIHostMot2_map.ncd TopPCIHostMot2.ngd TopPCIHostMot2.pcf 
+par -w -intstyle ise -ol high -mt off TopPCIHostMot2_map.ncd TopPCIHostMot2.ncd TopPCIHostMot2.pcf 
+bitgen -intstyle ise -f TopPCIHostMot2.ut TopPCIHostMot2.ncd 
+xst -intstyle ise -ifn "/home/ise/linuxCNC/TopPCIHostMot2.xst" -ofn "/home/ise/linuxCNC/TopPCIHostMot2.syr" 
+ngdbuild -intstyle ise -dd _ngo -aut -nt timestamp -uc 5i24.ucf -p xc6slx25-ftg256-2 TopPCIHostMot2.ngc TopPCIHostMot2.ngd  
+map -intstyle ise -p xc6slx25-ftg256-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr b -lc off -power off -o TopPCIHostMot2_map.ncd TopPCIHostMot2.ngd TopPCIHostMot2.pcf 
+par -w -intstyle ise -ol high -mt off TopPCIHostMot2_map.ncd TopPCIHostMot2.ncd TopPCIHostMot2.pcf 
+trce -intstyle ise -v 10 -s 2 -n 3 -fastpaths -xml TopPCIHostMot2.twx TopPCIHostMot2.ncd -o TopPCIHostMot2.twr TopPCIHostMot2.pcf -ucf 5i24.ucf 
+bitgen -intstyle ise -f TopPCIHostMot2.ut TopPCIHostMot2.ncd 
+xst -intstyle ise -ifn "/home/ise/linuxCNC/TopPCIHostMot2.xst" -ofn "/home/ise/linuxCNC/TopPCIHostMot2.syr" 
+ngdbuild -intstyle ise -dd _ngo -aut -nt timestamp -uc 5i24.ucf -p xc6slx25-ftg256-2 TopPCIHostMot2.ngc TopPCIHostMot2.ngd  
+map -intstyle ise -p xc6slx25-ftg256-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr b -lc off -power off -o TopPCIHostMot2_map.ncd TopPCIHostMot2.ngd TopPCIHostMot2.pcf 
+par -w -intstyle ise -ol high -mt off TopPCIHostMot2_map.ncd TopPCIHostMot2.ncd TopPCIHostMot2.pcf 
+bitgen -intstyle ise -f TopPCIHostMot2.ut TopPCIHostMot2.ncd 
+xst -intstyle ise -ifn "/home/ise/linuxCNC/TopPCIHostMot2.xst" -ofn "/home/ise/linuxCNC/TopPCIHostMot2.syr" 
+ngdbuild -intstyle ise -dd _ngo -aut -nt timestamp -uc 5i24.ucf -p xc6slx25-ftg256-2 TopPCIHostMot2.ngc TopPCIHostMot2.ngd  
+map -intstyle ise -p xc6slx25-ftg256-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr b -lc off -power off -o TopPCIHostMot2_map.ncd TopPCIHostMot2.ngd TopPCIHostMot2.pcf 
+par -w -intstyle ise -ol high -mt off TopPCIHostMot2_map.ncd TopPCIHostMot2.ncd TopPCIHostMot2.pcf 
+bitgen -intstyle ise -f TopPCIHostMot2.ut TopPCIHostMot2.ncd 
+xst -intstyle ise -ifn "/home/ise/linuxCNC/TopPCIHostMot2.xst" -ofn "/home/ise/linuxCNC/TopPCIHostMot2.syr" 
+ngdbuild -intstyle ise -dd _ngo -aut -nt timestamp -uc 5i24.ucf -p xc6slx25-ftg256-2 TopPCIHostMot2.ngc TopPCIHostMot2.ngd  
+map -intstyle ise -p xc6slx25-ftg256-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr b -lc off -power off -o TopPCIHostMot2_map.ncd TopPCIHostMot2.ngd TopPCIHostMot2.pcf 
+par -w -intstyle ise -ol high -mt off TopPCIHostMot2_map.ncd TopPCIHostMot2.ncd TopPCIHostMot2.pcf 
+bitgen -intstyle ise -f TopPCIHostMot2.ut TopPCIHostMot2.ncd 
+xst -intstyle ise -ifn "/home/ise/linuxCNC/TopPCIHostMot2.xst" -ofn "/home/ise/linuxCNC/TopPCIHostMot2.syr" 
+ngdbuild -intstyle ise -dd _ngo -aut -nt timestamp -uc 5i24.ucf -p xc6slx25-ftg256-2 TopPCIHostMot2.ngc TopPCIHostMot2.ngd  
+map -intstyle ise -p xc6slx25-ftg256-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr b -lc off -power off -o TopPCIHostMot2_map.ncd TopPCIHostMot2.ngd TopPCIHostMot2.pcf 
+par -w -intstyle ise -ol high -mt off TopPCIHostMot2_map.ncd TopPCIHostMot2.ncd TopPCIHostMot2.pcf 
+bitgen -intstyle ise -f TopPCIHostMot2.ut TopPCIHostMot2.ncd 
+xst -intstyle ise -ifn "/home/ise/linuxCNC/TopPCIHostMot2.xst" -ofn "/home/ise/linuxCNC/TopPCIHostMot2.syr" 
+ngdbuild -intstyle ise -dd _ngo -aut -nt timestamp -uc 5i24.ucf -p xc6slx25-ftg256-2 TopPCIHostMot2.ngc TopPCIHostMot2.ngd  
+map -intstyle ise -p xc6slx25-ftg256-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr b -lc off -power off -o TopPCIHostMot2_map.ncd TopPCIHostMot2.ngd TopPCIHostMot2.pcf 
+par -w -intstyle ise -ol high -mt off TopPCIHostMot2_map.ncd TopPCIHostMot2.ncd TopPCIHostMot2.pcf 
+bitgen -intstyle ise -f TopPCIHostMot2.ut TopPCIHostMot2.ncd 
+xst -intstyle ise -ifn "/home/ise/linuxCNC/TopPCIHostMot2.xst" -ofn "/home/ise/linuxCNC/TopPCIHostMot2.syr" 
+ngdbuild -intstyle ise -dd _ngo -aut -nt timestamp -uc 5i24.ucf -p xc6slx25-ftg256-2 TopPCIHostMot2.ngc TopPCIHostMot2.ngd  
+map -intstyle ise -p xc6slx25-ftg256-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr b -lc off -power off -o TopPCIHostMot2_map.ncd TopPCIHostMot2.ngd TopPCIHostMot2.pcf 
+par -w -intstyle ise -ol high -mt off TopPCIHostMot2_map.ncd TopPCIHostMot2.ncd TopPCIHostMot2.pcf 
+bitgen -intstyle ise -f TopPCIHostMot2.ut TopPCIHostMot2.ncd 
+xst -intstyle ise -ifn "/home/ise/linuxCNC/TopPCIHostMot2.xst" -ofn "/home/ise/linuxCNC/TopPCIHostMot2.syr" 
+xst -intstyle ise -ifn "/home/ise/linuxCNC/TopPCIHostMot2.xst" -ofn "/home/ise/linuxCNC/TopPCIHostMot2.syr" 
+ngdbuild -intstyle ise -dd _ngo -aut -nt timestamp -uc 5i24.ucf -p xc6slx25-ftg256-2 TopPCIHostMot2.ngc TopPCIHostMot2.ngd  
+map -intstyle ise -p xc6slx25-ftg256-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr b -lc off -power off -o TopPCIHostMot2_map.ncd TopPCIHostMot2.ngd TopPCIHostMot2.pcf 
+par -w -intstyle ise -ol high -mt off TopPCIHostMot2_map.ncd TopPCIHostMot2.ncd TopPCIHostMot2.pcf 
+bitgen -intstyle ise -f TopPCIHostMot2.ut TopPCIHostMot2.ncd 
+xst -intstyle ise -ifn "/home/ise/linuxCNC/TopPCIHostMot2.xst" -ofn "/home/ise/linuxCNC/TopPCIHostMot2.syr" 
+ngdbuild -intstyle ise -dd _ngo -aut -nt timestamp -uc 5i24.ucf -p xc6slx25-ftg256-2 TopPCIHostMot2.ngc TopPCIHostMot2.ngd  
+map -intstyle ise -p xc6slx25-ftg256-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr b -lc off -power off -o TopPCIHostMot2_map.ncd TopPCIHostMot2.ngd TopPCIHostMot2.pcf 
+par -w -intstyle ise -ol high -mt off TopPCIHostMot2_map.ncd TopPCIHostMot2.ncd TopPCIHostMot2.pcf 
+bitgen -intstyle ise -f TopPCIHostMot2.ut TopPCIHostMot2.ncd 
+xst -intstyle ise -ifn "/home/ise/linuxCNC/TopPCIHostMot2.xst" -ofn "/home/ise/linuxCNC/TopPCIHostMot2.syr" 
+ngdbuild -intstyle ise -dd _ngo -aut -nt timestamp -uc 5i24.ucf -p xc6slx25-ftg256-2 TopPCIHostMot2.ngc TopPCIHostMot2.ngd  
+map -intstyle ise -p xc6slx25-ftg256-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr b -lc off -power off -o TopPCIHostMot2_map.ncd TopPCIHostMot2.ngd TopPCIHostMot2.pcf 
+par -w -intstyle ise -ol high -mt off TopPCIHostMot2_map.ncd TopPCIHostMot2.ncd TopPCIHostMot2.pcf 
+bitgen -intstyle ise -f TopPCIHostMot2.ut TopPCIHostMot2.ncd 
+xst -intstyle ise -ifn "/home/ise/linuxCNC/TopPCIHostMot2.xst" -ofn "/home/ise/linuxCNC/TopPCIHostMot2.syr" 
+ngdbuild -intstyle ise -dd _ngo -aut -nt timestamp -uc 5i24.ucf -p xc6slx25-ftg256-2 TopPCIHostMot2.ngc TopPCIHostMot2.ngd  
+map -intstyle ise -p xc6slx25-ftg256-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr b -lc off -power off -o TopPCIHostMot2_map.ncd TopPCIHostMot2.ngd TopPCIHostMot2.pcf 
+par -w -intstyle ise -ol high -mt off TopPCIHostMot2_map.ncd TopPCIHostMot2.ncd TopPCIHostMot2.pcf 
+trce -intstyle ise -v 10 -s 2 -n 3 -fastpaths -xml TopPCIHostMot2.twx TopPCIHostMot2.ncd -o TopPCIHostMot2.twr TopPCIHostMot2.pcf -ucf 5i24.ucf 
+bitgen -intstyle ise -f TopPCIHostMot2.ut TopPCIHostMot2.ncd 
+xst -intstyle ise -ifn "/home/ise/linuxCNC/TopPCIHostMot2.xst" -ofn "/home/ise/linuxCNC/TopPCIHostMot2.syr" 
+ngdbuild -intstyle ise -dd _ngo -aut -nt timestamp -uc 5i24.ucf -p xc6slx25-ftg256-2 TopPCIHostMot2.ngc TopPCIHostMot2.ngd  
+map -intstyle ise -p xc6slx25-ftg256-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr b -lc off -power off -o TopPCIHostMot2_map.ncd TopPCIHostMot2.ngd TopPCIHostMot2.pcf 
+par -w -intstyle ise -ol high -mt off TopPCIHostMot2_map.ncd TopPCIHostMot2.ncd TopPCIHostMot2.pcf 
+bitgen -intstyle ise -f TopPCIHostMot2.ut TopPCIHostMot2.ncd 
+xst -intstyle ise -ifn "/home/ise/linuxCNC/TopPCIHostMot2.xst" -ofn "/home/ise/linuxCNC/TopPCIHostMot2.syr" 
+xst -intstyle ise -ifn "/home/ise/linuxCNC/TopPCIHostMot2.xst" -ofn "/home/ise/linuxCNC/TopPCIHostMot2.syr" 
+ngdbuild -intstyle ise -dd _ngo -aut -nt timestamp -uc 5i24.ucf -p xc6slx25-ftg256-2 TopPCIHostMot2.ngc TopPCIHostMot2.ngd  
+map -intstyle ise -p xc6slx25-ftg256-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr b -lc off -power off -o TopPCIHostMot2_map.ncd TopPCIHostMot2.ngd TopPCIHostMot2.pcf 
+par -w -intstyle ise -ol high -mt off TopPCIHostMot2_map.ncd TopPCIHostMot2.ncd TopPCIHostMot2.pcf 
+bitgen -intstyle ise -f TopPCIHostMot2.ut TopPCIHostMot2.ncd 
+xst -intstyle ise -ifn "/home/ise/linuxCNC/TopPCIHostMot2.xst" -ofn "/home/ise/linuxCNC/TopPCIHostMot2.syr" 
+ngdbuild -intstyle ise -dd _ngo -aut -nt timestamp -uc 5i24.ucf -p xc6slx25-ftg256-2 TopPCIHostMot2.ngc TopPCIHostMot2.ngd  
+map -intstyle ise -p xc6slx25-ftg256-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr b -lc off -power off -o TopPCIHostMot2_map.ncd TopPCIHostMot2.ngd TopPCIHostMot2.pcf 
+par -w -intstyle ise -ol high -mt off TopPCIHostMot2_map.ncd TopPCIHostMot2.ncd TopPCIHostMot2.pcf 
+bitgen -intstyle ise -f TopPCIHostMot2.ut TopPCIHostMot2.ncd 
+xst -intstyle ise -ifn "/home/ise/linuxCNC/TopPCIHostMot2.xst" -ofn "/home/ise/linuxCNC/TopPCIHostMot2.syr" 
+ngdbuild -intstyle ise -dd _ngo -aut -nt timestamp -uc 5i24.ucf -p xc6slx25-ftg256-2 TopPCIHostMot2.ngc TopPCIHostMot2.ngd  
+map -intstyle ise -p xc6slx25-ftg256-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr b -lc off -power off -o TopPCIHostMot2_map.ncd TopPCIHostMot2.ngd TopPCIHostMot2.pcf 
+par -w -intstyle ise -ol high -mt off TopPCIHostMot2_map.ncd TopPCIHostMot2.ncd TopPCIHostMot2.pcf 
+bitgen -intstyle ise -f TopPCIHostMot2.ut TopPCIHostMot2.ncd 
+xst -intstyle ise -ifn "/home/ise/linuxCNC/TopPCIHostMot2.xst" -ofn "/home/ise/linuxCNC/TopPCIHostMot2.syr" 
+ngdbuild -intstyle ise -dd _ngo -aut -nt timestamp -uc 5i24.ucf -p xc6slx25-ftg256-2 TopPCIHostMot2.ngc TopPCIHostMot2.ngd  
+map -intstyle ise -p xc6slx25-ftg256-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr b -lc off -power off -o TopPCIHostMot2_map.ncd TopPCIHostMot2.ngd TopPCIHostMot2.pcf 
+par -w -intstyle ise -ol high -mt off TopPCIHostMot2_map.ncd TopPCIHostMot2.ncd TopPCIHostMot2.pcf 
+bitgen -intstyle ise -f TopPCIHostMot2.ut TopPCIHostMot2.ncd 
+xst -intstyle ise -ifn "/home/ise/linuxCNC/TopPCIHostMot2.xst" -ofn "/home/ise/linuxCNC/TopPCIHostMot2.syr" 
+ngdbuild -intstyle ise -dd _ngo -aut -nt timestamp -uc 5i24.ucf -p xc6slx25-ftg256-2 TopPCIHostMot2.ngc TopPCIHostMot2.ngd  
+map -intstyle ise -p xc6slx25-ftg256-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr b -lc off -power off -o TopPCIHostMot2_map.ncd TopPCIHostMot2.ngd TopPCIHostMot2.pcf 
+par -w -intstyle ise -ol high -mt off TopPCIHostMot2_map.ncd TopPCIHostMot2.ncd TopPCIHostMot2.pcf 
+bitgen -intstyle ise -f TopPCIHostMot2.ut TopPCIHostMot2.ncd 
+xst -intstyle ise -ifn "/home/ise/linuxCNC/TopPCIHostMot2.xst" -ofn "/home/ise/linuxCNC/TopPCIHostMot2.syr" 
+xst -intstyle ise -ifn "/home/ise/linuxCNC/TopPCIHostMot2.xst" -ofn "/home/ise/linuxCNC/TopPCIHostMot2.syr" 
+xst -intstyle ise -ifn "/home/ise/linuxCNC/TopPCIHostMot2.xst" -ofn "/home/ise/linuxCNC/TopPCIHostMot2.syr" 
+xst -intstyle ise -ifn "/home/ise/linuxCNC/TopPCIHostMot2.xst" -ofn "/home/ise/linuxCNC/TopPCIHostMot2.syr" 
+ngdbuild -intstyle ise -dd _ngo -aut -nt timestamp -uc 5i24.ucf -p xc6slx25-ftg256-2 TopPCIHostMot2.ngc TopPCIHostMot2.ngd  
+map -intstyle ise -p xc6slx25-ftg256-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr b -lc off -power off -o TopPCIHostMot2_map.ncd TopPCIHostMot2.ngd TopPCIHostMot2.pcf 
+par -w -intstyle ise -ol high -mt off TopPCIHostMot2_map.ncd TopPCIHostMot2.ncd TopPCIHostMot2.pcf 
+bitgen -intstyle ise -f TopPCIHostMot2.ut TopPCIHostMot2.ncd 
+xst -intstyle ise -ifn "/home/ise/linuxCNC/TopPCIHostMot2.xst" -ofn "/home/ise/linuxCNC/TopPCIHostMot2.syr" 
+ngdbuild -intstyle ise -dd _ngo -aut -nt timestamp -uc 5i24.ucf -p xc6slx25-ftg256-2 TopPCIHostMot2.ngc TopPCIHostMot2.ngd  
+map -intstyle ise -p xc6slx25-ftg256-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr b -lc off -power off -o TopPCIHostMot2_map.ncd TopPCIHostMot2.ngd TopPCIHostMot2.pcf 
+par -w -intstyle ise -ol high -mt off TopPCIHostMot2_map.ncd TopPCIHostMot2.ncd TopPCIHostMot2.pcf 
+bitgen -intstyle ise -f TopPCIHostMot2.ut TopPCIHostMot2.ncd 
+xst -intstyle ise -ifn "/home/ise/linuxCNC/TopPCIHostMot2.xst" -ofn "/home/ise/linuxCNC/TopPCIHostMot2.syr" 
+ngdbuild -intstyle ise -dd _ngo -aut -nt timestamp -uc 5i24.ucf -p xc6slx25-ftg256-2 TopPCIHostMot2.ngc TopPCIHostMot2.ngd  
+map -intstyle ise -p xc6slx25-ftg256-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr b -lc off -power off -o TopPCIHostMot2_map.ncd TopPCIHostMot2.ngd TopPCIHostMot2.pcf 
+par -w -intstyle ise -ol high -mt off TopPCIHostMot2_map.ncd TopPCIHostMot2.ncd TopPCIHostMot2.pcf 
+bitgen -intstyle ise -f TopPCIHostMot2.ut TopPCIHostMot2.ncd 
+xst -intstyle ise -ifn "/home/ise/linuxCNC/TopPCIHostMot2.xst" -ofn "/home/ise/linuxCNC/TopPCIHostMot2.syr" 
+ngdbuild -intstyle ise -dd _ngo -aut -nt timestamp -uc 5i24.ucf -p xc6slx25-ftg256-2 TopPCIHostMot2.ngc TopPCIHostMot2.ngd  
+map -intstyle ise -p xc6slx25-ftg256-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr b -lc off -power off -o TopPCIHostMot2_map.ncd TopPCIHostMot2.ngd TopPCIHostMot2.pcf 
+par -w -intstyle ise -ol high -mt off TopPCIHostMot2_map.ncd TopPCIHostMot2.ncd TopPCIHostMot2.pcf 
+bitgen -intstyle ise -f TopPCIHostMot2.ut TopPCIHostMot2.ncd 
+xst -intstyle ise -ifn "/home/ise/linuxCNC/TopPCIHostMot2.xst" -ofn "/home/ise/linuxCNC/TopPCIHostMot2.syr" 
+ngdbuild -intstyle ise -dd _ngo -aut -nt timestamp -uc 5i24.ucf -p xc6slx25-ftg256-2 TopPCIHostMot2.ngc TopPCIHostMot2.ngd  
+map -intstyle ise -p xc6slx25-ftg256-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr b -lc off -power off -o TopPCIHostMot2_map.ncd TopPCIHostMot2.ngd TopPCIHostMot2.pcf 
+par -w -intstyle ise -ol high -mt off TopPCIHostMot2_map.ncd TopPCIHostMot2.ncd TopPCIHostMot2.pcf 
+bitgen -intstyle ise -f TopPCIHostMot2.ut TopPCIHostMot2.ncd 
+xst -intstyle ise -ifn "/home/ise/linuxCNC/TopPCIHostMot2.xst" -ofn "/home/ise/linuxCNC/TopPCIHostMot2.syr" 
+ngdbuild -intstyle ise -dd _ngo -aut -nt timestamp -uc 5i24.ucf -p xc6slx25-ftg256-2 TopPCIHostMot2.ngc TopPCIHostMot2.ngd  
+map -intstyle ise -p xc6slx25-ftg256-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr b -lc off -power off -o TopPCIHostMot2_map.ncd TopPCIHostMot2.ngd TopPCIHostMot2.pcf 
+par -w -intstyle ise -ol high -mt off TopPCIHostMot2_map.ncd TopPCIHostMot2.ncd TopPCIHostMot2.pcf 
+bitgen -intstyle ise -f TopPCIHostMot2.ut TopPCIHostMot2.ncd 
+xst -intstyle ise -ifn "/home/ise/linuxCNC/TopPCIHostMot2.xst" -ofn "/home/ise/linuxCNC/TopPCIHostMot2.syr" 
+ngdbuild -intstyle ise -dd _ngo -aut -nt timestamp -uc 5i24.ucf -p xc6slx25-ftg256-2 TopPCIHostMot2.ngc TopPCIHostMot2.ngd  
+map -intstyle ise -p xc6slx25-ftg256-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr b -lc off -power off -o TopPCIHostMot2_map.ncd TopPCIHostMot2.ngd TopPCIHostMot2.pcf 
+par -w -intstyle ise -ol high -mt off TopPCIHostMot2_map.ncd TopPCIHostMot2.ncd TopPCIHostMot2.pcf 
+bitgen -intstyle ise -f TopPCIHostMot2.ut TopPCIHostMot2.ncd 
+xst -intstyle ise -ifn "/home/ise/linuxCNC/TopPCIHostMot2.xst" -ofn "/home/ise/linuxCNC/TopPCIHostMot2.syr" 
+ngdbuild -intstyle ise -dd _ngo -aut -nt timestamp -uc 5i24.ucf -p xc6slx25-ftg256-2 TopPCIHostMot2.ngc TopPCIHostMot2.ngd  
+map -intstyle ise -p xc6slx25-ftg256-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr b -lc off -power off -o TopPCIHostMot2_map.ncd TopPCIHostMot2.ngd TopPCIHostMot2.pcf 
+par -w -intstyle ise -ol high -mt off TopPCIHostMot2_map.ncd TopPCIHostMot2.ncd TopPCIHostMot2.pcf 
+bitgen -intstyle ise -f TopPCIHostMot2.ut TopPCIHostMot2.ncd 
+xst -intstyle ise -ifn "/home/ise/linuxCNC/TopPCIHostMot2.xst" -ofn "/home/ise/linuxCNC/TopPCIHostMot2.syr" 
+ngdbuild -intstyle ise -dd _ngo -aut -nt timestamp -uc 5i24.ucf -p xc6slx25-ftg256-2 TopPCIHostMot2.ngc TopPCIHostMot2.ngd  
+map -intstyle ise -p xc6slx25-ftg256-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr b -lc off -power off -o TopPCIHostMot2_map.ncd TopPCIHostMot2.ngd TopPCIHostMot2.pcf 
+par -w -intstyle ise -ol high -mt off TopPCIHostMot2_map.ncd TopPCIHostMot2.ncd TopPCIHostMot2.pcf 
+bitgen -intstyle ise -f TopPCIHostMot2.ut TopPCIHostMot2.ncd 
+xst -intstyle ise -ifn "/home/ise/linuxCNC/TopPCIHostMot2.xst" -ofn "/home/ise/linuxCNC/TopPCIHostMot2.syr" 
+ngdbuild -intstyle ise -dd _ngo -aut -nt timestamp -uc 5i24.ucf -p xc6slx25-ftg256-2 TopPCIHostMot2.ngc TopPCIHostMot2.ngd  
+map -intstyle ise -p xc6slx25-ftg256-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr b -lc off -power off -o TopPCIHostMot2_map.ncd TopPCIHostMot2.ngd TopPCIHostMot2.pcf 
+par -w -intstyle ise -ol high -mt off TopPCIHostMot2_map.ncd TopPCIHostMot2.ncd TopPCIHostMot2.pcf 
+bitgen -intstyle ise -f TopPCIHostMot2.ut TopPCIHostMot2.ncd 
+xst -intstyle ise -ifn "/home/ise/linuxCNC/TopPCIHostMot2.xst" -ofn "/home/ise/linuxCNC/TopPCIHostMot2.syr" 
+ngdbuild -intstyle ise -dd _ngo -aut -nt timestamp -uc 5i24.ucf -p xc6slx25-ftg256-2 TopPCIHostMot2.ngc TopPCIHostMot2.ngd  
+map -intstyle ise -p xc6slx25-ftg256-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr b -lc off -power off -o TopPCIHostMot2_map.ncd TopPCIHostMot2.ngd TopPCIHostMot2.pcf 
+par -w -intstyle ise -ol high -mt off TopPCIHostMot2_map.ncd TopPCIHostMot2.ncd TopPCIHostMot2.pcf 
+bitgen -intstyle ise -f TopPCIHostMot2.ut TopPCIHostMot2.ncd 
+xst -intstyle ise -ifn "/home/ise/linuxCNC/TopPCIHostMot2.xst" -ofn "/home/ise/linuxCNC/TopPCIHostMot2.syr" 
+xst -intstyle ise -ifn "/home/ise/linuxCNC/TopPCIHostMot2.xst" -ofn "/home/ise/linuxCNC/TopPCIHostMot2.syr" 
+ngdbuild -intstyle ise -dd _ngo -aut -nt timestamp -uc 5i24.ucf -p xc6slx25-ftg256-2 TopPCIHostMot2.ngc TopPCIHostMot2.ngd  
+map -intstyle ise -p xc6slx25-ftg256-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr b -lc off -power off -o TopPCIHostMot2_map.ncd TopPCIHostMot2.ngd TopPCIHostMot2.pcf 
+par -w -intstyle ise -ol high -mt off TopPCIHostMot2_map.ncd TopPCIHostMot2.ncd TopPCIHostMot2.pcf 
+trce -intstyle ise -v 10 -s 2 -n 3 -fastpaths -xml TopPCIHostMot2.twx TopPCIHostMot2.ncd -o TopPCIHostMot2.twr TopPCIHostMot2.pcf -ucf 5i24.ucf 
+bitgen -intstyle ise -f TopPCIHostMot2.ut TopPCIHostMot2.ncd 
+xst -intstyle ise -ifn "/home/ise/linuxCNC/TopPCIHostMot2.xst" -ofn "/home/ise/linuxCNC/TopPCIHostMot2.syr" 
+ngdbuild -intstyle ise -dd _ngo -aut -nt timestamp -uc 5i24.ucf -p xc6slx25-ftg256-2 TopPCIHostMot2.ngc TopPCIHostMot2.ngd  
+map -intstyle ise -p xc6slx25-ftg256-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr b -lc off -power off -o TopPCIHostMot2_map.ncd TopPCIHostMot2.ngd TopPCIHostMot2.pcf 
+par -w -intstyle ise -ol high -mt off TopPCIHostMot2_map.ncd TopPCIHostMot2.ncd TopPCIHostMot2.pcf 
+bitgen -intstyle ise -f TopPCIHostMot2.ut TopPCIHostMot2.ncd 
+xst -intstyle ise -ifn "/home/ise/linuxCNC/TopPCIHostMot2.xst" -ofn "/home/ise/linuxCNC/TopPCIHostMot2.syr" 
+xst -intstyle ise -ifn "/home/ise/linuxCNC/TopPCIHostMot2.xst" -ofn "/home/ise/linuxCNC/TopPCIHostMot2.syr" 
+xst -intstyle ise -ifn "/home/ise/linuxCNC/TopPCIHostMot2.xst" -ofn "/home/ise/linuxCNC/TopPCIHostMot2.syr" 
+ngdbuild -intstyle ise -dd _ngo -aut -nt timestamp -uc 5i24.ucf -p xc6slx25-ftg256-2 TopPCIHostMot2.ngc TopPCIHostMot2.ngd  
+map -intstyle ise -p xc6slx25-ftg256-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr b -lc off -power off -o TopPCIHostMot2_map.ncd TopPCIHostMot2.ngd TopPCIHostMot2.pcf 
+par -w -intstyle ise -ol high -mt off TopPCIHostMot2_map.ncd TopPCIHostMot2.ncd TopPCIHostMot2.pcf 
+bitgen -intstyle ise -f TopPCIHostMot2.ut TopPCIHostMot2.ncd 
+xst -intstyle ise -ifn "/home/ise/linuxCNC/TopPCIHostMot2.xst" -ofn "/home/ise/linuxCNC/TopPCIHostMot2.syr" 
+ngdbuild -intstyle ise -dd _ngo -aut -nt timestamp -uc 5i24.ucf -p xc6slx25-ftg256-2 TopPCIHostMot2.ngc TopPCIHostMot2.ngd  
+map -intstyle ise -p xc6slx25-ftg256-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr b -lc off -power off -o TopPCIHostMot2_map.ncd TopPCIHostMot2.ngd TopPCIHostMot2.pcf 
+par -w -intstyle ise -ol high -mt off TopPCIHostMot2_map.ncd TopPCIHostMot2.ncd TopPCIHostMot2.pcf 
+bitgen -intstyle ise -f TopPCIHostMot2.ut TopPCIHostMot2.ncd 
+xst -intstyle ise -ifn "/home/ise/linuxCNC/TopPCIHostMot2.xst" -ofn "/home/ise/linuxCNC/TopPCIHostMot2.syr" 
+ngdbuild -intstyle ise -dd _ngo -aut -nt timestamp -uc 5i24.ucf -p xc6slx25-ftg256-2 TopPCIHostMot2.ngc TopPCIHostMot2.ngd  
+map -intstyle ise -p xc6slx25-ftg256-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr b -lc off -power off -o TopPCIHostMot2_map.ncd TopPCIHostMot2.ngd TopPCIHostMot2.pcf 
+par -w -intstyle ise -ol high -mt off TopPCIHostMot2_map.ncd TopPCIHostMot2.ncd TopPCIHostMot2.pcf 
+bitgen -intstyle ise -f TopPCIHostMot2.ut TopPCIHostMot2.ncd 
+xst -intstyle ise -ifn "/home/ise/linuxCNC/TopPCIHostMot2.xst" -ofn "/home/ise/linuxCNC/TopPCIHostMot2.syr" 
+ngdbuild -intstyle ise -dd _ngo -aut -nt timestamp -uc 5i24.ucf -p xc6slx25-ftg256-2 TopPCIHostMot2.ngc TopPCIHostMot2.ngd  
+map -intstyle ise -p xc6slx25-ftg256-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr b -lc off -power off -o TopPCIHostMot2_map.ncd TopPCIHostMot2.ngd TopPCIHostMot2.pcf 
+par -w -intstyle ise -ol high -mt off TopPCIHostMot2_map.ncd TopPCIHostMot2.ncd TopPCIHostMot2.pcf 
+bitgen -intstyle ise -f TopPCIHostMot2.ut TopPCIHostMot2.ncd 
+xst -intstyle ise -ifn "/home/ise/linuxCNC/TopPCIHostMot2.xst" -ofn "/home/ise/linuxCNC/TopPCIHostMot2.syr" 
+ngdbuild -intstyle ise -dd _ngo -aut -nt timestamp -uc 5i24.ucf -p xc6slx25-ftg256-2 TopPCIHostMot2.ngc TopPCIHostMot2.ngd  
+map -intstyle ise -p xc6slx25-ftg256-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr b -lc off -power off -o TopPCIHostMot2_map.ncd TopPCIHostMot2.ngd TopPCIHostMot2.pcf 
+par -w -intstyle ise -ol high -mt off TopPCIHostMot2_map.ncd TopPCIHostMot2.ncd TopPCIHostMot2.pcf 
+bitgen -intstyle ise -f TopPCIHostMot2.ut TopPCIHostMot2.ncd 
+xst -intstyle ise -ifn "/home/ise/linuxCNC/TopPCIHostMot2.xst" -ofn "/home/ise/linuxCNC/TopPCIHostMot2.syr" 
+ngdbuild -intstyle ise -dd _ngo -aut -nt timestamp -uc 5i24.ucf -p xc6slx25-ftg256-2 TopPCIHostMot2.ngc TopPCIHostMot2.ngd  
+map -intstyle ise -p xc6slx25-ftg256-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr b -lc off -power off -o TopPCIHostMot2_map.ncd TopPCIHostMot2.ngd TopPCIHostMot2.pcf 
+par -w -intstyle ise -ol high -mt off TopPCIHostMot2_map.ncd TopPCIHostMot2.ncd TopPCIHostMot2.pcf 
+bitgen -intstyle ise -f TopPCIHostMot2.ut TopPCIHostMot2.ncd 
+xst -intstyle ise -ifn "/home/ise/linuxCNC/TopPCIHostMot2.xst" -ofn "/home/ise/linuxCNC/TopPCIHostMot2.syr" 
+ngdbuild -intstyle ise -dd _ngo -aut -nt timestamp -uc 5i24.ucf -p xc6slx25-ftg256-2 TopPCIHostMot2.ngc TopPCIHostMot2.ngd  
+map -intstyle ise -p xc6slx25-ftg256-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr b -lc off -power off -o TopPCIHostMot2_map.ncd TopPCIHostMot2.ngd TopPCIHostMot2.pcf 
+par -w -intstyle ise -ol high -mt off TopPCIHostMot2_map.ncd TopPCIHostMot2.ncd TopPCIHostMot2.pcf 
+bitgen -intstyle ise -f TopPCIHostMot2.ut TopPCIHostMot2.ncd 
+xst -intstyle ise -ifn "/home/ise/linuxCNC/TopPCIHostMot2.xst" -ofn "/home/ise/linuxCNC/TopPCIHostMot2.syr" 
+xst -intstyle ise -ifn "/home/ise/linuxCNC/TopPCIHostMot2.xst" -ofn "/home/ise/linuxCNC/TopPCIHostMot2.syr" 
+ngdbuild -intstyle ise -dd _ngo -aut -nt timestamp -uc 5i24.ucf -p xc6slx25-ftg256-2 TopPCIHostMot2.ngc TopPCIHostMot2.ngd  
+map -intstyle ise -p xc6slx25-ftg256-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr b -lc off -power off -o TopPCIHostMot2_map.ncd TopPCIHostMot2.ngd TopPCIHostMot2.pcf 
+par -w -intstyle ise -ol high -mt off TopPCIHostMot2_map.ncd TopPCIHostMot2.ncd TopPCIHostMot2.pcf 
+trce -intstyle ise -v 10 -s 2 -n 3 -fastpaths -xml TopPCIHostMot2.twx TopPCIHostMot2.ncd -o TopPCIHostMot2.twr TopPCIHostMot2.pcf -ucf 5i24.ucf 
+bitgen -intstyle ise -f TopPCIHostMot2.ut TopPCIHostMot2.ncd 
+xst -intstyle ise -ifn "/home/ise/linuxCNC/TopPCIHostMot2.xst" -ofn "/home/ise/linuxCNC/TopPCIHostMot2.syr" 
+ngdbuild -intstyle ise -dd _ngo -aut -nt timestamp -uc 5i24.ucf -p xc6slx25-ftg256-2 TopPCIHostMot2.ngc TopPCIHostMot2.ngd  
+map -intstyle ise -p xc6slx25-ftg256-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr b -lc off -power off -o TopPCIHostMot2_map.ncd TopPCIHostMot2.ngd TopPCIHostMot2.pcf 
+par -w -intstyle ise -ol high -mt off TopPCIHostMot2_map.ncd TopPCIHostMot2.ncd TopPCIHostMot2.pcf 
+bitgen -intstyle ise -f TopPCIHostMot2.ut TopPCIHostMot2.ncd 
+xst -intstyle ise -ifn "/home/ise/linuxCNC/TopPCIHostMot2.xst" -ofn "/home/ise/linuxCNC/TopPCIHostMot2.syr" 
+ngdbuild -intstyle ise -dd _ngo -aut -nt timestamp -uc 5i24.ucf -p xc6slx25-ftg256-2 TopPCIHostMot2.ngc TopPCIHostMot2.ngd  
+map -intstyle ise -p xc6slx25-ftg256-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr b -lc off -power off -o TopPCIHostMot2_map.ncd TopPCIHostMot2.ngd TopPCIHostMot2.pcf 
+par -w -intstyle ise -ol high -mt off TopPCIHostMot2_map.ncd TopPCIHostMot2.ncd TopPCIHostMot2.pcf 
+bitgen -intstyle ise -f TopPCIHostMot2.ut TopPCIHostMot2.ncd 
+xst -intstyle ise -ifn "/home/ise/linuxCNC/TopPCIHostMot2.xst" -ofn "/home/ise/linuxCNC/TopPCIHostMot2.syr" 
+ngdbuild -intstyle ise -dd _ngo -aut -nt timestamp -uc 5i24.ucf -p xc6slx25-ftg256-2 TopPCIHostMot2.ngc TopPCIHostMot2.ngd  
+map -intstyle ise -p xc6slx25-ftg256-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr b -lc off -power off -o TopPCIHostMot2_map.ncd TopPCIHostMot2.ngd TopPCIHostMot2.pcf 
+par -w -intstyle ise -ol high -mt off TopPCIHostMot2_map.ncd TopPCIHostMot2.ncd TopPCIHostMot2.pcf 
+trce -intstyle ise -v 10 -s 2 -n 3 -fastpaths -xml TopPCIHostMot2.twx TopPCIHostMot2.ncd -o TopPCIHostMot2.twr TopPCIHostMot2.pcf -ucf 5i24.ucf 
+bitgen -intstyle ise -f TopPCIHostMot2.ut TopPCIHostMot2.ncd 
+xst -intstyle ise -ifn "/home/ise/linuxCNC/TopPCIHostMot2.xst" -ofn "/home/ise/linuxCNC/TopPCIHostMot2.syr" 
+xst -intstyle ise -ifn "/home/ise/linuxCNC/TopPCIHostMot2.xst" -ofn "/home/ise/linuxCNC/TopPCIHostMot2.syr" 
+ngdbuild -intstyle ise -dd _ngo -aut -nt timestamp -uc 5i24.ucf -p xc6slx25-ftg256-2 TopPCIHostMot2.ngc TopPCIHostMot2.ngd  
+map -intstyle ise -p xc6slx25-ftg256-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr b -lc off -power off -o TopPCIHostMot2_map.ncd TopPCIHostMot2.ngd TopPCIHostMot2.pcf 
+par -w -intstyle ise -ol high -mt off TopPCIHostMot2_map.ncd TopPCIHostMot2.ncd TopPCIHostMot2.pcf 
+trce -intstyle ise -v 10 -s 2 -n 3 -fastpaths -xml TopPCIHostMot2.twx TopPCIHostMot2.ncd -o TopPCIHostMot2.twr TopPCIHostMot2.pcf -ucf 5i24.ucf 
+bitgen -intstyle ise -f TopPCIHostMot2.ut TopPCIHostMot2.ncd 
+xst -intstyle ise -ifn "/home/ise/linuxCNC/TopPCIHostMot2.xst" -ofn "/home/ise/linuxCNC/TopPCIHostMot2.syr" 
+xst -intstyle ise -ifn "/home/ise/linuxCNC/TopPCIHostMot2.xst" -ofn "/home/ise/linuxCNC/TopPCIHostMot2.syr" 
+xst -intstyle ise -ifn "/home/ise/linuxCNC/TopPCIHostMot2.xst" -ofn "/home/ise/linuxCNC/TopPCIHostMot2.syr" 
+xst -intstyle ise -ifn "/home/ise/linuxCNC/TopPCIHostMot2.xst" -ofn "/home/ise/linuxCNC/TopPCIHostMot2.syr" 
+xst -intstyle ise -ifn "/home/ise/linuxCNC/TopPCIHostMot2.xst" -ofn "/home/ise/linuxCNC/TopPCIHostMot2.syr" 
+ngdbuild -intstyle ise -dd _ngo -aut -nt timestamp -uc 5i24.ucf -p xc6slx25-ftg256-2 TopPCIHostMot2.ngc TopPCIHostMot2.ngd  
+map -intstyle ise -p xc6slx25-ftg256-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr b -lc off -power off -o TopPCIHostMot2_map.ncd TopPCIHostMot2.ngd TopPCIHostMot2.pcf 
+par -w -intstyle ise -ol high -mt off TopPCIHostMot2_map.ncd TopPCIHostMot2.ncd TopPCIHostMot2.pcf 
+trce -intstyle ise -v 10 -s 2 -n 3 -fastpaths -xml TopPCIHostMot2.twx TopPCIHostMot2.ncd -o TopPCIHostMot2.twr TopPCIHostMot2.pcf -ucf 5i24.ucf 
+bitgen -intstyle ise -f TopPCIHostMot2.ut TopPCIHostMot2.ncd 
+xst -intstyle ise -ifn "/home/ise/linuxCNC/TopPCIHostMot2.xst" -ofn "/home/ise/linuxCNC/TopPCIHostMot2.syr" 
+ngdbuild -intstyle ise -dd _ngo -aut -nt timestamp -uc 5i24.ucf -p xc6slx25-ftg256-2 TopPCIHostMot2.ngc TopPCIHostMot2.ngd  
+map -intstyle ise -p xc6slx25-ftg256-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr b -lc off -power off -o TopPCIHostMot2_map.ncd TopPCIHostMot2.ngd TopPCIHostMot2.pcf 
+par -w -intstyle ise -ol high -mt off TopPCIHostMot2_map.ncd TopPCIHostMot2.ncd TopPCIHostMot2.pcf 
+bitgen -intstyle ise -f TopPCIHostMot2.ut TopPCIHostMot2.ncd 
+xst -intstyle ise -ifn "/home/ise/linuxCNC/TopPCIHostMot2.xst" -ofn "/home/ise/linuxCNC/TopPCIHostMot2.syr" 
+ngdbuild -intstyle ise -dd _ngo -aut -nt timestamp -uc 5i24.ucf -p xc6slx25-ftg256-2 TopPCIHostMot2.ngc TopPCIHostMot2.ngd  
+map -intstyle ise -p xc6slx25-ftg256-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr b -lc off -power off -o TopPCIHostMot2_map.ncd TopPCIHostMot2.ngd TopPCIHostMot2.pcf 
+par -w -intstyle ise -ol high -mt off TopPCIHostMot2_map.ncd TopPCIHostMot2.ncd TopPCIHostMot2.pcf 
+bitgen -intstyle ise -f TopPCIHostMot2.ut TopPCIHostMot2.ncd 
+xst -intstyle ise -ifn "/home/ise/linuxCNC/TopPCIHostMot2.xst" -ofn "/home/ise/linuxCNC/TopPCIHostMot2.syr" 
+ngdbuild -intstyle ise -dd _ngo -aut -nt timestamp -uc 5i24.ucf -p xc6slx25-ftg256-2 TopPCIHostMot2.ngc TopPCIHostMot2.ngd  
+map -intstyle ise -p xc6slx25-ftg256-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr b -lc off -power off -o TopPCIHostMot2_map.ncd TopPCIHostMot2.ngd TopPCIHostMot2.pcf 
+par -w -intstyle ise -ol high -mt off TopPCIHostMot2_map.ncd TopPCIHostMot2.ncd TopPCIHostMot2.pcf 
+bitgen -intstyle ise -f TopPCIHostMot2.ut TopPCIHostMot2.ncd 
+xst -intstyle ise -ifn "/home/ise/linuxCNC/TopPCIHostMot2.xst" -ofn "/home/ise/linuxCNC/TopPCIHostMot2.syr" 
+ngdbuild -intstyle ise -dd _ngo -aut -nt timestamp -uc 5i24.ucf -p xc6slx25-ftg256-2 TopPCIHostMot2.ngc TopPCIHostMot2.ngd  
+map -intstyle ise -p xc6slx25-ftg256-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr b -lc off -power off -o TopPCIHostMot2_map.ncd TopPCIHostMot2.ngd TopPCIHostMot2.pcf 
+par -w -intstyle ise -ol high -mt off TopPCIHostMot2_map.ncd TopPCIHostMot2.ncd TopPCIHostMot2.pcf 
+bitgen -intstyle ise -f TopPCIHostMot2.ut TopPCIHostMot2.ncd 
+xst -intstyle ise -ifn "/home/ise/linuxCNC/TopPCIHostMot2.xst" -ofn "/home/ise/linuxCNC/TopPCIHostMot2.syr" 
+ngdbuild -intstyle ise -dd _ngo -aut -nt timestamp -uc 5i24.ucf -p xc6slx25-ftg256-2 TopPCIHostMot2.ngc TopPCIHostMot2.ngd  
+map -intstyle ise -p xc6slx25-ftg256-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr b -lc off -power off -o TopPCIHostMot2_map.ncd TopPCIHostMot2.ngd TopPCIHostMot2.pcf 
+par -w -intstyle ise -ol high -mt off TopPCIHostMot2_map.ncd TopPCIHostMot2.ncd TopPCIHostMot2.pcf 
+bitgen -intstyle ise -f TopPCIHostMot2.ut TopPCIHostMot2.ncd 
+xst -intstyle ise -ifn "/home/ise/linuxCNC/TopPCIHostMot2.xst" -ofn "/home/ise/linuxCNC/TopPCIHostMot2.syr" 
+ngdbuild -intstyle ise -dd _ngo -aut -nt timestamp -uc 5i24.ucf -p xc6slx25-ftg256-2 TopPCIHostMot2.ngc TopPCIHostMot2.ngd  
+map -intstyle ise -p xc6slx25-ftg256-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr b -lc off -power off -o TopPCIHostMot2_map.ncd TopPCIHostMot2.ngd TopPCIHostMot2.pcf 
+par -w -intstyle ise -ol high -mt off TopPCIHostMot2_map.ncd TopPCIHostMot2.ncd TopPCIHostMot2.pcf 
+bitgen -intstyle ise -f TopPCIHostMot2.ut TopPCIHostMot2.ncd 
+xst -intstyle ise -ifn "/home/ise/linuxCNC/TopPCIHostMot2.xst" -ofn "/home/ise/linuxCNC/TopPCIHostMot2.syr" 
+ngdbuild -intstyle ise -dd _ngo -aut -nt timestamp -uc 5i24.ucf -p xc6slx25-ftg256-2 TopPCIHostMot2.ngc TopPCIHostMot2.ngd  
+map -intstyle ise -p xc6slx25-ftg256-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr b -lc off -power off -o TopPCIHostMot2_map.ncd TopPCIHostMot2.ngd TopPCIHostMot2.pcf 
+par -w -intstyle ise -ol high -mt off TopPCIHostMot2_map.ncd TopPCIHostMot2.ncd TopPCIHostMot2.pcf 
+bitgen -intstyle ise -f TopPCIHostMot2.ut TopPCIHostMot2.ncd 
+xst -intstyle ise -ifn "/home/ise/linuxCNC/TopPCIHostMot2.xst" -ofn "/home/ise/linuxCNC/TopPCIHostMot2.syr" 
+ngdbuild -intstyle ise -dd _ngo -aut -nt timestamp -uc 5i24.ucf -p xc6slx25-ftg256-2 TopPCIHostMot2.ngc TopPCIHostMot2.ngd  
+map -intstyle ise -p xc6slx25-ftg256-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr b -lc off -power off -o TopPCIHostMot2_map.ncd TopPCIHostMot2.ngd TopPCIHostMot2.pcf 
+par -w -intstyle ise -ol high -mt off TopPCIHostMot2_map.ncd TopPCIHostMot2.ncd TopPCIHostMot2.pcf 
+bitgen -intstyle ise -f TopPCIHostMot2.ut TopPCIHostMot2.ncd 
+xst -intstyle ise -ifn "/home/ise/linuxCNC/TopPCIHostMot2.xst" -ofn "/home/ise/linuxCNC/TopPCIHostMot2.syr" 
+xst -intstyle ise -ifn "/home/ise/linuxCNC/TopPCIHostMot2.xst" -ofn "/home/ise/linuxCNC/TopPCIHostMot2.syr" 
+ngdbuild -intstyle ise -dd _ngo -aut -nt timestamp -uc 5i24.ucf -p xc6slx25-ftg256-2 TopPCIHostMot2.ngc TopPCIHostMot2.ngd  
+map -intstyle ise -p xc6slx25-ftg256-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr b -lc off -power off -o TopPCIHostMot2_map.ncd TopPCIHostMot2.ngd TopPCIHostMot2.pcf 
+par -w -intstyle ise -ol high -mt off TopPCIHostMot2_map.ncd TopPCIHostMot2.ncd TopPCIHostMot2.pcf 
+trce -intstyle ise -v 10 -s 2 -n 3 -fastpaths -xml TopPCIHostMot2.twx TopPCIHostMot2.ncd -o TopPCIHostMot2.twr TopPCIHostMot2.pcf -ucf 5i24.ucf 
+bitgen -intstyle ise -f TopPCIHostMot2.ut TopPCIHostMot2.ncd 
+xst -intstyle ise -ifn "/home/ise/linuxCNC/TopPCIHostMot2.xst" -ofn "/home/ise/linuxCNC/TopPCIHostMot2.syr" 
+ngdbuild -intstyle ise -dd _ngo -aut -nt timestamp -uc 5i24.ucf -p xc6slx25-ftg256-2 TopPCIHostMot2.ngc TopPCIHostMot2.ngd  
+map -intstyle ise -p xc6slx25-ftg256-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr b -lc off -power off -o TopPCIHostMot2_map.ncd TopPCIHostMot2.ngd TopPCIHostMot2.pcf 
+par -w -intstyle ise -ol high -mt off TopPCIHostMot2_map.ncd TopPCIHostMot2.ncd TopPCIHostMot2.pcf 
+bitgen -intstyle ise -f TopPCIHostMot2.ut TopPCIHostMot2.ncd 
+xst -intstyle ise -ifn "/home/ise/linuxCNC/TopPCIHostMot2.xst" -ofn "/home/ise/linuxCNC/TopPCIHostMot2.syr" 
+xst -intstyle ise -ifn "/home/ise/linuxCNC/TopPCIHostMot2.xst" -ofn "/home/ise/linuxCNC/TopPCIHostMot2.syr" 
+ngdbuild -intstyle ise -dd _ngo -aut -nt timestamp -uc 5i24.ucf -p xc6slx25-ftg256-2 TopPCIHostMot2.ngc TopPCIHostMot2.ngd  
+map -intstyle ise -p xc6slx25-ftg256-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr b -lc off -power off -o TopPCIHostMot2_map.ncd TopPCIHostMot2.ngd TopPCIHostMot2.pcf 
+par -w -intstyle ise -ol high -mt off TopPCIHostMot2_map.ncd TopPCIHostMot2.ncd TopPCIHostMot2.pcf 
+trce -intstyle ise -v 10 -s 2 -n 3 -fastpaths -xml TopPCIHostMot2.twx TopPCIHostMot2.ncd -o TopPCIHostMot2.twr TopPCIHostMot2.pcf -ucf 5i24.ucf 
+bitgen -intstyle ise -f TopPCIHostMot2.ut TopPCIHostMot2.ncd 
+xst -intstyle ise -ifn "/home/ise/linuxCNC/TopPCIHostMot2.xst" -ofn "/home/ise/linuxCNC/TopPCIHostMot2.syr" 
+xst -intstyle ise -ifn "/home/ise/linuxCNC/TopPCIHostMot2.xst" -ofn "/home/ise/linuxCNC/TopPCIHostMot2.syr" 
+xst -intstyle ise -ifn "/home/ise/linuxCNC/TopPCIHostMot2.xst" -ofn "/home/ise/linuxCNC/TopPCIHostMot2.syr" 
+xst -intstyle ise -ifn "/home/ise/linuxCNC/TopPCIHostMot2.xst" -ofn "/home/ise/linuxCNC/TopPCIHostMot2.syr" 

@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=/home/ise/linuxCNC/TopPCIHostMot2.ncd
+OUTFILE=/home/ise/linuxCNC/TopPCIHostMot2.bit
+FAMILY=Spartan6
+PART=xc6slx25-2ftg256
+WORKINGDIR=/home/ise/linuxCNC
+LICENSE=ISE
+USER_INFO=8416_11442_1478797146_620

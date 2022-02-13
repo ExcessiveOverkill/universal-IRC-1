@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="warning" file="ConstraintSystem" num="0" >TNM : async_med was distributed to a DCM but new TNM constraints were not derived. This TNM is used in the following user groups or specifications:
+&lt;TIMESPEC &quot;TSLowToMed&quot; = FROM &quot;async_low&quot; to &quot;async_med&quot; TIG;&gt; [5i24.ucf(142)]
+&lt;TIMESPEC &quot;TSMedtoLow&quot; = FROM &quot;async_med&quot; to &quot;async_low&quot; TIG;&gt; [5i24.ucf(143)]
+</msg>
+
+<msg type="info" file="ConstraintSystem" num="178" delta="old" ><arg fmt="%s" index="1">TNM</arg> &apos;<arg fmt="%s" index="2">XCLK</arg>&apos;, used in period specification &apos;<arg fmt="%s" index="3">TS_XCLK</arg>&apos;, was traced into <arg fmt="%s" index="4">DCM_SP</arg> instance <arg fmt="%s" index="5">ClockMult1</arg>. The following new TNM groups and period specifications were generated at the <arg fmt="%s" index="6">DCM_SP</arg> output(s): 
+<arg fmt="%s" index="7">CLKFX</arg>: <arg fmt="%s" index="8">&lt;TIMESPEC TS_clkfx1 = PERIOD &quot;clkfx1&quot; TS_XCLK / 2 HIGH 50%&gt;</arg>
+</msg>
+
+<msg type="info" file="NgdBuild" num="1222" delta="old" >Setting <arg fmt="%s" index="1">CLKIN_PERIOD</arg> attribute associated with <arg fmt="%s" index="2">DCM</arg> instance <arg fmt="%s" index="3">ClockMult0</arg> to <arg fmt="%s" index="4">10.000000</arg> ns based on the period specification (<arg fmt="%s" index="5">&lt;TIMESPEC TS_clkfx1 = PERIOD &quot;clkfx1&quot; TS_XCLK / 2 HIGH 50%&gt;</arg>).
+</msg>
+
+</messages>
+
