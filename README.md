@@ -119,6 +119,6 @@ The new drives would likely fall under a v2 of this repository, as the majority 
 # Support Me
 Youtube: https://www.youtube.com/c/ExcessiveOverkill
 
-https://www.reddit.com/r/ExcessiveOverkill/
+Reddit: https://www.reddit.com/r/ExcessiveOverkill/
 
 Patreon: https://www.patreon.com/excessiveoverkill
