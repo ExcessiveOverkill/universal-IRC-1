@@ -1,0 +1,324 @@
+component fanuc_encoder "PktUART basic odrive interface";
+
+author "Riley Ott";
+license "GPL";
+
+include "hal/drivers/mesa-hostmot2/hostmot2.h";
+include <math.h>;
+include <stdlib.h>;
+
+param rw float max_torque_0 = 1 "Maximum torque 0";
+param rw float max_torque_1 = 1 "Maximum torque 1";
+param rw s32 com_error_limit = 10 "Maximum consecutive communication errors before giving up";
+
+pin out s32 testing  "Debug pin";
+
+pin in float comm_0  "Commutation angle from encoder 0";
+pin in float comm_1  "Commutation angle from encoder 1";
+pin in float torque_0  "Torque to send to motor 0";  
+pin in float torque_1  "Torque to send to motor 1";
+//pin in float field_weakening_0 "Amount of field weakening to apply 0";
+//pin in float field_weakening_1 "Amount of field weakening to apply 1";
+pin in bit enable_0 = 1 "Enable motor torque 0";
+pin in bit enable_1 "Enable motor torque 0";
+pin in bit invert_0 = 0 "Invert motor torque 0";
+pin in bit invert_1 = 0 "Invert motor torque 1";
+
+pin out float cmd_torque_0  "Adjusted torque sent 0";
+pin out float cmd_torque_1  "Adjusted torque sent 1";
+pin out bit torque_sat_0  "Maximum torque reached 0";
+pin out bit torque_sat_1  "Maximum torque reached 1";
+pin out bit is_enabled_0  "Torque is on 0";
+pin out bit is_enabled_1  "Torque is on 1";
+pin out bit error  "Error";
+pin out bit ready  "Drive ready";
+pin out s32 com_errors "Consecutive communication errors";
+pin out s32 int_count = 1 "Normal pulses to send before changing modes";
+
+variable char *name; // PktUART name
+
+option extra_setup yes;
+
+
+function update;
+
+;;
+
+
+
+#define FAST_BAUDRATE (2121640)
+#define BAUDRATE (130000)
+#define PI (3.14159265)
+
+
+
+/* This uses the RTAPI_MP_ARRAY_STRING macro to load the list of PktUART channels
+into an array. This is copied into the *name string of each */
+
+char *pktuart_chans[4] = {0,};
+RTAPI_MP_ARRAY_STRING(pktuart_chans, 2, "PktUART Channel names");
+
+static hostmot2_t* hm2=NULL;
+
+
+FUNCTION(update){
+	//make uart interface variables
+    rtapi_u8 frames = 1;
+    rtapi_u16 maxFrame = 8;
+    rtapi_u16 frameSize[15] = {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1};
+	
+	unsigned char readData_response[2];	
+	frameSize[0] = 2;
+	
+	
+	/*
+	if(com_errors<com_error_limit){
+		hm2_pktuart_setup(name, BAUDRATE, 0x0ff20, 0x007f08, 1, 1);
+		rtapi_u8 read_result = hm2_pktuart_read(name, readData_response, &frames, &maxFrame, frameSize);	//read uart buffer to check odrive response
+		if(read_result<4){	//increment error counter when there is an error
+			com_errors++;
+			rtapi_print_msg(RTAPI_MSG_ERR, "added com error");
+		}
+		
+	}
+	else if(readData_response[0]=0x06 && com_errors<com_error_limit){
+		ready = 1;
+		error = 0;
+		//com_errors = 0;
+	}
+	else if(readData_response[0]=0x15 || com_errors>=com_error_limit){
+		ready = 0;
+		error = 1;
+	}
+	else{
+		//com_errors++;
+	}
+	*/
+	ready = 1;
+	error = 0;
+
+	
+	cmd_torque_0 = torque_0;
+	if(invert_0){
+	cmd_torque_0 *= -1;
+	}
+	if(cmd_torque_0 > max_torque_0){
+	torque_sat_0 = 1;
+	cmd_torque_0 = max_torque_0;
+	}
+	else if(cmd_torque_0 < -max_torque_0){
+	torque_sat_0 = 1;
+	cmd_torque_0 = -max_torque_0;
+	}
+	else{
+	torque_sat_0 = 0;
+	}
+	int commCmd_1 = comm_1;
+	
+	//calculate axis1 commands
+	cmd_torque_0 = torque_0;
+	if(invert_1){
+	cmd_torque_1 *= -1;
+	}
+	if(cmd_torque_1 > max_torque_1){
+	torque_sat_1 = 1;
+	cmd_torque_1 = max_torque_1;
+	}
+	else if(cmd_torque_1 < -max_torque_1){
+	torque_sat_1 = 1;
+	cmd_torque_1 = -max_torque_1;
+	}
+	int commCmd_0 = comm_0;
+
+	//convert command values to char arrays
+	unsigned char torque0[5] = "00000";
+	sprintf(torque0, "-%f", cmd_torque_0);
+	unsigned char comm0[4] = "0000";
+	sprintf(comm0, "%04u", commCmd_0);
+	unsigned char torque1[7] = "0000000";
+	sprintf(torque1, "%07f", cmd_torque_1);
+	unsigned char comm1[4] = "0000";
+	sprintf(comm1, "%04u", commCmd_1);
+	
+	unsigned char enable0 = '0';
+	unsigned char enable1 = '0';
+	if(enable_0 && ready){
+		if(is_enabled_0){
+			enable0 = '1';
+		}
+		else{
+			enable0 = '2';
+		}
+	}
+	if(enable_1 && ready){
+		if(is_enabled_1){
+			enable1 = '1';
+		}
+		else{
+			enable1 = '2';
+		}
+	}
+
+	unsigned char sendData_update[28] = {	//format send data (z, comm0, torque0, enable0, comm1, torque1, enable0, /n)
+		'z', ' ',
+		comm0[0], comm0[1], comm0[2], comm0[3], ' ',
+		torque0[1], torque0[2], torque0[3], torque0[4], torque0[5], ' ',
+		enable0, ' ',
+		comm1[0], comm1[1], comm1[2], comm1[3], ' ',
+		torque1[0], torque1[1], torque1[2], torque1[3], torque1[4], ' ',
+		enable1,
+		'\n'
+		};
+
+	//frameSize[0] = 28;
+	
+	//hm2_pktuart_setup(name, BAUDRATE, 0x140, 0x100, 1, 1);		//clear uart buffers
+	//hm2_pktuart_send(name, sendData_update, &frames, frameSize);	//send data to odrive
+	//rtapi_print_msg(RTAPI_MSG_ERR, "after pktuart send");
+	
+	unsigned char sendMode[10] = {0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff};
+	
+	frameSize[0] = 1;
+	frameSize[1] = 1;
+	frameSize[2] = 1;
+	frameSize[3] = 1;
+	frameSize[4] = 1;
+	frameSize[5] = 1;
+	frameSize[6] = 1;
+	frameSize[7] = 1;
+	frameSize[8] = 1;
+	frameSize[9] = 1;
+	frameSize[10] = 1;
+	frameSize[11] = 1;
+	frameSize[12] = 1;
+	frameSize[13] = 1;
+	frameSize[14] = 1;
+	
+	if(int_count == -1){
+	sendMode[0] = 0x67;
+	sendMode[1] = 0x00;
+	frames = 1;
+	hm2_pktuart_setup(name, FAST_BAUDRATE, 0x20, 0x100, 1, 1);
+	hm2_pktuart_send(name, sendMode, &frames, frameSize);	//send data to odrive
+	
+	int_count = -2;
+	}
+	
+	if(int_count == 0){
+	hm2_pktuart_setup(name, FAST_BAUDRATE, 0x20, 0x100, 1, 1);
+	rtapi_u8 frames1 = 1;
+	unsigned char sendMode1[1] = {0x67};
+
+	hm2_pktuart_send(name, sendMode1, &frames, frameSize);	//send data to odrive
+	//hm2_pktuart_setup(name, FAST_BAUDRATE, 0x20, 0x100, 1, 1);
+	int_count = -1;
+	}
+	
+	if(int_count > 0){
+	
+	frames = 7;
+	//hm2_pktuart_setup(name, BAUDRATE, 0xff20, 0x100, 1, 1);		//clear uart buffers
+	hm2_pktuart_send(name, sendMode, &frames, frameSize);	//send data to odrive
+	//hm2_pktuart_send(name, sendMode, &frames, frameSize);	//send data to odrive
+	int_count--;
+	}
+	
+	
+	
+	
+
+
+
+}
+
+EXTRA_SETUP(){ // the names parameters are passed in 'prefix'.
+	if (prefix[0] == 'm'){ // should be the 'm' of hm2_....
+		rtapi_print_msg(0, "mesa_pktuart_test can not be loaded using the 'count' "
+						"parameter, see man mesa_uart for details\n");
+		return -1;
+	}
+	//name = prefix;
+	name = hal_malloc(strlen(prefix)+1);
+	strcpy(name, prefix);
+
+	/* 115200bps - default value from MIP Monitor Systems Settings */
+
+
+	 rtapi_print_msg(RTAPI_MSG_INFO, "\nSet up PktUART now: ");
+	 rtapi_print_msg(RTAPI_MSG_INFO, name);
+	/* Check buff = (u32)((bitrate * 1048576.0)/inst->clock_freq);
+	   Bitrate is (RXBitrate_Register_Value/1048576)*ClockLow */
+	/*  http://freeby.mesanet.com/regmap
+	  The PktUARTxMode register is used for setting and checking the
+	  PktUARTx's operation mode, timing and status:
+	  Bit  21	       FrameBuffer Has Data
+	  Bits 20..16      Frames to send
+	  Bits 15..8       InterFrame delay in bit times
+	  Bit  7	       Tr Logic active (not an error)
+	  Bit  6	       Drive Enable bit (enables external RS-422/485 Driver when set)
+	  Bit  5	       Drive enable Auto (Automatic external drive enable)
+	  Bit  4	       unused
+	  Bits 3..0        Drive enable delay (delay from asserting drive enable
+					   to start of data transmit. In CLock Low periods
+	*/
+
+	 /* http://freeby.mesanet.com/regmap
+	  The PktUARTrMode register is used for setting and checking the PktUARTr's
+	  operation mode, timing, and status
+	  Bit  21	       FrameBuffer has data
+	  Bits 20..16      Frames received
+	  Bits 15..8       InterFrame delay in bit times
+	  Bit  7	       Rx Logic active ( not an error)
+	  Bit  6	       RXMask
+	  Bit  5	       Unused
+	  Bit  4	       RCFIFO Error
+	  Bit  3	       RXEnable (must be set to receive packets)
+	  Bit  2	       RXMask Enable (enables input data masking when transmitting)
+	  Bit  1	       Overrun error (no stop bit when expected) (sticky)
+	  Bit  0	       False Start bit error (sticky)
+	*/
+
+
+	/*
+	   In case our device is streaming data from the very beginning,
+	   at first we do not set RXEnable but clear Rx and Tx registers.
+	   Then we read out whatever is in the buffer, send the DISABLE STREAM
+	   datagram and only then set RXEnable bit.
+	*/
+
+	// Now we set RxEnable bit and clear Rx/Tx registers
+	int retval=hm2_pktuart_setup(name, BAUDRATE, 0x920, 0x100, 1, 1);
+	if (retval<0)
+	{
+	 rtapi_print_msg(1, "PktUART for gyro setup problem: %d\n", retval);
+	 return -1;
+	}
+
+
+	/*
+	We assume a bit time to be 10 us/bit at 115200 bit/s baud rate for simplicity.
+	Try to estimate the total time for sending out 16 frames and receiving
+	16 reply frames:
+
+	16 Frames * 10 bits/byte * 10 us/bit*11 bytes + 15*255*10 us/bit (Tx Interfame delay) +
+	+ 16 Frames * 10 bits/byte * 10 us/bit*10 bytes + 15*255*10 us/bit (Rx Interfame delay) =
+	= 17600 + 38250 + 16000 + 38250 = 110100 us at least as the gyro needs to process
+	each DISABLE STREAM datagram and "compute" an ACK reply.
+
+	This wait time might be too long for  EXTRA_SETUP function,
+	that's why we read  out the ACK reply frames in the receive function
+	attached to a thread cycle of 10000 us , as we need about
+	10 bits/byte * 10 us/bit*10 bytes + 255*10 us/bit = 1000 + 2550 = 3550 us
+	for receiving an ACK frame of 10 bytes at 115200 bit/s baud rate .
+	*/
+
+
+	return 0;
+}
+
+
+int get_count(void){
+	int i;
+	for (i= 0; pktuart_chans[i] != NULL && i < 2 ; i++){}
+	return i;
+}

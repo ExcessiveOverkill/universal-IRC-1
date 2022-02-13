@@ -1,0 +1,86 @@
+component angular_vel_limit "joint vel limit";
+
+author "Riley Ott";
+license "GPL";
+
+//include "hal/drivers/mesa-hostmot2/hostmot2.h";
+include <math.h>;
+include <stdlib.h>;
+
+param rw float vel_lim_0 "Velocity limit of joint 0";
+param rw float vel_lim_1 "Velocity limit of joint 1";
+param rw float vel_lim_2 "Velocity limit of joint 2";
+param rw float vel_lim_3 "Velocity limit of joint 3";
+param rw float vel_lim_4 "Velocity limit of joint 4";
+param rw float vel_lim_5 "Velocity limit of joint 5";
+param rw float max_count "Maximum max velocity count";
+
+pin in float vel_0  "Commanded velocity of joint 0";
+pin in float vel_1  "Commanded velocity of joint 1";
+pin in float vel_2  "Commanded velocity of joint 2";
+pin in float vel_3  "Commanded velocity of joint 3";
+pin in float vel_4  "Commanded velocity of joint 4";
+pin in float vel_5  "Commanded velocity of joint 5";
+
+pin out s32 joint_limited = -1 "Joint being limited (-1 if none)";
+pin out s32 max_vel_counts = 1 "Output to adjust machine max velocity";
+pin out float overspeed "Fastest joint overspeed";
+//pin in float max_vel_value  "Current machine max velocity";
+pin in float max_vel_set  "Set machine max velocity";
+pin in float deadband  "amount of cmd vel change to start increasing velocity";
+pin in float gain  "gain";
+pin in float pid_out  "pid output";
+
+function update;
+;;
+FUNCTION(update){
+	overspeed = -1000.0;
+	int new_joint_to_limit = -1;
+	if((abs(vel_0)-vel_lim_0) > overspeed){
+		new_joint_to_limit = 0;
+		overspeed = abs(vel_0)-vel_lim_0;
+	}
+	
+	
+	/*///////////////////////////////////////////////
+	if(new_joint_to_limit != -1){
+		joint_limited = new_joint_to_limit;
+	}
+	//TODO: make an if for each axis like above
+	
+	if(max_vel_counts>0){
+		switch(new_joint_to_limit){
+			case -1:
+				break;
+			case 0:
+				max_vel_counts -= overspeed*gain;
+				break;
+	
+		}
+	}
+	if(new_joint_to_limit == -1 && max_vel_counts<max_count){
+		switch(joint_limited){
+			case -1:
+				return;
+				break;
+			case 0:
+				if(abs(vel_0) < vel_lim_0*(1+deadband)){
+					max_vel_counts += vel_lim_0*(1+deadband)*gain;
+				}
+				else{
+					joint_limited = -1;
+				}
+				break;
+		}
+	}
+	*///////////////////////////////////////////////
+	max_vel_counts = pid_out;
+	if(max_vel_counts<0){
+		max_vel_counts = 0;
+	}
+	
+	if(max_vel_counts>max_count){
+		max_vel_counts = max_count;
+	}
+	
+}

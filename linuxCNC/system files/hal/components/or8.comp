@@ -1,0 +1,25 @@
+component or8 "Two-input OR gate";
+pin in bit in0;
+pin in bit in1;
+pin in bit in2;
+pin in bit in3;
+pin in bit in4;
+pin in bit in5;
+pin in bit in6;
+pin in bit in7;
+pin out bit out r"""
+\fBout\fR is computed from the value of \fBin0\fR and \fBin1\fR according
+to the following rule:
+.RS
+.TP
+\fBin0=FALSE in1=FALSE\fB
+\fBout=FALSE\fR
+.TP
+Otherwise,
+\fBout=TRUE\fR
+.RE"""
+;
+function _ nofp;
+license "GPL";
+;;
+FUNCTION(_) { out = in0 || in1 || in2 || in3 || in4 || in5 || in6 || in7; }

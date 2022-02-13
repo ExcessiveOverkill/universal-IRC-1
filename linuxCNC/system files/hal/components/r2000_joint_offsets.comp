@@ -1,0 +1,78 @@
+component r2000_joint_offsets "joint vel limit";
+
+author "Riley Ott";
+license "GPL";
+
+//include "hal/drivers/mesa-hostmot2/hostmot2.h";
+include <math.h>;
+include <stdlib.h>;
+
+param rw float joint_0_offset "Joint offset";
+param rw float joint_1_offset "Joint offset";
+param rw float joint_2_offset "Joint offset";
+param rw float joint_3_offset "Joint offset";
+param rw float joint_4_offset "Joint offset";
+param rw float joint_5_offset "Joint offset";
+param rw float joint_6_offset "Joint offset";
+param rw float joint_7_offset "Joint offset";
+
+
+pin in float joint_0_in_controller  "Joint input pos";
+pin in float joint_1_in_controller  "Joint input pos";
+pin in float joint_2_in_controller  "Joint input pos";
+pin in float joint_3_in_controller  "Joint input pos";
+pin in float joint_4_in_controller  "Joint input pos";
+pin in float joint_5_in_controller  "Joint input pos";
+pin in float joint_6_in_controller  "Joint input pos";
+pin in float joint_7_in_controller  "Joint input pos";
+
+pin out float joint_0_out_controller  "Joint output pos";
+pin out float joint_1_out_controller  "Joint output pos";
+pin out float joint_2_out_controller  "Joint output pos";
+pin out float joint_3_out_controller  "Joint output pos";
+pin out float joint_4_out_controller  "Joint output pos";
+pin out float joint_5_out_controller  "Joint output pos";
+pin out float joint_6_out_controller  "Joint output pos";
+pin out float joint_7_out_controller  "Joint output pos";
+
+pin in float joint_0_in_feedback  "Joint input pos";
+pin in float joint_1_in_feedback  "Joint input pos";
+pin in float joint_2_in_feedback  "Joint input pos";
+pin in float joint_3_in_feedback  "Joint input pos";
+pin in float joint_4_in_feedback  "Joint input pos";
+pin in float joint_5_in_feedback  "Joint input pos";
+pin in float joint_6_in_feedback  "Joint input pos";
+pin in float joint_7_in_feedback  "Joint input pos";
+
+pin out float joint_0_out_feedback  "Joint output pos";
+pin out float joint_1_out_feedback  "Joint output pos";
+pin out float joint_2_out_feedback  "Joint output pos";
+pin out float joint_3_out_feedback  "Joint output pos";
+pin out float joint_4_out_feedback  "Joint output pos";
+pin out float joint_5_out_feedback  "Joint output pos";
+pin out float joint_6_out_feedback  "Joint output pos";
+pin out float joint_7_out_feedback  "Joint output pos";
+
+function update;
+;;
+FUNCTION(update){
+	joint_0_out_controller = joint_0_in_controller + joint_0_offset;
+	joint_1_out_controller = joint_1_in_controller + (joint_1_offset);
+	joint_2_out_controller = joint_2_in_controller + joint_2_offset;
+	joint_3_out_controller = joint_3_in_controller + joint_3_offset;
+	joint_4_out_controller = joint_4_in_controller + joint_4_offset;
+	joint_5_out_controller = joint_5_in_controller + joint_5_offset;
+	joint_6_out_controller = joint_6_in_controller + joint_6_offset;
+	joint_7_out_controller = joint_7_in_controller + joint_7_offset;
+	
+	joint_0_out_feedback = joint_0_in_feedback - joint_0_offset;
+	joint_1_out_feedback = joint_1_in_feedback - (joint_1_offset);
+	joint_2_out_feedback = joint_2_in_feedback - joint_2_offset;
+	joint_3_out_feedback = joint_3_in_feedback - joint_3_offset;
+	joint_4_out_feedback = joint_4_in_feedback - joint_4_offset;
+	joint_5_out_feedback = joint_5_in_feedback - joint_5_offset;
+	joint_6_out_feedback = joint_6_in_feedback - joint_6_offset;
+	joint_7_out_feedback = joint_7_in_feedback - joint_7_offset;
+	
+	
+}

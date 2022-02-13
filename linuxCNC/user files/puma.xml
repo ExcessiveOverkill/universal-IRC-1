@@ -1,0 +1,158 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<pyvcp>
+	<hbox>
+<vbox>
+	<hbox>
+		<label width="6"/>
+		<label><text>"Torque"</text></label>
+		<label width="7"/>
+		<label><text>"Feed Error"</text></label>
+	</hbox>
+		
+	<hbox>
+	<label><text>"J1"</text></label>
+    <meter>
+		<size>120</size>
+		<halpin>"torque0"</halpin>
+		<max_>15</max_>
+		<min_>-15</min_>
+		<majorscale>5</majorscale>
+		<minorscale>1</minorscale>
+		<region1>(-15, -8, "red")</region1>
+		<region3>(8, 15, "red")</region3>
+	</meter>
+	<meter>
+		<size>120</size>
+		<halpin>"ferror0"</halpin>
+		<max_>1</max_>
+		<min_>-1</min_>
+		<majorscale>1</majorscale>
+		<minorscale>.1</minorscale>
+		<region1>(-1, -.1, "red")</region1>
+		<region3>(.1, 1, "red")</region3>
+	</meter>
+	</hbox>
+	
+	<hbox>
+	<label><text>"J2"</text></label>
+    <meter>
+		<size>120</size>
+		<halpin>"torque1"</halpin>
+		<max_>15</max_>
+		<min_>-15</min_>
+		<majorscale>5</majorscale>
+		<minorscale>1</minorscale>
+		<region1>(-15, -8, "red")</region1>
+		<region3>(8, 15, "red")</region3>
+	</meter>
+	<meter>
+		<size>120</size>
+		<halpin>"ferror1"</halpin>
+		<max_>1</max_>
+		<min_>-1</min_>
+		<majorscale>1</majorscale>
+		<minorscale>.1</minorscale>
+		<region1>(-1, -.1, "red")</region1>
+		<region3>(.1, 1, "red")</region3>
+	</meter>
+	</hbox>
+	
+	<hbox>
+	<label><text>"J3"</text></label>
+    <meter>
+		<size>120</size>
+		<halpin>"torque2"</halpin>
+		<max_>15</max_>
+		<min_>-15</min_>
+		<majorscale>5</majorscale>
+		<minorscale>1</minorscale>
+		<region1>(-15, -8, "red")</region1>
+		<region3>(8, 15, "red")</region3>
+	</meter>
+	<meter>
+		<size>120</size>
+		<halpin>"ferror2"</halpin>
+		<max_>1</max_>
+		<min_>-1</min_>
+		<majorscale>1</majorscale>
+		<minorscale>.1</minorscale>
+		<region1>(-1, -.1, "red")</region1>
+		<region3>(.1, 1, "red")</region3>
+	</meter>
+	</hbox>
+	
+	<hbox>
+	<label><text>"J4"</text></label>
+    <meter>
+		<size>120</size>
+		<halpin>"torque3"</halpin>
+		<max_>15</max_>
+		<min_>-15</min_>
+		<majorscale>5</majorscale>
+		<minorscale>1</minorscale>
+		<region1>(-15, -8, "red")</region1>
+		<region3>(8, 15, "red")</region3>
+	</meter>
+	<meter>
+		<size>120</size>
+		<halpin>"ferror3"</halpin>
+		<max_>1</max_>
+		<min_>-1</min_>
+		<majorscale>1</majorscale>
+		<minorscale>.1</minorscale>
+		<region1>(-1, -.1, "red")</region1>
+		<region3>(.1, 1, "red")</region3>
+	</meter>
+	</hbox>
+	
+	<hbox>
+	<label><text>"J5"</text></label>
+    <meter>
+		<size>120</size>
+		<halpin>"torque4"</halpin>
+		<max_>15</max_>
+		<min_>-15</min_>
+		<majorscale>5</majorscale>
+		<minorscale>1</minorscale>
+		<region1>(-15, -8, "red")</region1>
+		<region3>(8, 15, "red")</region3>
+	</meter>
+	<meter>
+		<size>120</size>
+		<halpin>"ferror4"</halpin>
+		<max_>1</max_>
+		<min_>-1</min_>
+		<majorscale>1</majorscale>
+		<minorscale>.1</minorscale>
+		<region1>(-1, -.1, "red")</region1>
+		<region3>(.1, 1, "red")</region3>
+	</meter>
+	</hbox>
+	
+	<hbox>
+	<label><text>"J6"</text></label>
+    <meter>
+		<size>120</size>
+		<halpin>"torque5"</halpin>
+		<max_>15</max_>
+		<min_>-15</min_>
+		<majorscale>5</majorscale>
+		<minorscale>1</minorscale>
+		<region1>(-15, -8, "red")</region1>
+		<region3>(8, 15, "red")</region3>
+	</meter>
+	<meter>
+		<size>120</size>
+		<halpin>"ferror5"</halpin>
+		<max_>1</max_>
+		<min_>-1</min_>
+		<majorscale>1</majorscale>
+		<minorscale>.1</minorscale>
+		<region1>(-1, -.1, "red")</region1>
+		<region3>(.1, 1, "red")</region3>
+	</meter>
+	</hbox>
+
+</vbox>
+</hbox>
+</pyvcp>

@@ -1,0 +1,388 @@
+loadrt [KINS]KINEMATICS
+loadrt [EMCMOT]EMCMOT servo_period_nsec=[EMCMOT]SERVO_PERIOD traj_period_nsec=[EMCMOT]TRAJ_PERIOD num_joints=[KINS]JOINTS
+#loadrt threads name1=uart-thread period1=10000000
+loadrt hostmot2
+loadrt hm2_pci config="enable_raw fanuc_chan_0=A64i fanuc_chan_1=A64i fanuc_chan_2=A64i fanuc_chan_3=A64i fanuc_chan_4=A64i fanuc_chan_5=A64i"
+loadrt classicladder_rt
+loadrt message names=drivetorquefault messages="ODrive fault: Could not enable servos"
+
+setp hm2_5i24.0.watchdog.timeout_ns 50000000
+loadrt pid names=pid.0,pid.1,pid.2,pid.3,pid.4,pid.5,pid.6
+#loadrt angular_vel_limit names=angular_vel_limit.0
+loadrt or8 count=1
+loadrt and8 count=1
+loadrt not count=1
+loadrt odrive_pktuart names=hm2_5i24.0.pktuart.0,hm2_5i24.0.pktuart.1,hm2_5i24.0.pktuart.2,hm2_5i24.0.pktuart.3
+#loadrt fanuc_encoder names=hm2_5i24.0.pktuart.0,hm2_5i24.0.pktuart.1,hm2_5i24.0.pktuart.2,hm2_5i24.0.pktuart.3
+loadrt r2000_joint_offsets names=r2000_joint_offsets.0
+
+
+
+setp hm2_5i24.0.raw.read_address 0x1514
+
+setp hm2_5i24.0.dpll.base-freq-khz 8
+setp hm2_5i24.0.dpll.01.timer-us -1000
+#setp hm2_5i24.0.7i84.0.0.output-00 1
+setp hm2_5i24.0.fanuc.00.timer-number 1
+setp hm2_5i24.0.fanuc.01.timer-number 1
+setp hm2_5i24.0.fanuc.02.timer-number 1
+setp hm2_5i24.0.fanuc.03.timer-number 1
+setp hm2_5i24.0.fanuc.04.timer-number 1
+setp hm2_5i24.0.fanuc.05.timer-number 1
+#setp hm2_5i24.0.gpio.029.is_output 1
+#setp hm2_5i24.0.gpio.031.is_output 1
+
+
+#add other is-output pins here
+
+
+#configure encoders
+#setp hm2_5i24.0.fanuc.00.single-pair 1
+setp hm2_5i24.0.fanuc.00.frequency-khz 2721.088
+#setp hm2_5i24.0.fanuc.01.single-pair 1
+setp hm2_5i24.0.fanuc.01.frequency-khz 2721.088
+#setp hm2_5i24.0.fanuc.02.single-pair 1
+setp hm2_5i24.0.fanuc.02.frequency-khz 2721.088
+#setp hm2_5i24.0.fanuc.03.single-pair 1
+setp hm2_5i24.0.fanuc.03.frequency-khz 2721.088
+#setp hm2_5i24.0.fanuc.04.single-pair 1
+setp hm2_5i24.0.fanuc.04.frequency-khz 2721.088
+#setp hm2_5i24.0.fanuc.05.single-pair 1
+setp hm2_5i24.0.fanuc.05.frequency-khz 2721.088
+
+#setup commutation scale
+#Note: standard fanuc encoders have 1024 steps, rs485 have 255 steps, use 1024 since odrive driver uses 1024
+setp hm2_5i24.0.fanuc.00.comm-scalemax 1024
+setp hm2_5i24.0.fanuc.01.comm-scalemax 1024
+setp hm2_5i24.0.fanuc.02.comm-scalemax 1024
+setp hm2_5i24.0.fanuc.03.comm-scalemax 1024
+setp hm2_5i24.0.fanuc.04.comm-scalemax 1024
+setp hm2_5i24.0.fanuc.05.comm-scalemax 1024
+
+#setup encoder counts per turn
+setp hm2_5i24.0.fanuc.00.encoder.counts-per-rev 65536
+setp hm2_5i24.0.fanuc.01.encoder.counts-per-rev 65536
+setp hm2_5i24.0.fanuc.02.encoder.counts-per-rev 65536
+setp hm2_5i24.0.fanuc.03.encoder.counts-per-rev 65536
+setp hm2_5i24.0.fanuc.04.encoder.counts-per-rev 65536
+setp hm2_5i24.0.fanuc.05.encoder.counts-per-rev 65536
+
+#setup encoder scale
+setp hm2_5i24.0.fanuc.00.encoder.scale -37248
+setp hm2_5i24.0.fanuc.01.encoder.scale -46270
+setp hm2_5i24.0.fanuc.02.encoder.scale 41040
+setp hm2_5i24.0.fanuc.03.encoder.scale 39000 #near exact 39000.000284
+setp hm2_5i24.0.fanuc.04.encoder.scale 40778
+setp hm2_5i24.0.fanuc.05.encoder.scale -27769
+
+#set joint offsets
+setp r2000_joint_offsets.0.joint-0-offset 89.8872 #3348118 cnts
+setp r2000_joint_offsets.0.joint-1-offset 41.8361 #1935757 cnts
+setp r2000_joint_offsets.0.joint-2-offset 64.4524 #2645126 cnts
+setp r2000_joint_offsets.0.joint-3-offset 0.9777 #38130 cnts
+setp r2000_joint_offsets.0.joint-4-offset -18.3556 #-748505 cnts
+setp r2000_joint_offsets.0.joint-5-offset 131.8800 #3662176 cnts
+
+#set all joints homed
+
+
+#configure max motor currents
+setp hm2_5i24.0.pktuart.0.max-torque-0 15
+setp hm2_5i24.0.pktuart.0.max-torque-1 15
+setp hm2_5i24.0.pktuart.1.max-torque-0 15
+setp hm2_5i24.0.pktuart.1.max-torque-1 11
+setp hm2_5i24.0.pktuart.2.max-torque-0 11
+setp hm2_5i24.0.pktuart.2.max-torque-1 11
+
+setp hm2_5i24.0.pktuart.3.max-torque-0 1
+setp hm2_5i24.0.pktuart.3.max-torque-1 1
+
+setp hm2_5i24.0.pktuart.1.invert-0 1
+setp hm2_5i24.0.pktuart.1.invert-1 1
+setp hm2_5i24.0.pktuart.2.invert-0 1
+
+#setp hm2_5i24.0.pktuart.0.com-error-limit 0
+
+setp hm2_5i24.0.pktuart.0.drive-number 0
+setp hm2_5i24.0.pktuart.1.drive-number 1
+setp hm2_5i24.0.pktuart.2.drive-number 2
+setp hm2_5i24.0.pktuart.3.drive-number 3
+
+addf hm2_5i24.0.read          servo-thread
+addf motion-command-handler   servo-thread
+addf motion-controller        servo-thread
+addf and8.0					  servo-thread
+addf or8.0					  servo-thread
+addf not.0					  servo-thread
+addf r2000_joint_offsets.0.update	  servo-thread
+addf pid.0.do-pid-calcs       servo-thread
+addf pid.1.do-pid-calcs       servo-thread
+addf pid.2.do-pid-calcs       servo-thread
+addf pid.3.do-pid-calcs       servo-thread
+addf pid.4.do-pid-calcs       servo-thread
+addf pid.5.do-pid-calcs       servo-thread
+addf pid.6.do-pid-calcs       servo-thread
+addf classicladder.0.refresh  servo-thread
+addf drivetorquefault				  servo-thread
+#addf angular_vel_limit.0.update	  servo-thread
+
+addf hm2_5i24.0.pktuart.0.update servo-thread
+addf hm2_5i24.0.pktuart.1.update servo-thread
+addf hm2_5i24.0.pktuart.2.update servo-thread
+addf hm2_5i24.0.pktuart.3.update servo-thread
+
+addf hm2_5i24.0.write         servo-thread
+
+
+
+net comm0 hm2_5i24.0.fanuc.00.comm hm2_5i24.0.pktuart.0.comm-0
+net comm1 hm2_5i24.0.fanuc.01.comm hm2_5i24.0.pktuart.0.comm-1
+net comm2 hm2_5i24.0.fanuc.02.comm hm2_5i24.0.pktuart.1.comm-0
+net comm3 hm2_5i24.0.fanuc.03.comm hm2_5i24.0.pktuart.1.comm-1
+net comm4 hm2_5i24.0.fanuc.04.comm hm2_5i24.0.pktuart.2.comm-0
+net comm5 hm2_5i24.0.fanuc.05.comm hm2_5i24.0.pktuart.2.comm-1
+
+#setp angular_vel_limit.0.max-count 1000
+#setp angular_vel_limit.0.vel-lim-0 [JOINT_0]MAX_VELOCITY
+
+#setp angular_vel_limit.0.deadband .1
+#setp angular_vel_limit.0.gain 1
+#setp angular_vel_limit.0.max-vel-set 10
+#net cmd_vel_0 angular_vel_limit.0.vel-0 joint.0.vel-cmd
+#net cmd_vel_1 angular_vel_limit.0.vel-1 joint.1.vel-cmd
+#net cmd_vel_2 angular_vel_limit.0.vel-2 joint.2.vel-cmd
+#net cmd_vel_3 angular_vel_limit.0.vel-3 joint.3.vel-cmd
+#net cmd_vel_4 angular_vel_limit.0.vel-4 joint.4.vel-cmd
+#net cmd_vel_5 angular_vel_limit.0.vel-5 joint.5.vel-cmd
+
+#setp pid.6.command 0
+#net max_overspeed pid.6.feedback angular_vel_limit.0.overspeed
+#net pid_6_out pid.6.output angular_vel_limit.0.pid-out
+#net pid_6_out pid.6.output motion.adaptive-feed
+
+#setp pid.6.Pgain [AXIS_X]P
+#setp pid.6.Igain [AXIS_X]I
+#setp pid.6.Dgain [AXIS_X]D
+#setp pid.6.bias [AXIS_X]BIAS
+#setp pid.6.FF0	[AXIS_X]FF0
+#setp pid.6.FF1 [AXIS_X]FF1
+#setp pid.6.FF2 [AXIS_X]FF2
+#setp pid.6.deadband [AXIS_X]DEADBAND
+#setp pid.6.maxoutput [AXIS_X]MAX_OUTPUT
+
+#ODrive fault pins
+#net external_estop_in hm2_5i24.0.7i84.0.0.input-00-not or8.0.in0
+net drive_0_error hm2_5i24.0.pktuart.0.error or8.0.in1
+net drive_1_error hm2_5i24.0.pktuart.1.error or8.0.in2
+net drive_2_error hm2_5i24.0.pktuart.2.error or8.0.in3
+#net drive_3_error hm2_5i24.0.pktuart.3.error or8.0.in4
+net drive-fault or8.0.out
+
+net estop_active halui.estop.is-activated not.0.in
+
+#ODrive torque on pins
+net torque-0-0-on hm2_5i24.0.pktuart.0.is-enabled-0 and8.0.in0
+net torque-0-1-on hm2_5i24.0.pktuart.0.is-enabled-1 and8.0.in1
+net torque-1-0-on hm2_5i24.0.pktuart.1.is-enabled-0 and8.0.in2
+net torque-1-1-on hm2_5i24.0.pktuart.1.is-enabled-1 and8.0.in3
+net torque-2-0-on hm2_5i24.0.pktuart.2.is-enabled-0 and8.0.in4
+net torque-2-1-on hm2_5i24.0.pktuart.2.is-enabled-1 and8.0.in5
+net torque-3-0-on hm2_5i24.0.pktuart.3.is-enabled-0 and8.0.in6
+net torque-3-1-on hm2_5i24.0.pktuart.3.is-enabled-1 and8.0.in7
+#setp and8.0.in6 1
+#setp and8.0.in7 1
+net drive-torque-on and8.0.out
+
+#ODrive enable pins
+net enable-drives hm2_5i24.0.pktuart.0.enable-0 hm2_5i24.0.pktuart.0.enable-1
+net enable-drives hm2_5i24.0.pktuart.1.enable-0 hm2_5i24.0.pktuart.1.enable-1
+net enable-drives hm2_5i24.0.pktuart.2.enable-0 hm2_5i24.0.pktuart.2.enable-1
+#net enable-drives hm2_5i24.0.pktuart.3.enable-0 hm2_5i24.0.pktuart.3.enable-1
+
+#setp motion.enable 1
+net estop-loop hm2_5i24.0.7i84.0.0.input-15-not iocontrol.0.emc-enable-in
+net exit-estop iocontrol.0.user-enable-out hm2_5i24.0.7i84.0.0.output-00
+#net motion_enabled motion.motion-enabled hm2_5i24.0.7i84.0.0.output-03
+
+#classicladder pins
+net main-power classicladder.0.out-00 hm2_5i24.0.7i84.0.0.output-02
+net psus-on classicladder.0.out-01 hm2_5i24.0.7i84.0.0.output-01
+net motion-enabled motion.motion-enabled classicladder.0.in-02
+net drives-torque-on classicladder.0.in-01
+net estop-loop classicladder.0.in-00
+net brake-release classicladder.0.out-02 hm2_5i24.0.7i84.0.0.output-03
+net machine-off halui.machine.off classicladder.0.out-03
+net enable-drives classicladder.0.out-04
+net drive-torque-fault drivetorquefault.trigger classicladder.0.out-05
+
+#pyvcp pins
+net ferror_0 joint.0.f-error
+net ferror_1 joint.1.f-error
+net ferror_2 joint.2.f-error
+net ferror_3 joint.3.f-error
+net ferror_4 joint.4.f-error
+net ferror_5 joint.5.f-error
+
+#enable PIDs when brakes are released
+net brake-release pid.0.enable pid.1.enable pid.2.enable pid.3.enable pid.4.enable pid.5.enable pid.6.enable
+
+#setup joint offsets and cmd/fbk pins
+net fb_motor_0 r2000_joint_offsets.0.joint-0-out-feedback joint.0.motor-pos-fb
+net fb_motor_1 r2000_joint_offsets.0.joint-1-out-feedback joint.1.motor-pos-fb
+net fb_motor_2 r2000_joint_offsets.0.joint-2-out-feedback joint.2.motor-pos-fb
+net fb_motor_3 r2000_joint_offsets.0.joint-3-out-feedback joint.3.motor-pos-fb
+net fb_motor_4 r2000_joint_offsets.0.joint-4-out-feedback joint.4.motor-pos-fb
+net fb_motor_5 r2000_joint_offsets.0.joint-5-out-feedback joint.5.motor-pos-fb
+
+net fb_motor_actual_0 r2000_joint_offsets.0.joint-0-in-feedback hm2_5i24.0.fanuc.00.encoder.position pid.0.feedback
+net fb_motor_actual_1 r2000_joint_offsets.0.joint-1-in-feedback hm2_5i24.0.fanuc.01.encoder.position pid.1.feedback
+net fb_motor_actual_2 r2000_joint_offsets.0.joint-2-in-feedback hm2_5i24.0.fanuc.02.encoder.position pid.2.feedback
+net fb_motor_actual_3 r2000_joint_offsets.0.joint-3-in-feedback hm2_5i24.0.fanuc.03.encoder.position pid.3.feedback
+net fb_motor_actual_4 r2000_joint_offsets.0.joint-4-in-feedback hm2_5i24.0.fanuc.04.encoder.position pid.4.feedback
+net fb_motor_actual_5 r2000_joint_offsets.0.joint-5-in-feedback hm2_5i24.0.fanuc.05.encoder.position pid.5.feedback
+
+net cmd_motor_actual_0 r2000_joint_offsets.0.joint-0-out-controller pid.0.command
+net cmd_motor_actual_1 r2000_joint_offsets.0.joint-1-out-controller pid.1.command
+net cmd_motor_actual_2 r2000_joint_offsets.0.joint-2-out-controller pid.2.command
+net cmd_motor_actual_3 r2000_joint_offsets.0.joint-3-out-controller pid.3.command
+net cmd_motor_actual_4 r2000_joint_offsets.0.joint-4-out-controller pid.4.command
+net cmd_motor_actual_5 r2000_joint_offsets.0.joint-5-out-controller pid.5.command
+
+net cmd_motor_0 r2000_joint_offsets.0.joint-0-in-controller joint.0.motor-pos-cmd
+net cmd_motor_1 r2000_joint_offsets.0.joint-1-in-controller joint.1.motor-pos-cmd
+net cmd_motor_2 r2000_joint_offsets.0.joint-2-in-controller joint.2.motor-pos-cmd
+net cmd_motor_3 r2000_joint_offsets.0.joint-3-in-controller joint.3.motor-pos-cmd
+net cmd_motor_4 r2000_joint_offsets.0.joint-4-in-controller joint.4.motor-pos-cmd
+net cmd_motor_5 r2000_joint_offsets.0.joint-5-in-controller joint.5.motor-pos-cmd
+
+
+
+net torque_motor_0 pid.0.output hm2_5i24.0.pktuart.0.torque-0
+
+setp pid.0.Pgain [JOINT_0]P
+setp pid.0.Igain [JOINT_0]I
+setp pid.0.Dgain [JOINT_0]D
+setp pid.0.bias [JOINT_0]BIAS
+setp pid.0.FF0	[JOINT_0]FF0
+setp pid.0.FF1 [JOINT_0]FF1
+setp pid.0.FF2 [JOINT_0]FF2
+setp pid.0.deadband [JOINT_0]DEADBAND
+setp pid.0.maxoutput [JOINT_0]MAX_OUTPUT
+
+
+net torque_motor_1 pid.1.output hm2_5i24.0.pktuart.0.torque-1
+
+setp pid.1.Pgain [JOINT_1]P
+setp pid.1.Igain [JOINT_1]I
+setp pid.1.Dgain [JOINT_1]D
+setp pid.1.bias [JOINT_1]BIAS
+setp pid.1.FF0	[JOINT_1]FF0
+setp pid.1.FF1 [JOINT_1]FF1
+setp pid.1.FF2 [JOINT_1]FF2
+setp pid.1.deadband [JOINT_1]DEADBAND
+setp pid.1.maxoutput [JOINT_1]MAX_OUTPUT
+
+
+net torque_motor_2 pid.2.output hm2_5i24.0.pktuart.1.torque-0
+
+setp pid.2.Pgain [JOINT_2]P
+setp pid.2.Igain [JOINT_2]I
+setp pid.2.Dgain [JOINT_2]D
+setp pid.2.bias [JOINT_2]BIAS
+setp pid.2.FF0	[JOINT_2]FF0
+setp pid.2.FF1 [JOINT_2]FF1
+setp pid.2.FF2 [JOINT_2]FF2
+setp pid.2.deadband [JOINT_2]DEADBAND
+setp pid.2.maxoutput [JOINT_2]MAX_OUTPUT
+
+
+net torque_motor_3 pid.3.output hm2_5i24.0.pktuart.1.torque-1
+
+setp pid.3.Pgain [JOINT_3]P
+setp pid.3.Igain [JOINT_3]I
+setp pid.3.Dgain [JOINT_3]D
+setp pid.3.bias [JOINT_3]BIAS
+setp pid.3.FF0	[JOINT_3]FF0
+setp pid.3.FF1 [JOINT_3]FF1
+setp pid.3.FF2 [JOINT_3]FF2
+setp pid.3.deadband [JOINT_3]DEADBAND
+setp pid.3.maxoutput [JOINT_3]MAX_OUTPUT
+
+
+net torque_motor_4 pid.4.output hm2_5i24.0.pktuart.2.torque-0
+
+setp pid.4.Pgain [JOINT_4]P
+setp pid.4.Igain [JOINT_4]I
+setp pid.4.Dgain [JOINT_4]D
+setp pid.4.bias [JOINT_4]BIAS
+setp pid.4.FF0	[JOINT_4]FF0
+setp pid.4.FF1 [JOINT_4]FF1
+setp pid.4.FF2 [JOINT_4]FF2
+setp pid.4.deadband [JOINT_4]DEADBAND
+setp pid.4.maxoutput [JOINT_4]MAX_OUTPUT
+
+
+net torque_motor_5 pid.5.output hm2_5i24.0.pktuart.2.torque-1
+
+setp pid.5.Pgain [JOINT_5]P
+setp pid.5.Igain [JOINT_5]I
+setp pid.5.Dgain [JOINT_5]D
+setp pid.5.bias [JOINT_5]BIAS
+setp pid.5.FF0	[JOINT_5]FF0
+setp pid.5.FF1 [JOINT_5]FF1
+setp pid.5.FF2 [JOINT_5]FF2
+setp pid.5.deadband [JOINT_5]DEADBAND
+setp pid.5.maxoutput [JOINT_5]MAX_OUTPUT
+
+
+net tool-prep-loop iocontrol.0.tool-prepare iocontrol.0.tool-prepared
+net tool-change-loop iocontrol.0.tool-change iocontrol.0.tool-changed
+
+# create HAL signals for position commands from motion module
+#net J0pos <= joint.0.motor-pos-cmd
+#net J1pos <= joint.1.motor-pos-cmd
+#net J2pos <= joint.2.motor-pos-cmd
+#net J3pos <= joint.3.motor-pos-cmd
+#net J4pos <= joint.4.motor-pos-cmd
+#net J5pos <= joint.5.motor-pos-cmd
+
+
+# loop position commands back to motion module feedback
+#net J0pos => joint.0.motor-pos-fb
+#net J1pos => joint.1.motor-pos-fb
+#net J2pos => joint.2.motor-pos-fb
+#net J3pos => joint.3.motor-pos-fb
+#net J4pos => joint.4.motor-pos-fb
+#net J5pos => joint.5.motor-pos-fb
+
+
+
+loadusr -W r2000ia_200f
+
+setp genserkins.A-0 0
+setp genserkins.A-1 12.2834646
+setp genserkins.A-2 42.3228346
+setp genserkins.A-3 8.85826772
+setp genserkins.A-4 0
+setp genserkins.A-5 0
+
+setp genserkins.ALPHA-0 0 
+setp genserkins.ALPHA-1 1.570796326
+setp genserkins.ALPHA-2 0 
+setp genserkins.ALPHA-3 -1.570796326 
+setp genserkins.ALPHA-4 -1.570796326 
+setp genserkins.ALPHA-5 1.570796326
+
+setp genserkins.D-0 26.3779528
+setp genserkins.D-1 0
+setp genserkins.D-2 0
+setp genserkins.D-3 -43.70007874
+setp genserkins.D-4 0
+setp genserkins.D-5 -10.2362205
+
+net j0 joint.0.pos-fb r2000ia_200f.joint1
+net j1 joint.1.pos-fb r2000ia_200f.joint2
+net j2 joint.2.pos-fb r2000ia_200f.joint3
+net j3 joint.3.pos-fb r2000ia_200f.joint4
+net j4 joint.4.pos-fb r2000ia_200f.joint5
+net j5 joint.5.pos-fb r2000ia_200f.joint6

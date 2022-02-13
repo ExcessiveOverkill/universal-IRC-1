@@ -1,0 +1,22 @@
+# These files are loaded post GUI, in the order they appear
+
+net torque_motor_0 pyvcp.torque0
+net torque_motor_1 pyvcp.torque1
+net torque_motor_2 pyvcp.torque2
+net torque_motor_3 pyvcp.torque3
+net torque_motor_4 pyvcp.torque4
+net torque_motor_5 pyvcp.torque5
+
+net ferror_0 pyvcp.ferror0
+net ferror_1 pyvcp.ferror1
+net ferror_2 pyvcp.ferror2
+net ferror_3 pyvcp.ferror3
+net ferror_4 pyvcp.ferror4
+net ferror_5 pyvcp.ferror5
+
+#setp halui.max-velocity.direct-value 1
+#setp halui.max-velocity.scale .01
+#net max_vel_counts angular_vel_limit.0.max-vel-counts halui.max-velocity.counts
+
+source custom_postgui.hal
+
