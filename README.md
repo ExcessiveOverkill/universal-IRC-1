@@ -71,7 +71,7 @@ Depending on the robot, it may fall due to gravity, or spring upwards due to a c
 
 When I first unlocked the brakes to move my robot into a safe working position, I shorted together the motor phases to only allow the robot to move very slowly.
 
-Fanuc uses 90vdc brakes on all of their motors I have seen. They however open at around only 50v. I am using 75v since it was easily available due to my power supply selection.
+Fanuc uses 90vdc brakes on all of their motors I have seen. They however open at around only 50v. I am using 72v since it was easily available due to my power supply selection.
 
 Motor brakes will require a diode and resistor or other type of surge arrester to handle the inductive voltage spike when being turned off. I am currently using a diode and 2 ohm resistor across the brake terminals, I am planning on trying a higher value resistor to decrease the closing time. I tried with no surge protection and the EMI spike caused the computer running linuxCNC to crash, so don't do that.
 
