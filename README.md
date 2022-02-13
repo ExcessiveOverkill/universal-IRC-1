@@ -46,6 +46,12 @@ Making custom firmware for Mesa FPGAs: http://tom-itx.no-ip.biz:81/~webpage/emc/
 
 The odrives have custom firmware that makes them no longer need to calibrate before enabling, and allowing encoder position to be written over uart.
 
+There is a compiled .hex file in the odrive firmware folder that can be used to directly flash a v3.6 56v Odrive
+
+There is also a compiled .bit file in the hostmot2 folder for the 5i24-24, it can be programmed via mesaflash.
+
+LinuxCNC is currently a bit of a mess right now. All the files I modified are included in the repo. All of the new files were added under the comps folder, although I also needed to edit the abs_encoder.c file in the drivers/mesa/hostmot2 folder. Modifying a driver requires a full recompile of LinuxCNC.
+ 
 # Controls
 LinuxCNC is responsible for all of the servo control loops, path planning, kinematics, and gcode interpreting. 
 
