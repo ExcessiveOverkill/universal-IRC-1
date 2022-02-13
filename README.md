@@ -2,7 +2,6 @@
 Universal Industrial Robot Controller. V1 is based on using LinuxCNC in combination with Odrives.
 
 Everything in this repo is specifically for my R2000iA setup, but can be modified for other robots.
-//See this video for the R2000iA conversion.
 
 # Uses
 The purpose of this is to allow old industrial robots that are at end of life to be reused. 
