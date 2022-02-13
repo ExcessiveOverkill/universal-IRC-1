@@ -40,6 +40,10 @@ I am using linuxCNC 2.8 with some custom HAL components along with a modified dr
 
 The 5i24 FPGA hostmot2 firmware has custom changes to add support rs485 fanuc encoders.
 
+FPGA programming software: https://www.xilinx.com/support/download/index.html/content/xilinx/en/downloadNav/vivado-design-tools/archive-ise.html
+
+Making custom firmware for Mesa FPGAs: http://tom-itx.no-ip.biz:81/~webpage/emc/xilinx/xilinx14_install_index.php
+
 The odrives have custom firmware that makes them no longer need to calibrate before enabling, and allowing encoder position to be written over uart.
 
 # Controls
