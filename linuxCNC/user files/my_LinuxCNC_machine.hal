@@ -1,6 +1,5 @@
 loadrt [KINS]KINEMATICS
 loadrt [EMCMOT]EMCMOT servo_period_nsec=[EMCMOT]SERVO_PERIOD traj_period_nsec=[EMCMOT]TRAJ_PERIOD num_joints=[KINS]JOINTS
-#loadrt threads name1=uart-thread period1=10000000
 loadrt hostmot2
 loadrt hm2_pci config="enable_raw fanuc_chan_0=A64i fanuc_chan_1=A64i fanuc_chan_2=A64i fanuc_chan_3=A64i fanuc_chan_4=A64i fanuc_chan_5=A64i"
 loadrt classicladder_rt
@@ -13,7 +12,6 @@ loadrt or8 count=1
 loadrt and8 count=1
 loadrt not count=1
 loadrt odrive_pktuart names=hm2_5i24.0.pktuart.0,hm2_5i24.0.pktuart.1,hm2_5i24.0.pktuart.2,hm2_5i24.0.pktuart.3
-#loadrt fanuc_encoder names=hm2_5i24.0.pktuart.0,hm2_5i24.0.pktuart.1,hm2_5i24.0.pktuart.2,hm2_5i24.0.pktuart.3
 loadrt r2000_joint_offsets names=r2000_joint_offsets.0
 
 
@@ -31,9 +29,6 @@ setp hm2_5i24.0.fanuc.04.timer-number 1
 setp hm2_5i24.0.fanuc.05.timer-number 1
 #setp hm2_5i24.0.gpio.029.is_output 1
 #setp hm2_5i24.0.gpio.031.is_output 1
-
-
-#add other is-output pins here
 
 
 #configure encoders
@@ -67,7 +62,7 @@ setp hm2_5i24.0.fanuc.03.encoder.counts-per-rev 65536
 setp hm2_5i24.0.fanuc.04.encoder.counts-per-rev 65536
 setp hm2_5i24.0.fanuc.05.encoder.counts-per-rev 65536
 
-#setup encoder scale
+#setup encoder scale(counts per degree)
 setp hm2_5i24.0.fanuc.00.encoder.scale -37248
 setp hm2_5i24.0.fanuc.01.encoder.scale -46270
 setp hm2_5i24.0.fanuc.02.encoder.scale 41040
@@ -75,7 +70,7 @@ setp hm2_5i24.0.fanuc.03.encoder.scale 39000 #near exact 39000.000284
 setp hm2_5i24.0.fanuc.04.encoder.scale 40778
 setp hm2_5i24.0.fanuc.05.encoder.scale -27769
 
-#set joint offsets
+#set joint offsets(encoder reading at master position)
 setp r2000_joint_offsets.0.joint-0-offset 89.8872 #3348118 cnts
 setp r2000_joint_offsets.0.joint-1-offset 41.8361 #1935757 cnts
 setp r2000_joint_offsets.0.joint-2-offset 64.4524 #2645126 cnts
@@ -83,17 +78,13 @@ setp r2000_joint_offsets.0.joint-3-offset 0.9777 #38130 cnts
 setp r2000_joint_offsets.0.joint-4-offset -18.3556 #-748505 cnts
 setp r2000_joint_offsets.0.joint-5-offset 131.8800 #3662176 cnts
 
-#set all joints homed
-
-
-#configure max motor currents
+#configure max motor currents(still conservative)
 setp hm2_5i24.0.pktuart.0.max-torque-0 15
 setp hm2_5i24.0.pktuart.0.max-torque-1 15
 setp hm2_5i24.0.pktuart.1.max-torque-0 15
 setp hm2_5i24.0.pktuart.1.max-torque-1 11
 setp hm2_5i24.0.pktuart.2.max-torque-0 11
 setp hm2_5i24.0.pktuart.2.max-torque-1 11
-
 setp hm2_5i24.0.pktuart.3.max-torque-0 1
 setp hm2_5i24.0.pktuart.3.max-torque-1 1
 
@@ -103,17 +94,19 @@ setp hm2_5i24.0.pktuart.2.invert-0 1
 
 #setp hm2_5i24.0.pktuart.0.com-error-limit 0
 
+#pretty sure these don't need to exist, I'll remove them eventually
 setp hm2_5i24.0.pktuart.0.drive-number 0
 setp hm2_5i24.0.pktuart.1.drive-number 1
 setp hm2_5i24.0.pktuart.2.drive-number 2
 setp hm2_5i24.0.pktuart.3.drive-number 3
 
+#add componets to threads
 addf hm2_5i24.0.read          servo-thread
 addf motion-command-handler   servo-thread
 addf motion-controller        servo-thread
-addf and8.0					  servo-thread
-addf or8.0					  servo-thread
-addf not.0					  servo-thread
+addf and8.0					          servo-thread
+addf or8.0					          servo-thread
+addf not.0					           servo-thread
 addf r2000_joint_offsets.0.update	  servo-thread
 addf pid.0.do-pid-calcs       servo-thread
 addf pid.1.do-pid-calcs       servo-thread
@@ -125,22 +118,22 @@ addf pid.6.do-pid-calcs       servo-thread
 addf classicladder.0.refresh  servo-thread
 addf drivetorquefault				  servo-thread
 #addf angular_vel_limit.0.update	  servo-thread
-
 addf hm2_5i24.0.pktuart.0.update servo-thread
 addf hm2_5i24.0.pktuart.1.update servo-thread
 addf hm2_5i24.0.pktuart.2.update servo-thread
 addf hm2_5i24.0.pktuart.3.update servo-thread
-
 addf hm2_5i24.0.write         servo-thread
 
 
-
+#connect motor commutation data pins
 net comm0 hm2_5i24.0.fanuc.00.comm hm2_5i24.0.pktuart.0.comm-0
 net comm1 hm2_5i24.0.fanuc.01.comm hm2_5i24.0.pktuart.0.comm-1
 net comm2 hm2_5i24.0.fanuc.02.comm hm2_5i24.0.pktuart.1.comm-0
 net comm3 hm2_5i24.0.fanuc.03.comm hm2_5i24.0.pktuart.1.comm-1
 net comm4 hm2_5i24.0.fanuc.04.comm hm2_5i24.0.pktuart.2.comm-0
 net comm5 hm2_5i24.0.fanuc.05.comm hm2_5i24.0.pktuart.2.comm-1
+
+#all of this angular vel limit stuff should be removed
 
 #setp angular_vel_limit.0.max-count 1000
 #setp angular_vel_limit.0.vel-lim-0 [JOINT_0]MAX_VELOCITY
@@ -255,7 +248,7 @@ net cmd_motor_3 r2000_joint_offsets.0.joint-3-in-controller joint.3.motor-pos-cm
 net cmd_motor_4 r2000_joint_offsets.0.joint-4-in-controller joint.4.motor-pos-cmd
 net cmd_motor_5 r2000_joint_offsets.0.joint-5-in-controller joint.5.motor-pos-cmd
 
-
+#connect PID pins
 
 net torque_motor_0 pid.0.output hm2_5i24.0.pktuart.0.torque-0
 
@@ -356,9 +349,10 @@ net tool-change-loop iocontrol.0.tool-change iocontrol.0.tool-changed
 #net J5pos => joint.5.motor-pos-fb
 
 
-
+#load 3d render
 loadusr -W r2000ia_200f
 
+#set kinematic parameters
 setp genserkins.A-0 0
 setp genserkins.A-1 12.2834646
 setp genserkins.A-2 42.3228346
@@ -380,6 +374,7 @@ setp genserkins.D-3 -43.70007874
 setp genserkins.D-4 0
 setp genserkins.D-5 -10.2362205
 
+#link joint positions to 3d model
 net j0 joint.0.pos-fb r2000ia_200f.joint1
 net j1 joint.1.pos-fb r2000ia_200f.joint2
 net j2 joint.2.pos-fb r2000ia_200f.joint3
