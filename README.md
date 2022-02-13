@@ -33,12 +33,14 @@ Connected to it are 2 Mesa 7i44 boards(8ch rs422/rs485). One of which is set up 
 
 One of the smart serial devices is a Mesa 7i84 IO card for handling 24v IO, the other port is left unused currently.
 
+Mesa Store: http://store.mesanet.com/
+
 # Software
 I am using linuxCNC 2.8 with some custom HAL components along with a modified driver for the fanuc encoders.
 
 The 5i24 FPGA hostmot2 firmware has custom changes to add support rs485 fanuc encoders.
 
-The odrives have custom firmware that makes them no longer need to calibrate before enabling, and allow encoder position to be written over uart.
+The odrives have custom firmware that makes them no longer need to calibrate before enabling, and allowing encoder position to be written over uart.
 
 # Controls
 LinuxCNC is responsible for all of the servo control loops, path planning, kinematics, and gcode interpreting. 
