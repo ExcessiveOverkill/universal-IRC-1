@@ -3,6 +3,8 @@ Universal Industrial Robot Controller. V1 is based on using LinuxCNC in combinat
 
 Everything in this repo is specifically for my R2000iA setup, but can be modified for other robots.
 
+Video describing my setup: https://youtu.be/P2O8KCmVjU0
+
 # Uses
 The purpose of this is to allow old industrial robots that are at end of life to be reused at a hobbyist/enthusiast level. 
 
@@ -43,6 +45,8 @@ The 5i24 FPGA hostmot2 firmware has custom changes to add support rs485 fanuc en
 FPGA programming software: https://www.xilinx.com/support/download/index.html/content/xilinx/en/downloadNav/vivado-design-tools/archive-ise.html
 
 Making custom firmware for Mesa FPGAs: http://tom-itx.no-ip.biz:81/~webpage/emc/xilinx/xilinx14_install_index.php
+
+Note you must set the chip type from spartan6-16 to spartan6-25 in ISE for the 5i24-25 card.
 
 The odrives have custom firmware that makes them no longer need to calibrate before enabling, and allowing encoder position to be written over uart.
 
@@ -91,6 +95,8 @@ I could not just swap in quadrature encoders because I need absolute multiturn p
 It wasn't worth ditching the industrial fanuc encoders only to need to remake a jankier, less reliable version of basically the same thing.
 
 The encoders the R2000iA uses are A64i and A128i, they are able to provide 16 bit single and multi turn position, 8 bit commutation, a motor temp ok bit, and a battery ok bit. Both position counts are retained by battery backup, the commutation is absolute and will be accurate even after complete power loss.
+
+Spreadsheet with encoder info: https://docs.google.com/spreadsheets/d/1nRmV0D8c2zIuhrnp7eMNqSO8C0mfWp4tSzxPsphXA7A/edit?usp=sharing
 
 The encoders are connected with rs485. LinuxCNC and hostmot2 already support rs422 fanuc encoders, which were what I assumed my robot used(WRONG!).
 
