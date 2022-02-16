@@ -66,7 +66,7 @@ There is a forum for linuxCNC related questions as well: https://forum.linuxcnc.
 # Motors
 Most industrial robots use PMAC(permanent magnet alternating current) servo motors.
 
-I am using Odrives to run the motors since they are cheap and readily available. The issue is they are only rated for 56v, while most robots use ~250v motors. Odrives also use trapezoidal commutation instead of the sinusoidal commutation used by the industrial servos. These issues result in the Odrives only being able to achieve around 10% of the maximum motor speed in my case.
+I am using Odrives to run the motors since they are cheap and readily available. The issue is they are only rated for 56v, while most robots use ~250v motors. This results in the Odrives only being able to achieve around 10% of the maximum motor speed in my case.
 
 They are still able to apply full torque as it is proportional to current, which the Odrives have a surplus off.
 
