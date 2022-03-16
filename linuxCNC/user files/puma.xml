@@ -14,12 +14,12 @@
     <meter>
 		<size>120</size>
 		<halpin>"torque0"</halpin>
-		<max_>15</max_>
-		<min_>-15</min_>
+		<max_>30</max_>
+		<min_>-30</min_>
 		<majorscale>5</majorscale>
 		<minorscale>1</minorscale>
-		<region1>(-15, -8, "red")</region1>
-		<region3>(8, 15, "red")</region3>
+		<region1>(-30, -21, "red")</region1>
+		<region3>(21, 30, "red")</region3>
 	</meter>
 	<meter>
 		<size>120</size>
@@ -38,12 +38,12 @@
     <meter>
 		<size>120</size>
 		<halpin>"torque1"</halpin>
-		<max_>15</max_>
-		<min_>-15</min_>
+		<max_>30</max_>
+		<min_>-30</min_>
 		<majorscale>5</majorscale>
 		<minorscale>1</minorscale>
-		<region1>(-15, -8, "red")</region1>
-		<region3>(8, 15, "red")</region3>
+		<region1>(-30, -21, "red")</region1>
+		<region3>(21, 30, "red")</region3>
 	</meter>
 	<meter>
 		<size>120</size>
@@ -62,12 +62,12 @@
     <meter>
 		<size>120</size>
 		<halpin>"torque2"</halpin>
-		<max_>15</max_>
-		<min_>-15</min_>
+		<max_>30</max_>
+		<min_>-30</min_>
 		<majorscale>5</majorscale>
 		<minorscale>1</minorscale>
-		<region1>(-15, -8, "red")</region1>
-		<region3>(8, 15, "red")</region3>
+		<region1>(-30, -21, "red")</region1>
+		<region3>(21, 30, "red")</region3>
 	</meter>
 	<meter>
 		<size>120</size>
@@ -86,12 +86,12 @@
     <meter>
 		<size>120</size>
 		<halpin>"torque3"</halpin>
-		<max_>15</max_>
-		<min_>-15</min_>
+		<max_>20</max_>
+		<min_>-20</min_>
 		<majorscale>5</majorscale>
 		<minorscale>1</minorscale>
-		<region1>(-15, -8, "red")</region1>
-		<region3>(8, 15, "red")</region3>
+		<region1>(-20, -11, "red")</region1>
+		<region3>(11, 20, "red")</region3>
 	</meter>
 	<meter>
 		<size>120</size>
@@ -110,12 +110,12 @@
     <meter>
 		<size>120</size>
 		<halpin>"torque4"</halpin>
-		<max_>15</max_>
-		<min_>-15</min_>
+		<max_>20</max_>
+		<min_>-20</min_>
 		<majorscale>5</majorscale>
 		<minorscale>1</minorscale>
-		<region1>(-15, -8, "red")</region1>
-		<region3>(8, 15, "red")</region3>
+		<region1>(-20, -11, "red")</region1>
+		<region3>(11, 20, "red")</region3>
 	</meter>
 	<meter>
 		<size>120</size>
@@ -134,12 +134,12 @@
     <meter>
 		<size>120</size>
 		<halpin>"torque5"</halpin>
-		<max_>15</max_>
-		<min_>-15</min_>
+		<max_>20</max_>
+		<min_>-20</min_>
 		<majorscale>5</majorscale>
 		<minorscale>1</minorscale>
-		<region1>(-15, -8, "red")</region1>
-		<region3>(8, 15, "red")</region3>
+		<region1>(-20, -11, "red")</region1>
+		<region3>(11, 20, "red")</region3>
 	</meter>
 	<meter>
 		<size>120</size>

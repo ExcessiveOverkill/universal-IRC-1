@@ -1,9 +1,8 @@
-component r2000_joint_offsets "joint vel limit";
+component r2000_joint_offsets "joint offsets";
 
 author "Riley Ott";
 license "GPL";
 
-//include "hal/drivers/mesa-hostmot2/hostmot2.h";
 include <math.h>;
 include <stdlib.h>;
 

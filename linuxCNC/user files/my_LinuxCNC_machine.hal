@@ -46,7 +46,7 @@ setp hm2_5i24.0.fanuc.04.frequency-khz 2721.088
 setp hm2_5i24.0.fanuc.05.frequency-khz 2721.088
 
 #setup commutation scale
-#Note: standard fanuc encoders have 1024 steps, rs485 have 255 steps, use 1024 since odrive driver uses 1024
+#Note: standard fanuc encoders have 1024 steps, rs485 mode gives 256 steps, use 1024 since odrive driver uses 1024
 setp hm2_5i24.0.fanuc.00.comm-scalemax 1024
 setp hm2_5i24.0.fanuc.01.comm-scalemax 1024
 setp hm2_5i24.0.fanuc.02.comm-scalemax 1024
@@ -78,10 +78,12 @@ setp r2000_joint_offsets.0.joint-3-offset 0.9777 #38130 cnts
 setp r2000_joint_offsets.0.joint-4-offset -18.3556 #-748505 cnts
 setp r2000_joint_offsets.0.joint-5-offset 131.8800 #3662176 cnts
 
-#configure max motor currents(still conservative)
-setp hm2_5i24.0.pktuart.0.max-torque-0 15
-setp hm2_5i24.0.pktuart.0.max-torque-1 15
-setp hm2_5i24.0.pktuart.1.max-torque-0 15
+#configure max motor currents(still conservative, motors can handle over 3x current for short bursts)
+#J1-3 are 21A stall 30Nm
+#J4-6 are 11A stall 8Nm
+setp hm2_5i24.0.pktuart.0.max-torque-0 21
+setp hm2_5i24.0.pktuart.0.max-torque-1 21
+setp hm2_5i24.0.pktuart.1.max-torque-0 21
 setp hm2_5i24.0.pktuart.1.max-torque-1 11
 setp hm2_5i24.0.pktuart.2.max-torque-0 11
 setp hm2_5i24.0.pktuart.2.max-torque-1 11

@@ -1,0 +1,187 @@
+component r200j0_bias_torques "friction feed forward";
+
+author "Riley Ott";
+license "GPL";
+
+include <math.h>;
+include <stdlib.h>;
+
+param rw float j0_viscf = 0 "viscous friction"
+param rw float j1_viscf = 0 "viscous friction"
+param rw float j2_viscf = 0 "viscous friction"
+param rw float j3_viscf = 0 "viscous friction"
+param rw float j4_viscf = 0 "viscous friction"
+param rw float j5_viscf = 0 "viscous friction"
+param rw float j6_viscf = 0 "viscous friction"
+param rw float j7_viscf = 0 "viscous friction"
+
+
+param rw float j0_maxsf = 0 "max static friction"
+param rw float j1_maxsf = 0 "max static friction"
+param rw float j2_maxsf = 0 "max static friction"
+param rw float j3_maxsf = 0 "max static friction"
+param rw float j4_maxsf = 0 "max static friction"
+param rw float j5_maxsf = 0 "max static friction"
+param rw float j6_maxsf = 0 "max static friction"
+param rw float j7_maxsf = 0 "max static friction"
+
+param rw float j0_sffalloff = 1 "static friction falloff"
+param rw float j1_sffalloff = 1 "static friction falloff"
+param rw float j2_sffalloff = 1 "static friction falloff"
+param rw float j3_sffalloff = 1 "static friction falloff"
+param rw float j4_sffalloff = 1 "static friction falloff"
+param rw float j5_sffalloff = 1 "static friction falloff"
+param rw float j6_sffalloff = 1 "static friction falloff"
+param rw float j7_sffalloff = 1 "static friction falloff"
+
+//pin in float j0_ferror  "Joint feed error";
+//pin in float j1_ferror  "Joint feed error";
+//pin in float j2_ferror  "Joint feed error";
+//pin in float j3_ferror  "Joint feed error";
+//pin in float j4_ferror  "Joint feed error";
+//pin in float j5_ferror  "Joint feed error";
+//pin in float j6_ferror  "Joint feed error";
+//pin in float j7_ferror  "Joint feed error";
+
+pin in float j0_pos_fbk  "Joint fbk position";
+pin in float j1_pos_fbk  "Joint fbk position";
+pin in float j2_pos_fbk  "Joint fbk position";
+pin in float j3_pos_fbk  "Joint fbk position";
+pin in float j4_pos_fbk  "Joint fbk position";
+pin in float j5_pos_fbk  "Joint fbk position";
+pin in float j6_pos_fbk  "Joint fbk position";
+pin in float j7_pos_fbk  "Joint fbk position";
+
+pin in float j0_vel_cmd  "Joint cmd velocity";
+pin in float j1_vel_cmd  "Joint cmd velocity";
+pin in float j2_vel_cmd  "Joint cmd velocity";
+pin in float j3_vel_cmd  "Joint cmd velocity";
+pin in float j4_vel_cmd  "Joint cmd velocity";
+pin in float j5_vel_cmd  "Joint cmd velocity";
+pin in float j6_vel_cmd  "Joint cmd velocity";
+pin in float j7_vel_cmd  "Joint cmd velocity";
+
+pin in float j0_vel_fbk  "Joint fbk velocity";
+pin in float j1_vel_fbk  "Joint fbk velocity";
+pin in float j2_vel_fbk  "Joint fbk velocity";
+pin in float j3_vel_fbk  "Joint fbk velocity";
+pin in float j4_vel_fbk  "Joint fbk velocity";
+pin in float j5_vel_fbk  "Joint fbk velocity";
+pin in float j6_vel_fbk  "Joint fbk velocity";
+pin in float j7_vel_fbk  "Joint fbk velocity";
+
+pin out float j0_bias  "Joint bias";
+pin out float j1_bias  "Joint bias";
+pin out float j2_bias  "Joint bias";
+pin out float j3_bias  "Joint bias";
+pin out float j4_bias  "Joint bias";
+pin out float j5_bias  "Joint bias";
+pin out float j6_bias  "Joint bias";
+pin out float j7_bias  "Joint bias";
+
+function update;
+;;
+FUNCTION(update){
+
+	//load separate variables into arrays
+	float posFbk[8] = {
+		j0_pos_fbk,
+		j1_pos_fbk,
+		2_pos_fbk,
+		3_pos_fbk,
+		4_pos_fbk,
+		5_pos_fbk,
+		6_pos_fbk,
+		7_pos_fbk
+	};
+
+	float velFbk[8] = {
+		j0_vel_fbk,
+		j1_vel_fbk,
+		2_vel_fbk,
+		3_vel_fbk,
+		4_vel_fbk,
+		5_vel_fbk,
+		6_vel_fbk,
+		7_vel_fbk
+	};
+
+	float velCmd[8] = {
+		j0_vel_cmd,
+		j1_vel_cmd,
+		2_vel_cmd,
+		3_vel_cmd,
+		4_vel_cmd,
+		5_vel_cmd,
+		6_vel_cmd,
+		7_vel_cmd
+	};
+
+	float maxSF[8] = {
+		j0_maxsf,
+		j1_maxsf,
+		2_maxsf,
+		3_maxsf,
+		4_maxsf,
+		5_maxsf,
+		6_maxsf,
+		7_maxsf
+	};
+
+	float SFfalloff[8] = {
+		j0_sffalloff,
+		j1_sffalloff,
+		2_sffalloff,
+		3_sffalloff,
+		4_sffalloff,
+		5_sffalloff,
+		6_sffalloff,
+		7_sffalloff
+	};
+
+	float viscF[8] = {
+		j0_viscf,
+		j1_viscf,
+		2_viscf,
+		3_viscf,
+		4_viscf,
+		5_viscf,
+		6_viscf,
+		7_viscf
+	};
+
+	float bias[8] = {
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0,
+		0
+	};
+
+	// run biases that are not dependent on other joints (friction)
+	for(int joint=0; joint < 8; joint++;){
+		//only add a bias if the joint is supposed to be moving
+		if(velCmd[joint] != 0){
+
+		// use measured velocity but correct direction to cmd direction to prevent very low speed jitter
+		float velCorrected = abs(velFbk[joint]);
+		velCorrected = (velCmd[joint]>0) ? velCorrected : -velCorrected;
+
+		// add friction values
+		bias[joint] += viscF[joint] * velCorrected;	// add dynamic(viscous) friction
+		bias[joint] += maxSF[joint] / (SFfalloff[joint]*(velCorrected + (1/SFfalloff[joint])));	// add static friction
+
+		}
+	}
+
+	// add position based biases(gravity)
+
+	//TODO: add compensation for payload
+	bias[5] += 0;
+	bias[4] += 0;
+	bias[3] += 0;
+	
+}
