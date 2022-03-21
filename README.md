@@ -22,7 +22,7 @@ Think what the robot would do if it was trying its best to hurt you, if it could
 Be aware of the robot at all times, since Odrives have a higher PWM frequency and drive the motors slowly, some robots may be almost completely silent while moving.
 
 # Supported Robots
-Currently I have only tested this setup on a Fanuc R-2000iA 200F robot, theoretically it should be able to directly control ANY fanuc robot that uses an RJ3iB controller, with only simple parameter changes needed.
+Currently I have only tested this setup on a Fanuc R-2000iA 200F robot, theoretically it should be able to directly control ANY fanuc robot that uses an RJ3iB controller, with only simple parameter changes needed.(Kinematic and servo parameters)
 
 It is meant to control robots with AC servo motors, but there is the possibility of using different drives to run DC or stepper motors.
 
