@@ -134,3 +134,5 @@ Youtube: https://www.youtube.com/c/ExcessiveOverkill
 Reddit: https://www.reddit.com/r/ExcessiveOverkill/
 
 Patreon: https://www.patreon.com/excessiveoverkill
+
+Donate: https://www.paypal.com/donate/?business=3X4YGMEDN52KC&no_recurring=0&currency_code=USD
