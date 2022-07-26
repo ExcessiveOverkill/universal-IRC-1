@@ -10,7 +10,7 @@ The purpose of this is to allow old industrial robots that are at end of life to
 
 It will run robots as CNC machines, allowing direct Gcode input as well as options for spindle/coolant/aux IO control.
 
-It does not support any other method of control input. yet...
+I have not tested any other methods of control input, but linuxcnc should be able to interface to standard python programs to allow for much more complex control.
 
 # Safety
 If it isn't obvious, safety should be a major consideration when working with all industrial robots, especially large ones. Estops are not optional, always have a way of mechanically cutting power easily available, such as shutoffs or power contactors. Software should never be relied on to handle an estop situation.
@@ -124,6 +124,9 @@ To power the brakes(~200w) I added an additional 24v supply to the 48v motor sup
 Conveniently the entire robot can now be run off of a standard 120v plug(as long as it doesn't exceed 1.8kw for an extended time).
 
 # Future Upgrades/Changes
+Currently the control loops need a lot of tuning and probably several compensation variables to account for friction/gravity/etc. Faster communication to the odrives will help the PID loops as well(currently its around 300hz where industrial robots are closer to 6khz)
+I also need to find a better way of zeroing the robot joints, lining up the stickers isn't super accurate and can lead to quite high positiong error.
+
 The biggest thing I am working on improving is the servo drives. 10% speed just isn't going to fly. I've been working on designing a driver similar to the STMBL drive, only capable of handling the full power I need for the robot servos. Along with including a much better brake control and estop system.
 
 The new drives would likely fall under a v2 of this repository, as the majority of the hardware and low level software will be changed.
